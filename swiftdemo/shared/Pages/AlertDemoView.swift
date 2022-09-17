@@ -13,6 +13,12 @@ struct AlertDemoView: View {
     
     @State var showSheet: Bool = false
     
+    @State var showPop: Bool = false
+    
+    @State var pickerIndex: Int = 0
+    
+    @State var dateSelection: Date = Date()
+    
     private var sheet: ActionSheet {
         return ActionSheet(title: Text("Shit"), message: Text("Message"), buttons: [
             .destructive(Text("Fuckkkkkkkkk!"), action: {
@@ -52,6 +58,32 @@ struct AlertDemoView: View {
                     .frame(width: UIScreen.main.bounds.width-30, height: 40)
             }).actionSheet(isPresented: $showSheet, content: {sheet})
                 .background(.orange)
+            
+            Button(action: {
+                self.showPop = true
+            }, label: {
+                Text("Show Pop").foregroundColor(.white)
+                    .frame(width: UIScreen.main.bounds.width-30, height: 40)
+            }).background(.green)
+                .popover(isPresented: $showPop, content: {
+                    Text("This is the fucking pop!!!")
+                })
+            
+            Picker("ss", selection: $pickerIndex, content: {
+                ForEach(0..<10) { idx in
+                    Text("Selection \(idx)").foregroundColor(.white)
+                        .frame(width: UIScreen.main.bounds.width-30, height: 40)
+                }
+            }).frame(width: UIScreen.main.bounds.width-30, height: 40)
+                .background(.brown)
+            
+            HStack {
+                Text("Pick Date")
+                Spacer()
+                DatePicker(selection: $dateSelection, displayedComponents: .date, label: {
+                    Text("Date")
+                })
+            }.frame(width: UIScreen.main.bounds.width-30, height: 40)
         }
     }
 }

@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct ButtonDemoView: View {
+    
+    @State var isToggleOn: Bool = false
+    
+    @State var slideValue = 0.0
+    
+    @State var stepValue = 0
+    
     var body: some View {
         VStack {
             Group {
@@ -32,8 +39,35 @@ struct ButtonDemoView: View {
                 }, label: {
                     Text("按钮").padding(8)
                 }).background(.gray)
-    //                .padding(EdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5))
                     .cornerRadius(10, antialiased: false)
+                
+                Toggle(isOn: $isToggleOn) {
+                    Text("开关 \(self.isToggleOn ? "On" : "Off")")
+                }.padding(10)
+                
+                VStack {
+                    Slider(value: $slideValue, in: 0...10, label: {
+                        Text("What???")
+                    }, minimumValueLabel: {
+                        Text("MIN")
+                    }, maximumValueLabel: {
+                        Text("MAX")
+                    })
+                    Text("Slide vlaue: \(self.slideValue)")
+                }
+                
+                Stepper(value: $stepValue, step: 2, label: {
+                    Text("Stepper value [\(self.stepValue)]")
+                })
+                Stepper(label: {
+                    Text("Stepper2")
+                }, onIncrement: {
+                    print("increased ")
+                }, onDecrement: {
+                    print("decreaced ")
+                }, onEditingChanged: { editing in
+                    print("editing \(editing)")
+                })
             }
             
             NavigationLink(destination: {
