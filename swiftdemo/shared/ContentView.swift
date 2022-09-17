@@ -62,9 +62,14 @@ struct ContentView: View {
                     Text("各种对话框和提示")
                 }
                 NavigationLink {
-                    
+                    WebDemoView()
                 } label: {
                     Text("网页加载")
+                }
+                NavigationLink {
+                    TabPageDemoView()
+                } label: {
+                    Text("Tab styled page")
                 }
             }
             .toolbar {
