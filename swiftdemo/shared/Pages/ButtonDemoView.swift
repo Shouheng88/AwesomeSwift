@@ -59,6 +59,7 @@ struct ButtonDemoView: View {
                 Stepper(value: $stepValue, step: 2, label: {
                     Text("Stepper value [\(self.stepValue)]")
                 })
+                
                 Stepper(label: {
                     Text("Stepper2")
                 }, onIncrement: {
