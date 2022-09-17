@@ -10,7 +10,12 @@ import SwiftUI
 struct TextFieldDemoView: View {
 
     @State var account: String = ""
+    
     @State var password: String = ""
+    
+    @State var number: String = ""
+    
+    @State var emailAddress: String = ""
     
     var body: some View {
         VStack {
@@ -45,6 +50,16 @@ struct TextFieldDemoView: View {
                 TextField(text: $password, label: {
                     Text("Fucking password")
                 })
+                Section(header: Text("HEADER")) {
+                    TextField(text: $number, label: {
+                        Text("Number only")
+                    }).keyboardType(.numberPad)
+                }
+                Section(header: Text("HEADER")) {
+                    TextField(text: $emailAddress, label: {
+                        Text("Email")
+                    }).keyboardType(.emailAddress)
+                }
             }
         }
     }
