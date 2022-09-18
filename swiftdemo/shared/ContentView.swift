@@ -21,30 +21,39 @@ struct ContentView: View {
         // NavigationView 是什么？？
         NavigationView {
             List {
-                NavigationLink {
-                    TextDemoView()
-                } label: {
-                    Text("文本控件示例")
+                Group {
+                    NavigationLink {
+                        AnimationDemoView()
+                    } label: {
+                        Text("Animation demo")
+                    }
                 }
-                NavigationLink {
-                    TextFieldDemoView()
-                } label: {
-                    Text("输入框示例")
-                }
-                NavigationLink {
-                    ImageDemoView()
-                } label: {
-                    Text("图片控件")
-                }
-                NavigationLink {
-                    ButtonDemoView()
-                } label: {
-                    Text("按钮控件")
-                }
-                NavigationLink {
-                    TabDemoView()
-                } label: {
-                    Text("TAB 示例")
+                Group {
+                    NavigationLink {
+                        TextDemoView()
+                    } label: {
+                        Text("文本控件示例")
+                    }
+                    NavigationLink {
+                        TextFieldDemoView()
+                    } label: {
+                        Text("输入框示例")
+                    }
+                    NavigationLink {
+                        ImageDemoView()
+                    } label: {
+                        Text("图片控件")
+                    }
+                    NavigationLink {
+                        ButtonDemoView()
+                    } label: {
+                        Text("按钮控件")
+                    }
+                    NavigationLink {
+                        TabDemoView()
+                    } label: {
+                        Text("TAB 示例")
+                    }
                 }
                 NavigationLink {
                     SectionDemoView(viewModel: SectionDemoViewModel())
