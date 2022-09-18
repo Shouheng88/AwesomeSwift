@@ -17,58 +17,75 @@ struct ButtonDemoView: View {
     
     var body: some View {
         VStack {
-            Group {
-                Button(action: {
-                    print("你点击了普通按钮")
-                }, label: {
-                    Text("普通按钮")
-                }).padding(5)
-                    .border(.black, width: 2)
-                    .cornerRadius(10, antialiased: true)
-                
-                Button(action: {
-                    print("你点击了按钮")
-                }, label: {
-                    Text("按钮")
-                }).background(.gray)
-                    .padding(5)
-                    .cornerRadius(10, antialiased: true)
-                
-                Button(action: {
-                    print("你点击了按钮")
-                }, label: {
-                    Text("按钮").padding(8)
-                }).background(.gray)
-                    .cornerRadius(10, antialiased: false)
-                
-                Toggle(isOn: $isToggleOn) {
-                    Text("开关 \(self.isToggleOn ? "On" : "Off")")
-                }.padding(10)
+            ZStack { // 添加背景要用 zstack
+                LinearGradient(
+                    colors: [.red, .green, .blue],
+                    startPoint: .top,
+                    endPoint: .bottom
+                ).edgesIgnoringSafeArea(.all)
                 
                 VStack {
-                    Slider(value: $slideValue, in: 0...10, label: {
-                        Text("What???")
-                    }, minimumValueLabel: {
-                        Text("MIN")
-                    }, maximumValueLabel: {
-                        Text("MAX")
+                    Button(action: {
+                        print("你点击了普通按钮")
+                    }, label: {
+                        Text("普通按钮")
+                    }).padding(5)
+                        .border(.black, width: 2)
+                        .cornerRadius(10, antialiased: true)
+                    
+                    HStack {
+                        Button(action: {
+                            print("你点击了按钮")
+                        }, label: {
+                            Text("按钮")
+                        }).background(.gray)
+                            .padding(5)
+                            .cornerRadius(10, antialiased: true)
+                        
+                        Button(action: {
+                            print("你点击了按钮")
+                        }, label: {
+                            Text("按钮").padding(8)
+                        }).background(.gray)
+                            .cornerRadius(10, antialiased: false)
+                            .animation(.easeIn(duration: 5))
+                            .opacity(0.5)
+                        
+                        Button(action: {}, label: {
+                            Text("按钮").foregroundColor(.white).padding(8)
+                        }).background(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                            .foregroundColor(.green)
+                    }
+                 
+                    Toggle(isOn: $isToggleOn) {
+                        Text("开关 \(self.isToggleOn ? "On" : "Off")")
+                    }.padding(10)
+                    
+                    VStack {
+                        Slider(value: $slideValue, in: 0...10, label: {
+                            Text("What???")
+                        }, minimumValueLabel: {
+                            Text("MIN")
+                        }, maximumValueLabel: {
+                            Text("MAX")
+                        })
+                        Text("Slide vlaue: \(self.slideValue)")
+                    }
+                    
+                    Stepper(value: $stepValue, step: 2, label: {
+                        Text("Stepper value [\(self.stepValue)]")
                     })
-                    Text("Slide vlaue: \(self.slideValue)")
+                    
+                    Stepper(label: {
+                        Text("Stepper2")
+                    }, onIncrement: {
+                        print("increased ")
+                    }, onDecrement: {
+                        print("decreaced ")
+                    }, onEditingChanged: { editing in
+                        print("editing \(editing)")
+                    })
                 }
-                
-                Stepper(value: $stepValue, step: 2, label: {
-                    Text("Stepper value [\(self.stepValue)]")
-                })
-                
-                Stepper(label: {
-                    Text("Stepper2")
-                }, onIncrement: {
-                    print("increased ")
-                }, onDecrement: {
-                    print("decreaced ")
-                }, onEditingChanged: { editing in
-                    print("editing \(editing)")
-                })
             }
             
             NavigationLink(destination: {

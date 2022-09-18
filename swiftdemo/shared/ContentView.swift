@@ -47,7 +47,7 @@ struct ContentView: View {
                     Text("TAB 示例")
                 }
                 NavigationLink {
-                    SectionDemoView()
+                    SectionDemoView(viewModel: SectionDemoViewModel())
                 } label: {
                     Text("Section 示例")
                 }

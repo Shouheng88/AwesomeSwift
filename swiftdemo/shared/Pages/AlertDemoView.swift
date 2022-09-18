@@ -84,19 +84,35 @@ struct AlertDemoView: View {
                     }
                 }).pickerStyle(SegmentedPickerStyle())
                 
-                Picker("tips", selection: $pickerIndex, content: {
-                    ForEach(0..<5) { idx in
-                        Text("No.\(idx)")
-                    }
-                }).pickerStyle(WheelPickerStyle()).frame(height: 100)
-                
-                HStack {
-                    Text("Pick Date")
-                    Spacer()
-                    DatePicker(selection: $dateSelection, displayedComponents: .date, label: {
-                        Text("Date")
-                    })
-                }.frame(width: UIScreen.main.bounds.width-30, height: 40)
+                VStack(spacing: 60) {
+                    Picker("tips", selection: $pickerIndex, content: {
+                        ForEach(0..<5) { idx in
+                            Text("No.\(idx)")
+                        }
+                    }).pickerStyle(WheelPickerStyle()).frame(height: 100)
+                    
+                    HStack {
+                        Text("Pick Date")
+                        Spacer()
+                        DatePicker(selection: $dateSelection, displayedComponents: .date, label: {
+                            Text("Date")
+                        })
+                    }.frame(width: UIScreen.main.bounds.width-30, height: 40)
+                    
+                    DatePicker(
+                        "DatePicker",
+                        selection: $dateSelection,
+                        displayedComponents: .date
+                    ).datePickerStyle(WheelDatePickerStyle())
+                        .frame(height:80)
+                    
+                    DatePicker(
+                        "DatePicker",
+                        selection: $dateSelection,
+                        displayedComponents: .hourAndMinute
+                    ).datePickerStyle(WheelDatePickerStyle())
+                        .frame(height:100)
+                }
             }
         }
     }

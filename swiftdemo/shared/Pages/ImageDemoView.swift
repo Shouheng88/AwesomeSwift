@@ -27,6 +27,11 @@ struct ImageDemoView: View {
                     .onTapGesture {
                         print("Hello 50x")
                     }.blur(radius: 3)
+                HStack {
+                    Image(systemName: "3.circle").imageScale(.large)
+                    Image(systemName: "13.circle").imageScale(.large)
+                    Image(systemName: "50.circle").imageScale(.large) // max
+                }
                 MyImageView()
             }.navigationTitle(Text("标题啊"))
                 .navigationBarHidden(false)
