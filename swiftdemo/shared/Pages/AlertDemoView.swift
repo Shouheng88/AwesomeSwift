@@ -67,7 +67,7 @@ struct AlertDemoView: View {
                         .frame(width: UIScreen.main.bounds.width-30, height: 40)
                 }).background(.green)
                     .popover(isPresented: $showPop, content: {
-                        Text("This is the fucking pop!!!")
+                        PopLayerVeiew()
                     })
                 
                 Picker("ss", selection: $pickerIndex, content: {
@@ -118,8 +118,24 @@ struct AlertDemoView: View {
     }
 }
 
+struct PopLayerVeiew: View {
+    @Environment(\.presentationMode) var presentationMode
+
+    var body: some View {
+        return VStack {
+            Text("This is the fucking pop!!!")
+            Button(action: {
+                presentationMode.wrappedValue.dismiss()
+            }, label: {
+                Text("Click me to dismiss!!")
+            })
+        }
+    }
+}
+
 struct AlertDemoView_Previews: PreviewProvider {
     static var previews: some View {
         AlertDemoView()
+        PopLayerVeiew()
     }
 }

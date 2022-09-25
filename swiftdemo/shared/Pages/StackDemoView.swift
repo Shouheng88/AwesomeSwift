@@ -16,6 +16,18 @@ struct StackDemoView: View {
                 Text("RIGHT TOP")
             }
             Divider()
+            HStack(alignment: .bottom) {
+                Text("1")
+                Divider()
+                Text("2")
+            }
+            Divider()
+            HStack(alignment: .top) {
+                Text("3")
+                Divider()
+                Text("4")
+            }
+            Divider()
             HStack {
                 Text("LEFT BOTTOM")
                 Divider()
