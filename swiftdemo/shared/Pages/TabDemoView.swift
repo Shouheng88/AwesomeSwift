@@ -28,6 +28,8 @@ struct TabDemoView: View {
                 }
             }
         }
+        // 下面的代码用于指定 tab 的样式，可以修改样式来将 tab 定义成轮播图
+//        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
     }
 }
 

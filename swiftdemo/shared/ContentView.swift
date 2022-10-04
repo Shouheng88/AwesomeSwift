@@ -9,8 +9,11 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
+
     @Environment(\.managedObjectContext) private var viewContext
 
+    @EnvironmentObject var store: SharedStore
+    
     // 这里的注解什么含义？？
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],

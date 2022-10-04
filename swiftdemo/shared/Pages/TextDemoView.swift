@@ -20,6 +20,8 @@ struct TextDemoView: View {
                         Text("背影").shadow(color: .black, radius: 1, x: 3, y: 3)
                         Text("背影").shadow(color: .black, radius: 2, x: 3, y: 3)
                     }
+                    // 多语言版本的字符串，建议采用下划线的方式进行多语言配置
+                    Text(NSLocalizedString("hello_there", comment: ""))
                 }.border(.blue, width: 1) // group 上添加的属性会作用到内部的每一个控件上
                 VStack {
                     HStack {
@@ -69,6 +71,12 @@ struct TextDemoView: View {
                     }
                 }
                 Group {
+                    Link(destination: URL(string: "https://www.baidu.com")!) {
+                        Text("Click me! I'm a fucking link!")
+                    }
+                    Link(destination: URL(string: "https://www.baidu.com")!) {
+                        Image("sample_image")
+                    }
                     Text("www.baidu.com").underline().onTapGesture {
                         print("baidu clicked")
                     }
@@ -92,5 +100,6 @@ struct TextDemoView: View {
 struct TextViewDemo_Previews: PreviewProvider {
     static var previews: some View {
         TextDemoView()
+            .environment(\.locale, .init(identifier: "zh-Hans"))
     }
 }
