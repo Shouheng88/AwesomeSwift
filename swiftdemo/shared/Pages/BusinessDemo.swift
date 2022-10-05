@@ -8,6 +8,7 @@
 import SwiftUI
 import MessageUI
 import MapKit
+import StoreKit
 
 struct BusinessDemo: View {
     var body: some View {
@@ -29,9 +30,60 @@ struct BusinessDemo: View {
                 UserDefaults.testStringValue = "helllo"
             }, label: {
                 Text("Change UserDefaults Value")
-            })
+            }).frame(height: 40)
+            Button(action: {
+                openSettings()
+            }, label: {
+                Text("Open Settings")
+            }).frame(height: 40)
+            Button(action: {
+                requestReview()
+            }, label: {
+                Text("App Review")
+            }).frame(height: 40)
+            Button(action: {
+                requestReviewByUrl()
+            }, label: {
+                Text("App Review by Url")
+            }).frame(height: 40)
+            Button(action: {
+                openUrl()
+            }, label: {
+                Text("Open Url")
+            }).frame(height: 40)
             MapWrapperView(location: Location(coordinate: CLLocationCoordinate2D()))
         }
+    }
+    
+    private func openUrl() {
+        guard let url = URL(string: "https://github.com/vinhnx/Clendar") else { return }
+        UIApplication.shared.open(url)
+    }
+    
+    private func requestReview() {
+        // https://stackoverflow.com/a/63954318/1477298
+        guard let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene else { return }
+        SKStoreReviewController.requestReview(in: scene)
+    }
+    
+    private func requestReviewByUrl() {
+        // 需要把下面的 url 换成自己的
+        let url = "https://apps.apple.com/app/id1548102041"
+        let reviewURL = url + "?action=write-review"
+        if let writeReviewURL = URL(string: reviewURL) {
+            UIApplication.shared.open(writeReviewURL, options: [:], completionHandler: nil)
+        }
+    }
+    
+    // 打开设置
+    private func openSettings() {
+        guard let url = URL(string: UIApplication.openSettingsURLString), UIApplication.shared.canOpenURL(url) else {
+            print("failed to open settings")
+            return
+        }
+
+        let optionsKeyDictionary = [UIApplication.OpenExternalURLOptionsKey(rawValue: "universalLinksOnly"): NSNumber(value: true)]
+        UIApplication.shared.open(url, options: optionsKeyDictionary, completionHandler: nil)
     }
     
     /// 这种发送邮件的方式需要在 plist 当中注册 LSApplicationQueriesSchemes 信息
