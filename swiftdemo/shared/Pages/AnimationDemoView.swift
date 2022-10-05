@@ -15,6 +15,8 @@ struct AnimationDemoView: View {
     
     @State private var showSquare: Bool = false
     
+    @State private var animationIndex = 0
+    
     var body: some View {
         VStack {
             LinearGradient(
@@ -60,8 +62,20 @@ struct AnimationDemoView: View {
             VStack {
                 Button(action: {
                     // 动画是添加到这里的 ...
-                    withAnimation(.easeInOut(duration: 0.4)) {
+                    self.animationIndex = self.animationIndex + 1
+                    switch animationIndex % 3 {
+                    case 0:
                         self.showSquare.toggle()
+                    case 1:
+                        withAnimation {
+                            self.showSquare.toggle()
+                        }
+                    case 2:
+                        withAnimation(.easeInOut(duration: 0.4)) {
+                            self.showSquare.toggle()
+                        }
+                    default:
+                        break
                     }
                 }, label: {
                     Text("Tap Me!")
@@ -82,7 +96,30 @@ struct AnimationDemoView: View {
                         )
                 }
             }
-        }
+            
+            Text("Long click!")
+                .simultaneousGesture(
+                    LongPressGesture().onEnded({_ in
+                        print("Long clicked !!!")
+                    })
+                )
+                // 高优先级的动作
+                .highPriorityGesture(
+                    TapGesture(count: 3).onEnded({
+                        print("Clicked 3 times!!!")
+                        NotificationCenter.default.post(
+                            name: Notification.Name(rawValue: "animation_publisher"), object: nil)
+                    })
+                )
+        }.onAppear(perform: {
+            print("Animation view appear")
+        }).onDisappear(perform: {
+            print("Animation view disappear")
+        }).onReceive(
+            NotificationCenter.default.publisher(for: Notification.Name(rawValue: "animation_publisher")),
+            perform: { _ in
+            print("Animation received event!!")
+        })
     }
 }
 

@@ -51,8 +51,10 @@ struct ButtonDemoView: View {
                             .animation(.easeIn(duration: 5))
                             .opacity(0.5)
                         
-                        Button(action: {}, label: {
-                            Text("按钮").foregroundColor(.white).padding(8)
+                        Button(action: {
+                            NotificationCenter.default.post(name: NSNotification.Name("sample_event"), object: nil)
+                        }, label: {
+                            Text("事件按钮").foregroundColor(.white).padding(8)
                         }).background(RoundedRectangle(cornerRadius: 10, style: .continuous))
                             .foregroundColor(.green)
                     }

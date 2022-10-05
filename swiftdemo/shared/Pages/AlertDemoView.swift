@@ -66,9 +66,20 @@ struct AlertDemoView: View {
                     Text("Show Pop").foregroundColor(.white)
                         .frame(width: UIScreen.main.bounds.width-30, height: 40)
                 }).background(.green)
-                    .popover(isPresented: $showPop, content: {
-                        PopLayerVeiew()
+                    .sheet(isPresented: $showPop, content: {
+                        if #available(iOS 16.0, *) {
+                            NavigationStack {
+                                PopLayerVeiew()
+                            }
+                            .presentationDetents([.medium, .large])
+                            .presentationDragIndicator(.visible)
+                        } else {
+                            PopLayerVeiew()
+                        }
                     })
+//                    .popover(isPresented: $showPop, content: {
+//                        PopLayerVeiew()
+//                    })
                 
                 Picker("ss", selection: $pickerIndex, content: {
                     ForEach(0..<10) { idx in

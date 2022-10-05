@@ -65,6 +65,7 @@ struct swiftdemoApp: App {
         }
     }
     
+    /// 注册快捷方式，这里的快捷方式和安卓的长按图标的效果一样
     private func addQuickActions() {
         UIApplication.shared.shortcutItems = [
             UIApplicationShortcutItem(

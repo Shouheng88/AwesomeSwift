@@ -20,15 +20,31 @@ struct ContentView: View {
         animation: .default)
     private var items: FetchedResults<Item>
 
+    init() {
+        NotificationCenter.default.addObserver(
+            forName: NSNotification.Name("sample_event"),
+            object: nil,
+            queue: .main) { _ in
+                print("RECEIVED NOTIFICATION")
+            }
+    }
+    
     var body: some View {
-        // NavigationView 是什么？？
+        // NavigationView 一个带标题的默认布局
         NavigationView {
             List {
                 Group {
                     NavigationLink {
+                        BusinessDemo()
+                    } label: {
+                        Text("Business Demo")
+                    }
+                    NavigationLink {
                         AnimationDemoView()
                     } label: {
-                        Text("Animation demo")
+                        Text("Animation demo").overlay(content: {
+                            Text(" 🌹 ")
+                        })
                     }
                 }
                 Group {
@@ -138,7 +154,7 @@ private let itemFormatter: DateFormatter = {
     return formatter
 }()
 
-// 还有这个？？？
+// 预览
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
