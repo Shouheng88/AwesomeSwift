@@ -24,6 +24,12 @@ struct BusinessDemo: View {
                 Text("Change App Icon")
             }).frame(height: 40)
             Image("icon1").frame(width: 40, height: 40)
+            Text("Storage value: \(UserDefaults.testStringValue)")
+            Button(action: {
+                UserDefaults.testStringValue = "helllo"
+            }, label: {
+                Text("Change UserDefaults Value")
+            })
             MapWrapperView(location: Location(coordinate: CLLocationCoordinate2D()))
         }
     }
