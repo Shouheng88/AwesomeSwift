@@ -11,6 +11,10 @@ import MapKit
 import StoreKit
 
 struct BusinessDemo: View {
+    
+    @State
+    private var isDarkTheme = false
+    
     var body: some View {
         VStack {
             Button(action: {
@@ -31,28 +35,50 @@ struct BusinessDemo: View {
             }, label: {
                 Text("Change UserDefaults Value")
             }).frame(height: 40)
-            Button(action: {
-                openSettings()
-            }, label: {
-                Text("Open Settings")
-            }).frame(height: 40)
-            Button(action: {
-                requestReview()
-            }, label: {
-                Text("App Review")
-            }).frame(height: 40)
-            Button(action: {
-                requestReviewByUrl()
-            }, label: {
-                Text("App Review by Url")
-            }).frame(height: 40)
-            Button(action: {
-                openUrl()
-            }, label: {
-                Text("Open Url")
-            }).frame(height: 40)
+            Group {
+                Button(action: {
+                    openSettings()
+                }, label: {
+                    Text("Open Settings")
+                }).frame(height: 40)
+                Button(action: {
+                    requestReview()
+                }, label: {
+                    Text("App Review")
+                }).frame(height: 40)
+                Button(action: {
+                    requestReviewByUrl()
+                }, label: {
+                    Text("App Review by Url")
+                }).frame(height: 40)
+                Button(action: {
+                    openUrl()
+                }, label: {
+                    Text("Open Url")
+                }).frame(height: 40)
+                Button(action: {
+                    shareApp()
+                }, label: {
+                    Text("Share App")
+                })
+                Button(action: {
+                    isDarkTheme = !isDarkTheme
+                    // TODO: 换肤如何获取？
+//                    self?.view.window?.windowScene?.windows
+//                        .first { $0.isKeyWindow }?
+//                        .overrideUserInterfaceStyle = isDarkTheme ? .dark : .light
+                }, label: {
+                    Text("Change Theme")
+                })
+            }
             MapWrapperView(location: Location(coordinate: CLLocationCoordinate2D()))
         }
+    }
+    
+    private func shareApp() { // TODO: 无效，这种情况下应该如何使用??
+        guard let url = URL(string: "https://github.com/vinhnx/Clendar") else { return }
+        let activity = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+        UIHostingController(rootView: self).present(activity, animated: true, completion: nil)
     }
     
     private func openUrl() {
@@ -82,6 +108,7 @@ struct BusinessDemo: View {
             return
         }
 
+        // TODO: 这里传递的参数有什么用？
         let optionsKeyDictionary = [UIApplication.OpenExternalURLOptionsKey(rawValue: "universalLinksOnly"): NSNumber(value: true)]
         UIApplication.shared.open(url, options: optionsKeyDictionary, completionHandler: nil)
     }

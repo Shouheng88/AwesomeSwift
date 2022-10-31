@@ -15,9 +15,12 @@
 		9D46D61628D4B01800BA87DB /* SectionDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D46D61528D4B01800BA87DB /* SectionDemoView.swift */; };
 		9D46D61828D4B32100BA87DB /* StackDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D46D61728D4B32100BA87DB /* StackDemoView.swift */; };
 		9D46D61A28D4B53500BA87DB /* AlertDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D46D61928D4B53500BA87DB /* AlertDemoView.swift */; };
+		9D4D223E291012E7006E0075 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4D223D291012E7006E0075 /* Style.swift */; };
 		9DD9999E28D586C900D5A44A /* WebDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD9999D28D586C900D5A44A /* WebDemoView.swift */; };
 		9DD999A228D630D800D5A44A /* TabPageDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD999A128D630D800D5A44A /* TabPageDemoView.swift */; };
 		9DD999A428D740B400D5A44A /* AnimationDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD999A328D740B400D5A44A /* AnimationDemoView.swift */; };
+		9DE4F4A828F41CF2000473A7 /* AppInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE4F4A728F41CF1000473A7 /* AppInfoView.swift */; };
+		9DE4F4AB28FAEE98000473A7 /* AppPermisions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE4F4AA28FAEE98000473A7 /* AppPermisions.swift */; };
 		9DFCD3E028E9B9BC00CDE915 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9DFCD3E328E9B9BC00CDE915 /* Localizable.strings */; };
 		9DFCD3E128E9B9BC00CDE915 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9DFCD3E328E9B9BC00CDE915 /* Localizable.strings */; };
 		9DFCD3EE28EC520300CDE915 /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFCD3ED28EC520300CDE915 /* SharedStore.swift */; };
@@ -80,9 +83,12 @@
 		9D46D61528D4B01800BA87DB /* SectionDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDemoView.swift; sourceTree = "<group>"; };
 		9D46D61728D4B32100BA87DB /* StackDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackDemoView.swift; sourceTree = "<group>"; };
 		9D46D61928D4B53500BA87DB /* AlertDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDemoView.swift; sourceTree = "<group>"; };
+		9D4D223D291012E7006E0075 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		9DD9999D28D586C900D5A44A /* WebDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDemoView.swift; sourceTree = "<group>"; };
 		9DD999A128D630D800D5A44A /* TabPageDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPageDemoView.swift; sourceTree = "<group>"; };
 		9DD999A328D740B400D5A44A /* AnimationDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationDemoView.swift; sourceTree = "<group>"; };
+		9DE4F4A728F41CF1000473A7 /* AppInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoView.swift; sourceTree = "<group>"; };
+		9DE4F4AA28FAEE98000473A7 /* AppPermisions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPermisions.swift; sourceTree = "<group>"; };
 		9DFCD3E228E9B9BC00CDE915 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9DFCD3E428E9B9C000CDE915 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		9DFCD3E528E9B9C500CDE915 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -151,6 +157,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D4D223C291012B1006E0075 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9D4D223D291012E7006E0075 /* Style.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9DE4F4A928FAEE86000473A7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9DE4F4AA28FAEE98000473A7 /* AppPermisions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		9DFCD45E28ED3D3300CDE915 /* AppIcons */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +246,8 @@
 		9DFF4C9A28CC8EF800B7EBF8 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				9D4D223C291012B1006E0075 /* Extensions */,
+				9DE4F4A928FAEE86000473A7 /* Utils */,
 				9DFCD45E28ED3D3300CDE915 /* AppIcons */,
 				9DFF4CDE28CC9A0900B7EBF8 /* Pages */,
 				9DFF4C9D28CC8EF800B7EBF8 /* swiftdemoApp.swift */,
@@ -292,6 +316,7 @@
 				9DFCD3F328ED297200CDE915 /* BusinessDemo.swift */,
 				9DFCD42B28ED34F400CDE915 /* MapWrapperView.swift */,
 				9DFCD47828EDCC5F00CDE915 /* UserDefault.swift */,
+				9DE4F4A728F41CF1000473A7 /* AppInfoView.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -474,10 +499,12 @@
 				9DFCD3F428ED297200CDE915 /* BusinessDemo.swift in Sources */,
 				9DD999A428D740B400D5A44A /* AnimationDemoView.swift in Sources */,
 				9D46D61028D1EFF500BA87DB /* MyImageView.swift in Sources */,
+				9D4D223E291012E7006E0075 /* Style.swift in Sources */,
 				9DFCD42C28ED34F400CDE915 /* MapWrapperView.swift in Sources */,
 				9DFF4CC828CC8EFC00B7EBF8 /* swiftdemoApp.swift in Sources */,
 				9D46D61228D1F39A00BA87DB /* ButtonDemoView.swift in Sources */,
 				9DD999A228D630D800D5A44A /* TabPageDemoView.swift in Sources */,
+				9DE4F4A828F41CF2000473A7 /* AppInfoView.swift in Sources */,
 				9DFCD3EE28EC520300CDE915 /* SharedStore.swift in Sources */,
 				9D46D60C28D1A0DA00BA87DB /* TextFieldDemoView.swift in Sources */,
 				9D46D60E28D1DE5100BA87DB /* ImageDemoView.swift in Sources */,
@@ -486,6 +513,7 @@
 				9D46D61628D4B01800BA87DB /* SectionDemoView.swift in Sources */,
 				9DFF4CE228CCA11200B7EBF8 /* TextDemoView.swift in Sources */,
 				9D46D61828D4B32100BA87DB /* StackDemoView.swift in Sources */,
+				9DE4F4AB28FAEE98000473A7 /* AppPermisions.swift in Sources */,
 				9D46D61428D4A88C00BA87DB /* TabDemoView.swift in Sources */,
 				9DFF4CC628CC8EFC00B7EBF8 /* swiftdemo.xcdatamodeld in Sources */,
 				9DFF4CCA28CC8EFC00B7EBF8 /* ContentView.swift in Sources */,
@@ -680,6 +708,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "swiftdemo--iOS--Info.plist";
+				INFOPLIST_KEY_NSContactsUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -711,6 +740,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "swiftdemo--iOS--Info.plist";
+				INFOPLIST_KEY_NSContactsUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

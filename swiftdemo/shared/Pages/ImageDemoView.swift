@@ -11,6 +11,29 @@ struct ImageDemoView: View {
     var body: some View {
         ScrollView {
             VStack {
+                Group {
+                    VStack {
+                        Text("图片资源")
+                        HStack {
+                            Image("sample_image")
+                                .onTapGesture {
+                                    print("Hello 1x")
+                                }
+                            Image("sample_image")
+                                .resizable()
+                                .frame(width: 30, height: 30, alignment: .bottom)
+                                .onTapGesture {
+                                    print("Hello 30x")
+                                }
+                            Image("sample_image")
+                                .resizable()
+                                .frame(width: 50, height: 50, alignment: .bottom)
+                                .onTapGesture {
+                                    print("Hello 50x")
+                                }.blur(radius: 3)
+                        }
+                    }
+                }
                 HStack {
                     Image("sample_image")
                         .onTapGesture {

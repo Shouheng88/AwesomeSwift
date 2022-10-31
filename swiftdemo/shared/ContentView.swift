@@ -35,6 +35,11 @@ struct ContentView: View {
             List {
                 Group {
                     NavigationLink {
+                        AppInfoView()
+                    } label: {
+                        Text("App Info Demo")
+                    }
+                    NavigationLink {
                         BusinessDemo()
                     } label: {
                         Text("Business Demo")
