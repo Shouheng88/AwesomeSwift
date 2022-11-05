@@ -1,0 +1,31 @@
+#source 'https://github.com/aliyun/aliyun-specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+#source 'https://cdn.cocoapods.org/‘
+
+# 指定平台和系统版本
+platform :ios, '12.0'
+
+# 表示可以使用 swift 的框架
+use_frameworks!
+
+# 这个是 cocoapods 升级 1.0 后必须的，即 TARGET NAME
+target 'AwesomeSwift' do
+  # 指定库 和 库的版本
+  # pod 'JSONKit',       '~> 1.4'
+  # pod 'Reachability',  '~> 3.0.0'
+  # pod 'ASIHTTPRequest'
+  # pod 'RegexKitLite'
+
+  # 网络相关
+  pod 'Alamofire', :git => 'git@github.com:Alamofire/Alamofire.git'
+  pod 'HandyJSON', :git => 'git@github.com:alibaba/HandyJSON.git'
+  # 语法糖
+  pod 'Then', :git => 'git@github.com:devxoul/Then.git'
+  pod 'R.swift'#, :git => 'git@github.com:mac-cain13/R.swift.git', :tag => '6.1.0'
+  # 图片
+  pod 'Kingfisher', :git => 'git@github.com:onevcat/Kingfisher.git'
+  
+  pod 'NotificationBannerSwift', '~> 3.0.0'
+  pod 'JXSegmentedView'
+  # pod 'WhatsNewKit', :git => 'git@github.com:SvenTiigi/WhatsNewKit.git', :tag => '2.0.3'
+end

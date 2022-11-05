@@ -1,0 +1,72 @@
+PODS:
+  - Alamofire (5.6.2)
+  - HandyJSON (5.0.4-beta)
+  - JXSegmentedView (1.3.0)
+  - Kingfisher (7.4.1)
+  - MarqueeLabel (4.0.5)
+  - NotificationBannerSwift (3.0.6):
+    - MarqueeLabel (~> 4.0.5)
+    - SnapKit (~> 5.0.1)
+  - R.swift (6.1.0):
+    - R.swift.Library (~> 5.3.0)
+  - R.swift.Library (5.3.0)
+  - SnapKit (5.0.1)
+  - Then (3.0.0)
+
+DEPENDENCIES:
+  - "Alamofire (from `git@github.com:Alamofire/Alamofire.git`)"
+  - "HandyJSON (from `git@github.com:alibaba/HandyJSON.git`)"
+  - JXSegmentedView
+  - "Kingfisher (from `git@github.com:onevcat/Kingfisher.git`)"
+  - NotificationBannerSwift (~> 3.0.0)
+  - R.swift
+  - "Then (from `git@github.com:devxoul/Then.git`)"
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - JXSegmentedView
+    - MarqueeLabel
+    - NotificationBannerSwift
+    - R.swift
+    - R.swift.Library
+    - SnapKit
+
+EXTERNAL SOURCES:
+  Alamofire:
+    :git: "git@github.com:Alamofire/Alamofire.git"
+  HandyJSON:
+    :git: "git@github.com:alibaba/HandyJSON.git"
+  Kingfisher:
+    :git: "git@github.com:onevcat/Kingfisher.git"
+  Then:
+    :git: "git@github.com:devxoul/Then.git"
+
+CHECKOUT OPTIONS:
+  Alamofire:
+    :commit: bdecb2c87a21a236dcfe88b21532ad3f0e3d20f4
+    :git: "git@github.com:Alamofire/Alamofire.git"
+  HandyJSON:
+    :commit: f0b15db3bc0c51e935ea2385d6e33d412f04fffe
+    :git: "git@github.com:alibaba/HandyJSON.git"
+  Kingfisher:
+    :commit: 44e891bdb61426a95e31492a67c7c0dfad1f87c5
+    :git: "git@github.com:onevcat/Kingfisher.git"
+  Then:
+    :commit: d41ef523faef0f911369f79c0b96815d9dbb6d7a
+    :git: "git@github.com:devxoul/Then.git"
+
+SPEC CHECKSUMS:
+  Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
+  HandyJSON: a9c67202df97805a0ba4a00e30b50e9a30ac28f3
+  JXSegmentedView: fec0d335355b6e019c494fe2e030bde8a36d2df6
+  Kingfisher: cd762a593a61b2fbecf7645c00f9a801a3ebfc9c
+  MarqueeLabel: 00cc0bcd087111dca575878b3531af980559707d
+  NotificationBannerSwift: 7021be2338f8f29cf424b0aca43da462bf9e2a1a
+  R.swift: ec98ff71c4ab2f6fd01dd077e5afd15e63a4834c
+  R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  Then: 844265ae87834bbe1147d91d5d41a404da2ec27d
+
+PODFILE CHECKSUM: de2f0482bf8c5a26286953aeac2912c9f33425c5
+
+COCOAPODS: 1.11.3

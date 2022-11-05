@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  AwesomeSwift
+
+  Created by 王守恒 on 2022/11/2.
+  
+*/
+
+wan_android = "Wan Android";
+wna_android_pull_to_load = "Pull up to load ...";
+wna_android_loading = "Loading data ...";
+wna_android_empty_title = "Empty Data";
+
+banner_test_entry = "Banner Notification Demo";
+banner_success_type = "Success Type Notification";
