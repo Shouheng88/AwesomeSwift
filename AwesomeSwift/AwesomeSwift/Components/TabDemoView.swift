@@ -40,6 +40,7 @@ struct TabDemoView: View {
         }.navigationBarHidden(selection == 4)
             .navigationBarTitle("TAB Title \(selection + 1)", displayMode: .inline)
             .navigationBarItems(trailing: trailingView)
+            .statusBar(hidden: selection == 4) // hide status bar
     }
     
     private var trailingView: some View {
@@ -92,18 +93,25 @@ struct NormalPageView: View {
     private let colors: [Color] = [.red, .green, .blue, .orange, .yellow]
 
     var body: some View {
-        VStack {
-            ScrollView(content: {
-                VStack{
-                    Text(
-                        "This is the page for tab item with index [\(idx)]. This might be a good practice to show how the TabView of SwiftUI works! If you have any question, you can contace me at email blablabla@gmail.com anytime."
-                    ).padding(EdgeInsets(top: 10, leading: 15, bottom: 10, trailing: 15))
-                    .frame(width: UIScreen.main.bounds.width,height: UIScreen.main.bounds.height)
-                        .background(colors[idx])
-                }
-            })
-            Spacer()
-            Divider()
+        ZStack {
+            VStack {
+                Color(.gray).frame(height: 300)
+                Spacer()
+                Color(.gray).frame(height: 300)
+            }
+            VStack {
+                ScrollView(content: {
+                    VStack{
+                        Text(
+                            "This is the page for tab item with index [\(idx)]. This might be a good practice to show how the TabView of SwiftUI works! If you have any question, you can contace me at email blablabla@gmail.com anytime."
+                        ).padding(EdgeInsets(top: 10, leading: 15, bottom: 10, trailing: 15))
+                        .frame(width: UIScreen.main.bounds.width,height: UIScreen.main.bounds.height)
+                            .background(colors[idx])
+                    }
+                })
+//                Spacer()
+//                Divider()
+            }
         }
     }
 }

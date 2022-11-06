@@ -34,6 +34,12 @@ struct ContentView: View {
             }, label: {
                 Text("Tab Page Demo")
             }).frame(height: 40)
+            
+            NavigationLink(destination: {
+                ImmersiveView()
+            }, label: {
+                Text("SwiftUI Immersive Page Demo")
+            }).frame(height: 40)
         })
     }
     

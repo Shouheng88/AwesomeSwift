@@ -9,7 +9,7 @@ import SwiftUI
 import MarqueeLabel
 
 struct TextDemoView: View {
-    
+
     @State private var text = ""
     
     var colorSampleView: some View {
@@ -126,7 +126,7 @@ struct TextDemoView: View {
                 linkEffectSampleView
                 textWrapSampleView
             }
-        }.navigationTitle("文本示例")
+        }.navigationTitle("文本示例").navigationBarTitleDisplayMode(.inline)
     }
 }
 

@@ -73,6 +73,7 @@ struct TextFieldDemoView: View {
                     .border(.gray, width: 1)
             }
         }).navigationTitle("SwiftUI TextField Demo")
+            .navigationBarTitleDisplayMode(.inline)
     }
 }
 

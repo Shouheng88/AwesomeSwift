@@ -44,6 +44,7 @@
 		9DE65CB729164C1D00804F13 /* TabDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE65CA929164C1D00804F13 /* TabDemoView.swift */; };
 		9DE65CBC29164C1D00804F13 /* TabPageDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE65CAF29164C1D00804F13 /* TabPageDemoView.swift */; };
 		9DE65CBE291667BE00804F13 /* FormDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE65CBD291667BE00804F13 /* FormDemoView.swift */; };
+		9DE65CC02917E94D00804F13 /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE65CBF2917E94D00804F13 /* ImmersiveView.swift */; };
 		B3E192ED2397AEC01D6093AD /* Pods_AwesomeSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50099D577C029A65A007F832 /* Pods_AwesomeSwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +108,7 @@
 		9DE65CA929164C1D00804F13 /* TabDemoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabDemoView.swift; sourceTree = "<group>"; };
 		9DE65CAF29164C1D00804F13 /* TabPageDemoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabPageDemoView.swift; sourceTree = "<group>"; };
 		9DE65CBD291667BE00804F13 /* FormDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormDemoView.swift; sourceTree = "<group>"; };
+		9DE65CBF2917E94D00804F13 /* ImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView.swift; sourceTree = "<group>"; };
 		D97B031A2C8DA6B18B475D85 /* Pods-AwesomeSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeSwift.debug.xcconfig"; path = "Target Support Files/Pods-AwesomeSwift/Pods-AwesomeSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -274,6 +276,7 @@
 				9DE65C7D2916056B00804F13 /* SegmentedViewDemo.swift */,
 				9DE65C8A2916201100804F13 /* PullToRefreshViewDemo.swift */,
 				9DE65CBD291667BE00804F13 /* FormDemoView.swift */,
+				9DE65CBF2917E94D00804F13 /* ImmersiveView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -507,6 +510,7 @@
 				9DE65CA029163F6F00804F13 /* LynnPullToRefreshModifier.swift in Sources */,
 				9DE65CB129164C1D00804F13 /* ButtonDemoView.swift in Sources */,
 				9DE65C5929117E1F00804F13 /* ProjectViewModel.swift in Sources */,
+				9DE65CC02917E94D00804F13 /* ImmersiveView.swift in Sources */,
 				9DE65C7C29156FDD00804F13 /* WhatsNewKitView.swift in Sources */,
 				9DE65C7E2916056B00804F13 /* SegmentedViewDemo.swift in Sources */,
 				9DE65CB229164C1D00804F13 /* TextFieldDemoView.swift in Sources */,
