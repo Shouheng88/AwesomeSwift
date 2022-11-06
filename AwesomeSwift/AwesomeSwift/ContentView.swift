@@ -31,7 +31,6 @@ struct ContentView: View {
             
             NavigationLink(destination: {
                 TabDemoView()
-//                SlidePageView()
             }, label: {
                 Text("Tab Page Demo")
             }).frame(height: 40)
@@ -109,6 +108,12 @@ struct ContentView: View {
             }, label: {
                 Text("SwiftUI Layout Demo")
             }).frame(height: 40)
+            
+            NavigationLink(destination: {
+                PopupDemoView()
+            }, label: {
+                Text("SwiftUI Popup Demo")
+            }).frame(height: 40)
         })
     }
     
@@ -120,7 +125,7 @@ struct ContentView: View {
                     thirdPartComponentsDemo
                     officialComponentsDemo
                     Spacer()
-                }
+                }.frame(width: UIScreen.main.bounds.width)
             }.toolbar {
                 // 工具栏的使用方法，但是需要放到 NavigationView 内部
                 ToolbarItemGroup {

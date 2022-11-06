@@ -13,7 +13,7 @@ struct TabDemoView: View {
     @State var tip: String = ""
     
     var body: some View {
-        ZStack {
+        NavigationView {
             TabView(selection: $selection) {
                 ForEach(0..<5) { idx in
                     VStack {
@@ -37,6 +37,19 @@ struct TabDemoView: View {
             Text(self.tip)
                 .foregroundColor(.gray)
                 .font(.system(size: 14))
+        }.navigationBarHidden(selection == 4)
+            .navigationBarTitle("TAB Title \(selection + 1)", displayMode: .inline)
+            .navigationBarItems(trailing: trailingView)
+    }
+    
+    private var trailingView: some View {
+        switch selection {
+        case 0:
+            return AnyView(Image(systemName: "plus.circle"))
+        case 1:
+            return AnyView(Image(systemName: "person.badge.plus"))
+        default:
+            return AnyView(EmptyView())
         }
     }
 }
