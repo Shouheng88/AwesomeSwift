@@ -18,7 +18,7 @@ struct ButtonDemoView: View {
     @State var stepperValue = 0
     
     var buttonSampleView: some View {
-        Section("Button Samples", content: {
+        Section(content: {
             VStack(content: {
                 Text(self.tip).foregroundColor(.gray).font(.system(size: 14))
                 
@@ -27,7 +27,7 @@ struct ButtonDemoView: View {
                 }, label: {
                     Text("Normal Button")
                 }).padding(EdgeInsets(top: 10, leading: 30, bottom: 10, trailing: 30))
-                    .background(.green)
+                    .background(Rectangle().fill(.green))
                     .cornerRadius(8, antialiased: true)
                 
                 Button(action: {
@@ -36,7 +36,7 @@ struct ButtonDemoView: View {
                     Text("Custom Text Button")
                         .foregroundColor(.white)
                         .padding(EdgeInsets(top: 10, leading: 30, bottom: 10, trailing: 30))
-                }).background(.orange)
+                }).background(Rectangle().fill(.orange))
                     .cornerRadius(8, antialiased: true)
                 
                 Button(action: {
@@ -45,7 +45,7 @@ struct ButtonDemoView: View {
                     Text("Animation Button")
                         .foregroundColor(.white)
                         .padding(EdgeInsets(top: 10, leading: 30, bottom: 10, trailing: 30))
-                }).background(.blue)
+                }).background(Rectangle().fill(.blue))
                     .cornerRadius(8, antialiased: false)
                     .animation(.easeIn(duration: 5))
                 
@@ -54,7 +54,7 @@ struct ButtonDemoView: View {
                 }, label: {
                     Text("Button with Opacity")
                 }).padding(EdgeInsets(top: 10, leading: 30, bottom: 10, trailing: 30))
-                    .background(.purple)
+                    .background(Rectangle().fill(.purple))
                     .cornerRadius(8, antialiased: true)
                     .opacity(0.5)
                 
@@ -65,7 +65,7 @@ struct ButtonDemoView: View {
                     Text("Button to Send Notification").foregroundColor(.white)
                 }).padding(EdgeInsets(top: 10, leading: 30, bottom: 10, trailing: 30))
                     .background(RoundedRectangle(cornerRadius: 10, style: .circular))
-                    .foregroundColor(.brown)
+                    .foregroundColor(.green)
                 
                 Button(action: {
                     self.tip = "You clicked a Button with Icon."
@@ -83,11 +83,13 @@ struct ButtonDemoView: View {
                    .overlay(RoundedRectangle(cornerRadius: 40).stroke(Color.red, lineWidth: 4))
                 })
             })
+        }, header: {
+            Text("Button Samples")
         })
     }
     
     var toggleSampleView: some View {
-        Section("Toggle Sample View", content: {
+        Section(content: {
             VStack {
                 Toggle(isOn: $isToggleOn) {
                     
@@ -107,10 +109,12 @@ struct ButtonDemoView: View {
                     }
                     Text("Toggle Button with Image").foregroundColor(.gray).font(.system(size: 14))
 
-                    Toggle(isOn: $bold) {
-                        Image(systemName: "bold")
-                    }.toggleStyle(.button)
-                    Text(".button Toggle Button with Image").foregroundColor(.gray).font(.system(size: 14))
+                    if #available(iOS 15.0, *) {
+                        Toggle(isOn: $bold) {
+                            Image(systemName: "bold")
+                        }.toggleStyle(.button)
+                        Text(".button Toggle Button with Image").foregroundColor(.gray).font(.system(size: 14))
+                    }
 
                     Toggle(isOn: $bold) {
                         Image(systemName: "bold")
@@ -123,11 +127,13 @@ struct ButtonDemoView: View {
                     Text("Toggle Button with Custom Image").foregroundColor(.gray).font(.system(size: 14))
                 }
             }
+        }, header: {
+            Text("Toggle Sample View")
         })
     }
     
     var sliderSampleView: some View {
-        Section("Slider Sample View", content: {
+        Section(content: {
             Slider(value: $slideValue, in: 0...10, label: {
                 Text("What ???")
             }, minimumValueLabel: {
@@ -152,11 +158,13 @@ struct ButtonDemoView: View {
             Text("Slide vlaue: \(self.slideValue)")
                 .foregroundColor(.gray)
                 .font(.system(size: 14))
+        }, header: {
+            Text("Slider Sample View")
         })
     }
     
     var stepperSampleView: some View {
-        Section("Stepper Sample", content: {
+        Section(content: {
             VStack(content: {
                 Stepper(value: $stepValue, step: 2, label: {
                     Text("Stepper value [\(self.stepValue)]")
@@ -176,6 +184,8 @@ struct ButtonDemoView: View {
                     print("editing \(editing)")
                 })
             })
+        }, header: {
+            Text("Stepper Sample")
         })
     }
     
@@ -192,7 +202,7 @@ struct ButtonDemoView: View {
                 }, label: {
                     Text("Navigation Button").foregroundColor(.white)
                 }).padding(EdgeInsets(top: 10, leading: 30, bottom: 10, trailing: 30))
-                    .background(.blue)
+                    .background(Rectangle().fill(.blue))
                     .cornerRadius(8)
                 
                 List {

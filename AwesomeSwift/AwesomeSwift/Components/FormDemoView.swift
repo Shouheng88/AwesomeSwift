@@ -29,24 +29,42 @@ struct FormDemoView: View {
                 .foregroundColor(.gray)
                 .font(.system(size: 14))
             Form {
-                TextField(text: $account, label: {
-                    Text("Please input your account")
-                })
-                SecureField(text: $password, prompt: Text("This is the prompt"), label: {
-                    Text("Please input your password")
-                })
+                if #available(iOS 15.0, *) {
+                    TextField(text: $account, label: {
+                        Text("Please input your account")
+                    })
+                } else {
+                    TextField("Please input your account", text: $account)
+                }
+                TextField("Please input your account", text: $account)
+                if #available(iOS 15.0, *) {
+                    SecureField(text: $password, prompt: Text("This is the prompt"), label: {
+                        Text("Please input your password")
+                    })
+                } else {
+                    SecureField("Please input your password", text: $password)
+                }
                 Section(header: Text("Number Only Section")) {
-                    TextField(text: $number, label: {
-                        Text("Please input your number")
-                    }).keyboardType(.numberPad)
+                    if #available(iOS 15.0, *) {
+                        TextField("Please input your number", text: $number)
+                            .keyboardType(.numberPad)
+                    } else {
+                        TextField("Please input your number", text: $number)
+                            .keyboardType(.numberPad)
+                    }
                 }
                 Section(header: Text("Email Section")) {
-                    TextField(text: $emailAddress, label: {
-                        Text("Please input your email")
-                    }).keyboardType(.emailAddress)
+                    if #available(iOS 15.0, *) {
+                        TextField(text: $emailAddress, label: {
+                            Text("Please input your email")
+                        })
+                    } else {
+                        TextField("Please input your email", text: $emailAddress)
+                            .keyboardType(.emailAddress)
+                    }
                 }
             }
-        }
+        }.navigationBarTitleDisplayMode(.inline)
     }
 }
 
