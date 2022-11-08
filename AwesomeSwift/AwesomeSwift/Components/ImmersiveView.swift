@@ -22,7 +22,7 @@ struct ImmersiveView: View {
                 }).frame(height: 40)
             }.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
                 .background(Color(R.color.custom_color()!))
-        }.edgesIgnoringSafeArea([.top, .leading, .trailing])
+        }.edgesIgnoringSafeArea([.top, .leading, .trailing, .bottom])
             .navigationBarHidden(true)
     }
 }
