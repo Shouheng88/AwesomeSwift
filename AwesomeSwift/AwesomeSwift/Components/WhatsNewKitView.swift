@@ -46,11 +46,11 @@ struct WhatsNewKitView: View {
                       subtitle: "This is a sub title for super long text test for WhatsNewKit demonstrate. What do you think of this kind of ui of swift ?"),
             ],
             primaryAction: .init(
-                backgroundColor: .cyan
+                backgroundColor: .red
             ),
             secondaryAction: .init(
                 title: "About Translation & Privacy",
-                foregroundColor: .cyan,
+                foregroundColor: .red,
                 action: .openURL(
                     .init(string: "https://apple.com/privacy")
                 )

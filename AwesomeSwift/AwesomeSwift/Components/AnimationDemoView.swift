@@ -15,10 +15,8 @@ struct AnimationDemoView: View {
     @State private var animationIndex = 0
     @State private var tip: String = ""
     
-    var body: some View {
-        VStack(spacing: 40) {
-            Text(self.tip).foregroundColor(.gray).font(.system(size: 14))
-            
+    var dragMoveSampleView: some View {
+        VStack {
             LinearGradient(
                 colors: [.red, .green, .blue],
                 startPoint: .topLeading,
@@ -36,10 +34,7 @@ struct AnimationDemoView: View {
                                 self.dragAmount = .zero
                             })
                         })
-                )
-                .overlay(content: {
-                    Text("Drag Me")
-                })
+                ).overlay(Text("Drag Me"))
             
             HStack {
                 ForEach(0..<6) { index in
@@ -61,45 +56,54 @@ struct AnimationDemoView: View {
                         self.dragAmount = .zero
                     })
             )
-            
-            VStack {
-                Button(action: {
-                    // 动画是添加到这里的 ...
-                    self.animationIndex = self.animationIndex + 1
-                    switch animationIndex % 3 {
-                    case 0:
+        }
+    }
+    
+    var toggleSampleView: some View {
+        VStack {
+            Button(action: {
+                // 动画是添加到这里的 ...
+                self.animationIndex = self.animationIndex + 1
+                switch animationIndex % 3 {
+                case 0:
+                    self.showSquare.toggle()
+                case 1:
+                    withAnimation {
                         self.showSquare.toggle()
-                    case 1:
-                        withAnimation {
-                            self.showSquare.toggle()
-                        }
-                    case 2:
-                        withAnimation(.easeInOut(duration: 0.4)) {
-                            self.showSquare.toggle()
-                        }
-                    default:
-                        break
                     }
-                }, label: {
-                    Text("Tap Me!")
-                })
-                if showSquare {
-                    Rectangle()
-                        .fill(.pink)
-                        .frame(width: 100, height: 100)
-                        .transition(.asymmetric(insertion: .scale, removal: .scale))
-                    Rectangle()
-                        .fill(.blue)
-                        .frame(width: 100, height: 100)
-                        .transition(
-                            .modifier(
-                                active: CornerRotationModifier(angle: .radians(-.pi/2), anchor: .topLeading),
-                                identity: CornerRotationModifier(angle: .radians(0), anchor: .topLeading)
-                            )
-                        )
+                case 2:
+                    withAnimation(.easeInOut(duration: 0.4)) {
+                        self.showSquare.toggle()
+                    }
+                default:
+                    break
                 }
+            }, label: {
+                Text("Tap Me!")
+            })
+            if showSquare {
+                Rectangle()
+                    .fill(.pink)
+                    .frame(width: 100, height: 100)
+                    .transition(.asymmetric(insertion: .scale, removal: .scale))
+                Rectangle()
+                    .fill(.blue)
+                    .frame(width: 100, height: 100)
+                    .transition(
+                        .modifier(
+                            active: CornerRotationModifier(angle: .radians(-.pi/2), anchor: .topLeading),
+                            identity: CornerRotationModifier(angle: .radians(0), anchor: .topLeading)
+                        )
+                    )
             }
-            
+        }
+    }
+    
+    var body: some View {
+        VStack(spacing: 40) {
+            Text(self.tip).foregroundColor(.gray).font(.system(size: 14))
+            dragMoveSampleView
+            toggleSampleView
             Text("Long click!")
                 .simultaneousGesture(
                     LongPressGesture().onEnded({_ in
@@ -123,7 +127,7 @@ struct AnimationDemoView: View {
             perform: { _ in
                 self.tip = "Animation received event!!"
             }
-        )
+        ).navigationBarTitleDisplayMode(.inline)
     }
 }
 
