@@ -16,7 +16,7 @@ struct ContentView: View {
     @State private var fontSize = 12.0
     
     var businessComponentsDemo: some View {
-        Section("Business Components Demo", content: {
+        Section(content: {
             NavigationLink{
                 ProjectList()
             } label: {
@@ -38,13 +38,31 @@ struct ContentView: View {
             NavigationLink(destination: {
                 ImmersiveView()
             }, label: {
-                Text("SwiftUI Immersive Page Demo")
+                Text("Immersive Page Demo")
             }).frame(height: 40)
+            
+            NavigationLink(destination: {
+                KeyboardAwareDemoView()
+            }, label: {
+                Text("Keyboard Aware Demo")
+            }).frame(height: 40)
+            
+            NavigationLink(destination: {
+                if #available(iOS 15.0, *) {
+                    KeyboardAwareDemoView2()
+                } else {
+                    Text("Only available on 15.0 and newer")
+                }
+            }, label: {
+                Text("Keyboard Aware Demo 2")
+            }).frame(height: 40)
+        }, header: {
+            Text("Business Components Demo")
         })
     }
     
     var thirdPartComponentsDemo: some View {
-        Section("Third Part Components Demo", content: {
+        Section(content: {
             NavigationLink(destination: {
                 NotificationBannerView()
             }, label: {
@@ -68,11 +86,13 @@ struct ContentView: View {
             }, label: {
                 Text("Pull To Refresh View Demo")
             }).frame(height: 40)
+        }, header: {
+            Text("Third Part Components Demo")
         })
     }
     
     var officialComponentsDemo: some View {
-        Section("Official Components Demo", content: {
+        Section(content: {
             NavigationLink(destination: {
                 TextDemoView()
             }, label: {
@@ -120,6 +140,8 @@ struct ContentView: View {
             }, label: {
                 Text("SwiftUI Popup Demo")
             }).frame(height: 40)
+        }, header: {
+            Text("Official Components Demo")
         })
     }
     

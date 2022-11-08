@@ -45,6 +45,8 @@
 		9DE65CBC29164C1D00804F13 /* TabPageDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE65CAF29164C1D00804F13 /* TabPageDemoView.swift */; };
 		9DE65CBE291667BE00804F13 /* FormDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE65CBD291667BE00804F13 /* FormDemoView.swift */; };
 		9DE65CC02917E94D00804F13 /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE65CBF2917E94D00804F13 /* ImmersiveView.swift */; };
+		9DE65CC22917F38800804F13 /* KeyboardAwareDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE65CC12917F38800804F13 /* KeyboardAwareDemoView.swift */; };
+		9DE65CC42918096A00804F13 /* KeyboardAwareDemoView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE65CC32918096A00804F13 /* KeyboardAwareDemoView2.swift */; };
 		B3E192ED2397AEC01D6093AD /* Pods_AwesomeSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50099D577C029A65A007F832 /* Pods_AwesomeSwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +111,8 @@
 		9DE65CAF29164C1D00804F13 /* TabPageDemoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabPageDemoView.swift; sourceTree = "<group>"; };
 		9DE65CBD291667BE00804F13 /* FormDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormDemoView.swift; sourceTree = "<group>"; };
 		9DE65CBF2917E94D00804F13 /* ImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView.swift; sourceTree = "<group>"; };
+		9DE65CC12917F38800804F13 /* KeyboardAwareDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAwareDemoView.swift; sourceTree = "<group>"; };
+		9DE65CC32918096A00804F13 /* KeyboardAwareDemoView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAwareDemoView2.swift; sourceTree = "<group>"; };
 		D97B031A2C8DA6B18B475D85 /* Pods-AwesomeSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeSwift.debug.xcconfig"; path = "Target Support Files/Pods-AwesomeSwift/Pods-AwesomeSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -277,6 +281,8 @@
 				9DE65C8A2916201100804F13 /* PullToRefreshViewDemo.swift */,
 				9DE65CBD291667BE00804F13 /* FormDemoView.swift */,
 				9DE65CBF2917E94D00804F13 /* ImmersiveView.swift */,
+				9DE65CC12917F38800804F13 /* KeyboardAwareDemoView.swift */,
+				9DE65CC32918096A00804F13 /* KeyboardAwareDemoView2.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -516,7 +522,9 @@
 				9DE65CB229164C1D00804F13 /* TextFieldDemoView.swift in Sources */,
 				9DE65C9429162C7100804F13 /* TextDemoView.swift in Sources */,
 				9DE65CB629164C1D00804F13 /* PopupDemoView.swift in Sources */,
+				9DE65CC42918096A00804F13 /* KeyboardAwareDemoView2.swift in Sources */,
 				9DE65C6E29135B9400804F13 /* R.generated.swift in Sources */,
+				9DE65CC22917F38800804F13 /* KeyboardAwareDemoView.swift in Sources */,
 				9DE65CB429164C1D00804F13 /* AnimationDemoView.swift in Sources */,
 				9DE65CB529164C1D00804F13 /* ImageDemoView.swift in Sources */,
 				9DE65CB729164C1D00804F13 /* TabDemoView.swift in Sources */,
@@ -704,6 +712,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -734,6 +743,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

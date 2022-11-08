@@ -37,7 +37,7 @@ struct TabPageDemoView: View {
                     Text("")
                 }).pickerStyle(SegmentedPickerStyle())
                     .foregroundColor(.gray)
-                    .background(.purple)
+                    .background(Rectangle().fill(.purple))
                 Picker(selection: $selection, content: {
                     ForEach(0..<3) { idx in
 //                        Text("TAB \(idx)")
@@ -48,7 +48,7 @@ struct TabPageDemoView: View {
                 }).pickerStyle(InlinePickerStyle())
             }.padding(10)
             contentView
-        }
+        }.navigationBarTitleDisplayMode(.inline)
     }
     
     private var contentView: some View {

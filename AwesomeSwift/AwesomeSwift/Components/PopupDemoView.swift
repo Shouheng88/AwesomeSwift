@@ -10,13 +10,9 @@ import SwiftUI
 struct PopupDemoView: View {
     
     @State var showAlert: Bool = false
-    
     @State var showSheet: Bool = false
-    
     @State var showPop: Bool = false
-    
     @State var pickerIndex: Int = 0
-    
     @State var dateSelection: Date = Date()
     
     private var sheet: ActionSheet {
@@ -50,7 +46,7 @@ struct PopupDemoView: View {
                           message: Text("message"),
                           primaryButton: .destructive(Text("primary")),
                           secondaryButton: .cancel())
-                }).background(.blue) // 显示对话框
+                }).background(Rectangle().fill(.blue)) // 显示对话框
                 
                 Button(action: {
                     self.showSheet = true
@@ -58,14 +54,14 @@ struct PopupDemoView: View {
                     Text("Show Sheet").foregroundColor(.white)
                         .frame(width: UIScreen.main.bounds.width-30, height: 40)
                 }).actionSheet(isPresented: $showSheet, content: {sheet})
-                    .background(.orange)
+                    .background(Rectangle().fill(.orange))
                 
                 Button(action: {
                     self.showPop = true
                 }, label: {
                     Text("Show Pop").foregroundColor(.white)
                         .frame(width: UIScreen.main.bounds.width-30, height: 40)
-                }).background(.green)
+                }).background(Rectangle().fill(.green))
                     .sheet(isPresented: $showPop, content: {
                         if #available(iOS 16.0, *) {
                             NavigationStack {
@@ -87,7 +83,7 @@ struct PopupDemoView: View {
                             .frame(width: UIScreen.main.bounds.width-30, height: 40)
                     }
                 }).frame(width: UIScreen.main.bounds.width-30, height: 40)
-                    .background(.brown)
+                    .background(Rectangle().fill(.green))
                 
                 Picker("tips", selection: $pickerIndex, content: {
                     ForEach(0..<5) { idx in
