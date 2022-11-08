@@ -13,15 +13,14 @@ struct TabDemoView: View {
     @State var tip: String = ""
     
     var body: some View {
-        NavigationView {
+        // Use ZStack instead of NavigationView, since NavigationView will
+        // put a fade shader on page on 14.x.
+//        NavigationView {
+        ZStack {
             TabView(selection: $selection) {
                 ForEach(0..<5) { idx in
                     VStack {
-                        if idx == 0 {
-                            SlidePageView()
-                        } else {
-                            NormalPageView(idx: idx)
-                        }
+                        getTabView(idx: idx)
                     }.tabItem {
                         VStack {
                             Text("Tab \(idx+1)").onTapGesture {
@@ -43,6 +42,18 @@ struct TabDemoView: View {
             .statusBar(hidden: selection == 4) // hide status bar
     }
     
+    private func getTabView(idx: Int) -> some View {
+        return VStack {
+            if idx == 0 {
+                SlidePageView()
+            } else if idx == 1 {
+                SlidePageViewWithCustomIndicator()
+            } else {
+                NormalPageView(idx: idx)
+            }
+        }
+    }
+    
     private var trailingView: some View {
         switch selection {
         case 0:
@@ -55,9 +66,46 @@ struct TabDemoView: View {
     }
 }
 
+struct SlidePageViewWithCustomIndicator: View {
+
+    private let colors: [Color] = [.red, .green, .blue, .orange, .yellow, .pink, .purple, .black]
+    @State var selection: Int = 0
+
+    var customIndicatorView: some View {
+        HStack(spacing: 15) {
+            ForEach(0..<8) { idx in
+                Rectangle()
+                    .fill(.white.opacity(selection == idx ? 1 : 0.5))
+                    .frame(width: 5, height: 5, alignment: .center)
+            }
+        }
+    }
+    
+    var body: some View {
+        TabView(selection: $selection) {
+            ForEach(0..<8) { idx in
+                VStack {
+                    Text("Slide Page [\(idx)]").foregroundColor(.white)
+                    Button("Click to Navigate to Next Page", action: {
+                        let next = self.selection + 1
+                        if next >= 8 {
+                            self.selection = 0
+                        } else {
+                            self.selection = next
+                        }
+                    }).frame(height: 40).foregroundColor(.white)
+                }.frame(width: UIScreen.main.bounds.width, height: 200)
+                    .background(colors[idx])
+            }
+        }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+            .background(Rectangle().fill(.pink))
+            .overlay(customIndicatorView, alignment: .bottom)
+    }
+}
+
 struct SlidePageView: View {
 
-    private let colors: [Color] = [.red, .green, .blue, .orange, .yellow, .pink, .purple, .brown]
+    private let colors: [Color] = [.red, .green, .blue, .orange, .yellow, .pink, .purple, .black]
     @State var selection: Int = 0
 
     var body: some View {
@@ -75,15 +123,10 @@ struct SlidePageView: View {
                     }).frame(height: 40).foregroundColor(.white)
                 }.frame(width: UIScreen.main.bounds.width, height: 200)
                     .background(colors[idx])
-                    .tabItem{
-                        Image(uiImage: R.image.heart_lock()!)
-//                            .foregroundColor(.green)
-//                            .cornerRadius(10)
-//                            .font(.system(size: 5))
-//                            .frame(width: 10, height: 10)
-                    }
             }
-        }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .always)).background(.pink)
+        }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
+//            .background(.pink) // Available only on 15.0 or newer
+            .background(Rectangle().fill(.pink))
     }
 }
 
