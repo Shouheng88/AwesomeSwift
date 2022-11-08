@@ -10,7 +10,10 @@ import Rswift
 
 struct ProjectList: View {
     
-    @ObservedObject private var viewModel: ProjectViewModel = ProjectViewModel()
+    @ObservedObject
+    private var viewModel: ProjectViewModel = ProjectViewModel()
+    @State
+    private var scrollToTop: Int = 0
 
     private var loadingMoreView: some View {
         Text(NSLocalizedString("wna_android_pull_to_load", comment: ""))
@@ -39,15 +42,34 @@ struct ProjectList: View {
                         if viewModel.projects.count > 0 {
                             loadingMoreView
                         }
-                    }
+                    }.onChange(of: scrollToTop, perform: { newValue in
+                        proxy.scrollTo(viewModel.projects.first?.id)
+                    })
                 })
             }
-            Button("Scroll To Top", action: {
-//                self.proxy.scrollTo(viewModel.projects.first?.id)
-            })
+            bottomRightFab
         }.onAppear(perform: {
             viewModel.request()
         }).navigationTitle(R.string.localizable.wan_android())
+    }
+    
+    private var bottomRightFab: some View {
+        VStack {
+            Spacer()
+            HStack {
+                Spacer()
+                Button(action: {
+                    self.scrollToTop = self.scrollToTop + 1
+                }, label: {
+                    Image(systemName: "arrow.up.circle")
+                        .resizable()
+                        .padding(10)
+                        .frame(width: 50, height: 50)
+                        .background(RoundedRectangle(cornerRadius: 30).fill(.white))
+                        .shadow(radius: 0)
+                }).shadow(color: .gray, radius: 2, x: 0, y: 3)
+            }.padding(.trailing, 8)
+        }
     }
     
     private var loadingView: some View {
