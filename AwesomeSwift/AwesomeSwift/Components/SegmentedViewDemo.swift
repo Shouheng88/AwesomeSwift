@@ -12,23 +12,34 @@ import UIKit
 struct SegmentedViewDemo: View {
     
     @ObservedObject private var vm: SegmentedViewModel = SegmentedViewModel()
-    @State private var selectedIndex: Int = 0
+    @State private var selection: Int = 0
+    private let colors: [Color] = [.red, .green, .blue]
 
     var body: some View {
-        ZStack{
-            VStack {
-                SegmentedView(titles: self.$vm.titles, selectedIndex: self.$selectedIndex)
-                    .frame(width: UIScreen.main.bounds.size.width, height: 40)
-                Spacer()
-            }
-            Button("Switch", action: {
-                var currentIndex = self.selectedIndex
-                currentIndex += 1
-                self.selectedIndex = currentIndex % 3
-            })
+        VStack{
+            SegmentedView(
+                titles: self.$vm.titles,
+                selectedIndex: self.$selection
+            ).frame(width: UIScreen.main.bounds.size.width, height: 40)
+            TabView(selection: $selection) {
+                ForEach(0..<3) { idx in
+                    VStack {
+                        Text("Slide Page [\(idx)]").foregroundColor(.white)
+                        Button("Click to Navigate to Next Page", action: {
+                            let next = self.selection + 1
+                            if next >= colors.count {
+                                self.selection = 0
+                            } else {
+                                self.selection = next
+                            }
+                        }).frame(height: 40).foregroundColor(.white)
+                    }.frame(width: UIScreen.main.bounds.width, height: 200)
+                        .background(colors[idx])
+                }
+            }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
         }.onAppear(perform: {
             vm.requestTabs()
-        })
+        }).navigationBarHidden(true)
     }
 }
 
@@ -56,6 +67,7 @@ struct SegmentedView: UIViewRepresentable {
         // 当点击发生了之后回调，刷新状态数据
         func segmentedView(_ segmentedView: JXSegmentedView, didSelectedItemAt index: Int) {
             print("didSelectedItemAt index [\(index)]")
+            self.parent.selectedIndex = index
         }
         
         func segmentedView(_ segmentedView: JXSegmentedView, didClickSelectedItemAt index: Int) {
