@@ -14,7 +14,7 @@ struct ImageDemoView: View {
     private var tip: String = ""
     
     var resouceImageView: some View {
-        Section("Assets Image", content: {
+        Section(content: {
             VStack {
                 Text("[\(self.tip)]")
                     .foregroundColor(.gray)
@@ -38,25 +38,41 @@ struct ImageDemoView: View {
                         }.blur(radius: 3)
                 }
             }
+        }, header: {
+            Text("Assets Image")
         })
     }
     
     var gradientSampleView: some View {
-        Section("Gradient Sample View") {
-            VStack {
-                ZStack {
-                    LinearGradient(
-                        colors: [.red, .green, .blue],
-                        startPoint: .top,
-                        endPoint: .bottom
-                    ).edgesIgnoringSafeArea(.all)
-                }.frame(height: 50)
+        Section(content: {
+            VStack(spacing: 10) {
+                LinearGradient(
+                    colors: [.red, .green, .blue],
+                    startPoint: .top,
+                    endPoint: .bottom
+                ).frame(width: 200, height: 100)
+                    .overlay(Text("LinearGradient").foregroundColor(.white))
+                
+                RoundedRectangle(cornerRadius: 10.0)
+                    .fill(.blue)
+                    .frame(width: 200, height: 100)
+                    .overlay(Text("RoundedRectangle").foregroundColor(.white))
+                
+                Capsule().fill(.red)
+                    .frame(width: 200, height: 100)
+                    .overlay(Text("Capsule").foregroundColor(.white))
+                
+                Circle().fill(.green)
+                    .frame(width: 200, height: 100)
+                    .overlay(Text("Capsule").foregroundColor(.white))
             }
-        }
+        }, header: {
+            Text("Shape Sample View")
+        })
     }
     
     var bigImageSampleView: some View {
-        Section("Big Image Sample", content: {
+        Section(content: {
             VStack(spacing: 20) {
                 HStack(spacing: 20) {
                     Image(uiImage: R.image.the_soup()!)
@@ -87,23 +103,20 @@ struct ImageDemoView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: 100, height: 100, alignment: .top)
-                        .overlay(content: {
-                            Text("Top alignment")
-                        })
+                        .overlay(Text("Top alignment"))
+//                        .overlay(content: { // This method is only available on 16.0 and newer
+//                            Text("Top alignment")
+//                        })
                     Image(uiImage: R.image.the_soup()!)
                         .resizable()
                         .scaledToFit()
                         .frame(width: 100, height: 100, alignment: .center)
-                        .overlay(content: {
-                            Text("Center alignment")
-                        })
+                        .overlay(Text("Center alignment"))
                     Image(uiImage: R.image.the_soup()!)
                         .resizable()
                         .scaledToFit()
                         .frame(width: 100, height: 100, alignment: .bottom)
-                        .overlay(content: {
-                            Text("Bottom alignment")
-                        })
+                        .overlay(Text("Bottom alignment"))
                 }
                 HStack {
                     Image(uiImage: R.image.the_soup()!)
@@ -126,6 +139,8 @@ struct ImageDemoView: View {
                          .frame(width: 100, height: 100)
                 }
             }
+        }, header: {
+            Text("Big Image Sample")
         })
     }
     
@@ -143,7 +158,6 @@ struct ImageDemoView: View {
             }
         }.navigationTitle(Text("The Title"))
             .navigationBarHidden(false)
-            .navigationViewStyle(.columns)
             .navigationBarItems(
                 leading: Text("Leading"),
                 trailing: Text("Trialing").onTapGesture {
