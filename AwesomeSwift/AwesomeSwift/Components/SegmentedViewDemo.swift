@@ -14,9 +14,19 @@ struct SegmentedViewDemo: View {
     @ObservedObject private var vm: SegmentedViewModel = SegmentedViewModel()
     @State private var selection: Int = 0
     private let colors: [Color] = [.red, .green, .blue]
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
     var body: some View {
         VStack{
+            HStack {
+                Image(systemName: "arrow.left")
+                    .padding(10)
+                    .frame(width: 50, height: 50)
+                    .onTapGesture {
+                        presentationMode.wrappedValue.dismiss()
+                    }
+                Spacer()
+            }.padding(.leading, 5)
             SegmentedView(
                 titles: self.$vm.titles,
                 selectedIndex: self.$selection
