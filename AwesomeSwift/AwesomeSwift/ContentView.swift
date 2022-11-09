@@ -174,8 +174,14 @@ struct ContentView: View {
                      Toggle(isOn: $italic) {
                          Image(systemName: "italic")
                      }
-                 }
+                }
             }.navigationTitle(Text("Aswsome Swift"))
+                .onReceive(NotificationCenter.Publisher(
+                    center: NotificationCenter.default,
+                    name: NSNotification.Name(Events.SMAPLE_NOTIFICATION_NAME)
+                ), perform: { out in
+                    debugPrint("RECEIVED NOTIFICATION WITH \(String(describing: out.object))")
+                })
         }
     }
 }

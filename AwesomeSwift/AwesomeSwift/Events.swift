@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+struct Events {
+    static let SMAPLE_NOTIFICATION_NAME = "sample_event"
+}

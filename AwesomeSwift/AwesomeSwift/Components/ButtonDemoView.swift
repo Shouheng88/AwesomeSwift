@@ -60,7 +60,7 @@ struct ButtonDemoView: View {
                 
                 Button(action: {
                     self.tip = "You clicked a Button that send a notification."
-                    NotificationCenter.default.post(name: NSNotification.Name("sample_event"), object: nil)
+                    NotificationCenter.default.post(name: NSNotification.Name(Events.SMAPLE_NOTIFICATION_NAME), object: Message(text: "Hello world!"))
                 }, label: {
                     Text("Button to Send Notification").foregroundColor(.white)
                 }).padding(EdgeInsets(top: 10, leading: 30, bottom: 10, trailing: 30))
