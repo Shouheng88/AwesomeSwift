@@ -18,6 +18,9 @@
 		9DDD6905291A960B00E2CB69 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD6904291A960B00E2CB69 /* Events.swift */; };
 		9DDD6907291B897900E2CB69 /* KeyboardReadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD6906291B897900E2CB69 /* KeyboardReadable.swift */; };
 		9DDD6909291BF36F00E2CB69 /* CustomPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD6908291BF36F00E2CB69 /* CustomPreference.swift */; };
+		9DDD690E291BFC1500E2CB69 /* EnvironmentDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD690D291BFC1500E2CB69 /* EnvironmentDemoView.swift */; };
+		9DDD6910291BFD4F00E2CB69 /* KeyboardDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD690F291BFD4F00E2CB69 /* KeyboardDemoView.swift */; };
+		9DDD6912291BFF5600E2CB69 /* KeyboardAwareDemo3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD6911291BFF5600E2CB69 /* KeyboardAwareDemo3.swift */; };
 		9DE65C532911495800804F13 /* ProjectList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE65C522911495800804F13 /* ProjectList.swift */; };
 		9DE65C5529116DDF00804F13 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE65C5429116DDF00804F13 /* Project.swift */; };
 		9DE65C5729116EDB00804F13 /* ProjectRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE65C5629116EDB00804F13 /* ProjectRow.swift */; };
@@ -87,6 +90,9 @@
 		9DDD6904291A960B00E2CB69 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		9DDD6906291B897900E2CB69 /* KeyboardReadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardReadable.swift; sourceTree = "<group>"; };
 		9DDD6908291BF36F00E2CB69 /* CustomPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPreference.swift; sourceTree = "<group>"; };
+		9DDD690D291BFC1500E2CB69 /* EnvironmentDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentDemoView.swift; sourceTree = "<group>"; };
+		9DDD690F291BFD4F00E2CB69 /* KeyboardDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardDemoView.swift; sourceTree = "<group>"; };
+		9DDD6911291BFF5600E2CB69 /* KeyboardAwareDemo3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAwareDemo3.swift; sourceTree = "<group>"; };
 		9DE65C522911495800804F13 /* ProjectList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectList.swift; sourceTree = "<group>"; };
 		9DE65C5429116DDF00804F13 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		9DE65C5629116EDB00804F13 /* ProjectRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRow.swift; sourceTree = "<group>"; };
@@ -231,6 +237,36 @@
 			path = AwesomeSwiftUITests;
 			sourceTree = "<group>";
 		};
+		9DDD690A291BFBBB00E2CB69 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				9DDD690C291BFBD400E2CB69 /* Keyboard */,
+				9DDD690B291BFBCC00E2CB69 /* Events */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		9DDD690B291BFBCC00E2CB69 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				9DDD6908291BF36F00E2CB69 /* CustomPreference.swift */,
+				9DDD690D291BFC1500E2CB69 /* EnvironmentDemoView.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		9DDD690C291BFBD400E2CB69 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				9DE65CC12917F38800804F13 /* KeyboardAwareDemoView.swift */,
+				9DE65CC32918096A00804F13 /* KeyboardAwareDemoView2.swift */,
+				9DDD6911291BFF5600E2CB69 /* KeyboardAwareDemo3.swift */,
+				9DDD690F291BFD4F00E2CB69 /* KeyboardDemoView.swift */,
+				9DDD6906291B897900E2CB69 /* KeyboardReadable.swift */,
+			);
+			path = Keyboard;
+			sourceTree = "<group>";
+		};
 		9DE65C512911486800804F13 /* WanAndroid */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +307,7 @@
 		9DE65C6F2913E69200804F13 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				9DDD690A291BFBBB00E2CB69 /* Business */,
 				9DE65C9929163F6F00804F13 /* PullToRefresh */,
 				9DE65CA829164C1D00804F13 /* PopupDemoView.swift */,
 				9DE65CA629164C1C00804F13 /* AnimationDemoView.swift */,
@@ -288,10 +325,6 @@
 				9DE65C8A2916201100804F13 /* PullToRefreshViewDemo.swift */,
 				9DE65CBD291667BE00804F13 /* FormDemoView.swift */,
 				9DE65CBF2917E94D00804F13 /* ImmersiveView.swift */,
-				9DE65CC12917F38800804F13 /* KeyboardAwareDemoView.swift */,
-				9DE65CC32918096A00804F13 /* KeyboardAwareDemoView2.swift */,
-				9DDD6906291B897900E2CB69 /* KeyboardReadable.swift */,
-				9DDD6908291BF36F00E2CB69 /* CustomPreference.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -511,6 +544,7 @@
 			files = (
 				9DE65C5729116EDB00804F13 /* ProjectRow.swift in Sources */,
 				9DE65C682912C6A300804F13 /* WebView.swift in Sources */,
+				9DDD6910291BFD4F00E2CB69 /* KeyboardDemoView.swift in Sources */,
 				9DE65C9829162D5700804F13 /* StyleExtension.swift in Sources */,
 				9DE65C9E29163F6F00804F13 /* LynnRefreshDefaultViews.swift in Sources */,
 				9D4D228929102713006E0075 /* ContentView.swift in Sources */,
@@ -534,11 +568,13 @@
 				9DE65C9429162C7100804F13 /* TextDemoView.swift in Sources */,
 				9DE65CB629164C1D00804F13 /* PopupDemoView.swift in Sources */,
 				9DE65CC42918096A00804F13 /* KeyboardAwareDemoView2.swift in Sources */,
+				9DDD6912291BFF5600E2CB69 /* KeyboardAwareDemo3.swift in Sources */,
 				9DE65C6E29135B9400804F13 /* R.generated.swift in Sources */,
 				9DE65CC22917F38800804F13 /* KeyboardAwareDemoView.swift in Sources */,
 				9DE65CB429164C1D00804F13 /* AnimationDemoView.swift in Sources */,
 				9DE65CB529164C1D00804F13 /* ImageDemoView.swift in Sources */,
 				9DE65CB729164C1D00804F13 /* TabDemoView.swift in Sources */,
+				9DDD690E291BFC1500E2CB69 /* EnvironmentDemoView.swift in Sources */,
 				9DE65CB329164C1D00804F13 /* LayoutDemoView.swift in Sources */,
 				9DE65C5529116DDF00804F13 /* Project.swift in Sources */,
 				9DE65CA129163F6F00804F13 /* LynnPullToRefresh.swift in Sources */,

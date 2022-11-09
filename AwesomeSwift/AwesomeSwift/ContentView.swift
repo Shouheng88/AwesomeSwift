@@ -42,19 +42,15 @@ struct ContentView: View {
             }).frame(height: 40)
             
             NavigationLink(destination: {
-                KeyboardAwareDemoView()
+                EnvironmentDemoView()
             }, label: {
-                Text("Keyboard Aware Demo")
+                Text("Environment Object Demo")
             }).frame(height: 40)
             
             NavigationLink(destination: {
-                if #available(iOS 15.0, *) {
-                    KeyboardAwareDemoView2()
-                } else {
-                    Text("Only available on 15.0 and newer")
-                }
+                KeyboardDemoView()
             }, label: {
-                Text("Keyboard Aware Demo 2")
+                Text("Keyboard Demo")
             }).frame(height: 40)
         }, header: {
             Text("Business Components Demo")
