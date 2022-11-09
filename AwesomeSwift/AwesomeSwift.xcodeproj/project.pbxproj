@@ -16,6 +16,8 @@
 		9D4D22A729102714006E0075 /* AwesomeSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4D22A629102714006E0075 /* AwesomeSwiftUITests.swift */; };
 		9D4D22A929102714006E0075 /* AwesomeSwiftUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4D22A829102714006E0075 /* AwesomeSwiftUITestsLaunchTests.swift */; };
 		9DDD6905291A960B00E2CB69 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD6904291A960B00E2CB69 /* Events.swift */; };
+		9DDD6907291B897900E2CB69 /* KeyboardReadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD6906291B897900E2CB69 /* KeyboardReadable.swift */; };
+		9DDD6909291BF36F00E2CB69 /* CustomPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD6908291BF36F00E2CB69 /* CustomPreference.swift */; };
 		9DE65C532911495800804F13 /* ProjectList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE65C522911495800804F13 /* ProjectList.swift */; };
 		9DE65C5529116DDF00804F13 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE65C5429116DDF00804F13 /* Project.swift */; };
 		9DE65C5729116EDB00804F13 /* ProjectRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE65C5629116EDB00804F13 /* ProjectRow.swift */; };
@@ -83,6 +85,8 @@
 		9D4D22A629102714006E0075 /* AwesomeSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwesomeSwiftUITests.swift; sourceTree = "<group>"; };
 		9D4D22A829102714006E0075 /* AwesomeSwiftUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwesomeSwiftUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9DDD6904291A960B00E2CB69 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
+		9DDD6906291B897900E2CB69 /* KeyboardReadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardReadable.swift; sourceTree = "<group>"; };
+		9DDD6908291BF36F00E2CB69 /* CustomPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPreference.swift; sourceTree = "<group>"; };
 		9DE65C522911495800804F13 /* ProjectList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectList.swift; sourceTree = "<group>"; };
 		9DE65C5429116DDF00804F13 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		9DE65C5629116EDB00804F13 /* ProjectRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRow.swift; sourceTree = "<group>"; };
@@ -286,6 +290,8 @@
 				9DE65CBF2917E94D00804F13 /* ImmersiveView.swift */,
 				9DE65CC12917F38800804F13 /* KeyboardAwareDemoView.swift */,
 				9DE65CC32918096A00804F13 /* KeyboardAwareDemoView2.swift */,
+				9DDD6906291B897900E2CB69 /* KeyboardReadable.swift */,
+				9DDD6908291BF36F00E2CB69 /* CustomPreference.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -514,6 +520,7 @@
 				9DE65CB029164C1D00804F13 /* UserDefault.swift in Sources */,
 				9DE65C6B2912CB9200804F13 /* DateExtension.swift in Sources */,
 				9DE65C532911495800804F13 /* ProjectList.swift in Sources */,
+				9DDD6909291BF36F00E2CB69 /* CustomPreference.swift in Sources */,
 				9DE65CBE291667BE00804F13 /* FormDemoView.swift in Sources */,
 				9DE65C9F29163F6F00804F13 /* LynnRefreshState.swift in Sources */,
 				9DE65CA029163F6F00804F13 /* LynnPullToRefreshModifier.swift in Sources */,
@@ -535,6 +542,7 @@
 				9DE65CB329164C1D00804F13 /* LayoutDemoView.swift in Sources */,
 				9DE65C5529116DDF00804F13 /* Project.swift in Sources */,
 				9DE65CA129163F6F00804F13 /* LynnPullToRefresh.swift in Sources */,
+				9DDD6907291B897900E2CB69 /* KeyboardReadable.swift in Sources */,
 				9D4D229329102714006E0075 /* AwesomeSwift.xcdatamodeld in Sources */,
 				9DE65CBC29164C1D00804F13 /* TabPageDemoView.swift in Sources */,
 			);

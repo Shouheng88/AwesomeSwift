@@ -48,6 +48,13 @@ struct ButtonDemoView: View {
                 }).background(Rectangle().fill(.blue))
                     .cornerRadius(8, antialiased: false)
                     .animation(.easeIn(duration: 5))
+                    .background(
+                        GeometryReader { proxy in
+                            let frame = proxy.frame(in: .local)
+                            let origin = frame.origin
+                            Color.clear.preference(key: CustomPreferenceKey.self, value: origin)
+                        }
+                    )
                 
                 Button(action: {
                     self.tip = "You clicked a Button with opacity."
@@ -85,6 +92,8 @@ struct ButtonDemoView: View {
             })
         }, header: {
             Text("Button Samples")
+        }).onPreferenceChange(CustomPreferenceKey.self, perform: { value in
+            self.tip = "Received preference change with value: [\(value)]"
         })
     }
     
