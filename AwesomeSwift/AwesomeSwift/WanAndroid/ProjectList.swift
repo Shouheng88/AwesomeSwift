@@ -14,6 +14,9 @@ struct ProjectList: View {
     private var viewModel: ProjectViewModel = ProjectViewModel()
     @State
     private var scrollToTop: Int = 0
+    private let scrollAreaId = "scrollArea"
+    @State private var scrollWidth: CGFloat? = 0
+    @State private var scrollOffset: CGFloat? = 0
 
     private var loadingMoreView: some View {
         Text(NSLocalizedString("wna_android_pull_to_load", comment: ""))
@@ -24,8 +27,15 @@ struct ProjectList: View {
     
     private var projectListView: some View {
         ZStack {
-            ScrollView {
-                ScrollViewReader(content: { proxy in
+            ScrollViewReader(content: { proxy in
+                ScrollView {
+                    GeometryReader { proxy in
+                        let frame = proxy.frame(in: .named(scrollAreaId))
+                        let offset = frame.minY
+                        let width = frame.width
+                        Color.clear.preference(key: ScrollViewOffsetPreferenceKey.self, value: offset)
+                        Color.clear.preference(key: WidthPreferenceKey.self, value: width)
+                    }
                     LazyVStack(spacing: 0) {
                         ForEach(viewModel.projects) { project in
                             NavigationLink(destination: {
@@ -45,9 +55,18 @@ struct ProjectList: View {
                     }.onChange(of: scrollToTop, perform: { newValue in
                         proxy.scrollTo(viewModel.projects.first?.id)
                     })
-                })
-            }
+                // 属性监听要放到这里才行，放到 scrollview 内部监听不到 ...
+                }.onPreferenceChange(WidthPreferenceKey.self) { value in
+                    self.scrollWidth = value
+                }
+                .onPreferenceChange(ScrollViewOffsetPreferenceKey.self) { value in
+                    DispatchQueue.main.async {
+                        self.scrollOffset = value
+                    }
+                }
+            })
             bottomRightFab
+            scrollInfoView
         }.onAppear(perform: {
             viewModel.request()
         }).navigationTitle(R.string.localizable.wan_android())
@@ -72,6 +91,18 @@ struct ProjectList: View {
         }
     }
     
+    private var scrollInfoView: some View {
+        VStack {
+            HStack {
+                Spacer()
+                Text("Scroll info:\nwidth[\(self.scrollWidth ?? 0)]\noffset[\(self.scrollOffset ?? 0)]")
+                    .padding(10)
+                    .background(Rectangle().fill(.white))
+            }
+            Spacer()
+        }
+    }
+    
     private var loadingView: some View {
         Text(NSLocalizedString("wna_android_loading", comment: ""))
     }
@@ -91,6 +122,22 @@ struct ProjectList: View {
             }
             projectListView
         }
+    }
+}
+
+struct ScrollViewOffsetPreferenceKey: PreferenceKey {
+    static var defaultValue: CGFloat? = nil
+    
+    static func reduce(value: inout CGFloat?, nextValue: () -> CGFloat?) {
+        value = value ?? nextValue()
+    }
+}
+
+struct WidthPreferenceKey: PreferenceKey {
+    static var defaultValue: CGFloat? = nil
+    
+    static func reduce(value: inout CGFloat?, nextValue: () -> CGFloat?) {
+        value = nextValue() ?? value
     }
 }
 
