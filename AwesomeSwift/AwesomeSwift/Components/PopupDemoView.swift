@@ -14,19 +14,20 @@ struct PopupDemoView: View {
     @State var showPop: Bool = false
     @State var pickerIndex: Int = 0
     @State var dateSelection: Date = Date()
+    @State var showCustomPop: Bool = false
     
     private var sheet: ActionSheet {
-        return ActionSheet(title: Text("Shit"), message: Text("Message"), buttons: [
-            .destructive(Text("Fuckkkkkkkkk!"), action: {
-                print("you clicked fuck!")
+        return ActionSheet(title: Text("Sheet"), message: Text("Message"), buttons: [
+            .destructive(Text("destructive"), action: {
+                print("you clicked destructive")
             }),
-            .destructive(Text("Shit"), action: {
-                print("you clicked shit!")
+            .destructive(Text("destructive"), action: {
+                print("you clicked destructive")
             }),
-            .default(Text("Damn it!"), action: {
-                print("You cliked damn it!!")
+            .default(Text("default"), action: {
+                print("You cliked default")
             }),
-            .cancel(Text("Cannnnnnncel"), action: {
+            .cancel(Text("cancel"), action: {
                 print("You want to cancel me???")
             })
         ])
@@ -51,7 +52,7 @@ struct PopupDemoView: View {
                 Button(action: {
                     self.showSheet = true
                 }, label: {
-                    Text("Show Sheet").foregroundColor(.white)
+                    Text("Show actionSheet").foregroundColor(.white)
                         .frame(width: UIScreen.main.bounds.width-30, height: 40)
                 }).actionSheet(isPresented: $showSheet, content: {sheet})
                     .background(Rectangle().fill(.orange))
@@ -59,7 +60,7 @@ struct PopupDemoView: View {
                 Button(action: {
                     self.showPop = true
                 }, label: {
-                    Text("Show Pop").foregroundColor(.white)
+                    Text("Show sheet").foregroundColor(.white)
                         .frame(width: UIScreen.main.bounds.width-30, height: 40)
                 }).background(Rectangle().fill(.green))
                     .sheet(isPresented: $showPop, content: {
@@ -76,6 +77,13 @@ struct PopupDemoView: View {
 //                    .popover(isPresented: $showPop, content: {
 //                        PopLayerVeiew()
 //                    })
+                
+                Button("Show Custom Pop", action: {
+                    withAnimation {
+                        self.showCustomPop = true
+                    }
+                }).frame(width: UIScreen.main.bounds.width-30, height: 40)
+                    .background(Rectangle().fill(.purple))
                 
                 Picker("ss", selection: $pickerIndex, content: {
                     ForEach(0..<10) { idx in
@@ -122,6 +130,44 @@ struct PopupDemoView: View {
                 }
             }
         }
+        .blur(radius: showCustomPop ? 6 : 0)
+        .overlay(showCustomPop ? CustomPopView(showPop: $showCustomPop) : nil)
+    }
+}
+
+struct CustomPopView: View {
+    
+    @State private var showAlert: Bool = false
+    @Binding var showPop: Bool
+    
+    var body: some View {
+        VStack {
+            Spacer()
+            HStack {
+                Spacer()
+                Button("Show Alert", action: {
+                    self.showAlert = true
+                })
+                .alert(isPresented: $showAlert, content: {
+                    Alert(title: Text("alert from popup"),
+                          message: Text("message"),
+                          primaryButton: .destructive(Text("primary")),
+                          secondaryButton: .cancel())
+                })
+                Spacer()
+            }.padding(40).background(Rectangle().fill(.white))
+                .cornerRadius(16)
+                .transition(.offset(x: 0, y: 100))
+        }
+        .padding(.all, 8)
+        // 灰色的背景
+        .background(Color.black.opacity(0.3))
+        // 点击背景消失
+        .onTapGesture {
+            self.showPop = false
+        }
+        .edgesIgnoringSafeArea(.all)
+        .opacity(showAlert ? 0 : 1)
     }
 }
 
@@ -130,7 +176,7 @@ struct PopLayerVeiew: View {
 
     var body: some View {
         return VStack {
-            Text("This is the fucking pop!!!")
+            Text("This is the PopLayerVeiew")
             Button(action: {
                 presentationMode.wrappedValue.dismiss()
             }, label: {
