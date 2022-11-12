@@ -55,8 +55,11 @@ struct ProjectList: View {
                     }.onChange(of: scrollToTop, perform: { newValue in
                         proxy.scrollTo(viewModel.projects.first?.id)
                     })
+                }
+                // 还要加上这个监听的才准确，
+                .coordinateSpace(name: scrollAreaId)
                 // 属性监听要放到这里才行，放到 scrollview 内部监听不到 ...
-                }.onPreferenceChange(WidthPreferenceKey.self) { value in
+                .onPreferenceChange(WidthPreferenceKey.self) { value in
                     self.scrollWidth = value
                 }
                 .onPreferenceChange(ScrollViewOffsetPreferenceKey.self) { value in
