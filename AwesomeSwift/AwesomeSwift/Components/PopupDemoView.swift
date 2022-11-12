@@ -132,6 +132,7 @@ struct PopupDemoView: View {
         }
         .blur(radius: showCustomPop ? 6 : 0)
         .overlay(showCustomPop ? CustomPopView(showPop: $showCustomPop) : nil)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
