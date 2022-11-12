@@ -36,6 +36,7 @@ struct AwesomeSwiftApp: App {
             tabBarAppearance.configureWithDefaultBackground()
             UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
             
+            // 避免 iOS15 增加的列表顶部空白
             UITableView.appearance().sectionHeaderTopPadding = 0
         }
     }
@@ -43,10 +44,14 @@ struct AwesomeSwiftApp: App {
     private func setupStatusBar() {
         guard
             let window = UIApplication.shared.windows.filter({ $0.isKeyWindow }).first,
-            let statusBarManager = window.windowScene?.statusBarManager else {
-            return
+            let statusBarManager = window.windowScene?.statusBarManager
+        else { return }
+        StatusBarStyle.Key.defaultValue.getter = {
+            statusBarManager.statusBarStyle
         }
-//        statusBarManager.statusBarStyle = UIStatusBarStyle.default
-//        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
+        StatusBarStyle.Key.defaultValue.setter = {
+            /// 暂时还没有找到更好的方法
+            UIApplication.shared.statusBarStyle = $0
+        }
     }
 }

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Rswift
+import Foundation
 
 struct ProjectList: View {
     
@@ -17,6 +18,9 @@ struct ProjectList: View {
     private let scrollAreaId = "scrollArea"
     @State private var scrollWidth: CGFloat? = 0
     @State private var scrollOffset: CGFloat? = 0
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @Environment(\.statusBarStyle) var statusBarStyle
+    @State private var lightStatusBar: Bool? = nil
 
     private var loadingMoreView: some View {
         Text(NSLocalizedString("wna_android_pull_to_load", comment: ""))
@@ -37,6 +41,11 @@ struct ProjectList: View {
                         Color.clear.preference(key: WidthPreferenceKey.self, value: width)
                     }
                     LazyVStack(spacing: 0) {
+                        Image(uiImage: R.image.the_soup()!)
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(height: 300)
+                            .clipped()
                         ForEach(viewModel.projects) { project in
                             NavigationLink(destination: {
                                 WebView(url: project.link ?? "")
@@ -65,14 +74,24 @@ struct ProjectList: View {
                 .onPreferenceChange(ScrollViewOffsetPreferenceKey.self) { value in
                     DispatchQueue.main.async {
                         self.scrollOffset = value
+                        let _lightStatuBar = (value ?? 0) > -30
+                        if self.lightStatusBar != _lightStatuBar {
+                            self.lightStatusBar = _lightStatuBar
+//                            statusBarStyle.current = _lightStatuBar ? .lightContent : .default
+                            // 用这种方式修改状态栏需要在 info 中添加如下属性 View controller-based status bar appearance
+                            // 并将值设置为 NO，Xcode 中的设置方式是，Project->Targets->Info->Custom iOS Target Properties
+                            UIApplication.shared.statusBarStyle = _lightStatuBar ? .lightContent : .default // invalid
+                        }
                     }
                 }
             })
             bottomRightFab
-            scrollInfoView
         }.onAppear(perform: {
             viewModel.request()
-        }).navigationTitle(R.string.localizable.wan_android())
+        })
+        .background(Rectangle().fill(.white))
+        .navigationTitle(R.string.localizable.wan_android())
+        .onDisappear { statusBarStyle.current = .default } // 无效
     }
     
     private var bottomRightFab: some View {
@@ -98,7 +117,11 @@ struct ProjectList: View {
         VStack {
             HStack {
                 Spacer()
-                Text("Scroll info:\nwidth[\(self.scrollWidth ?? 0)]\noffset[\(self.scrollOffset ?? 0)]")
+                Text("""
+                     Scroll info:\nwidth[\(self.scrollWidth ?? 0)]\n
+                     offset[\(self.scrollOffset ?? 0)]\n
+                     light required[\(String(self.lightStatusBar ?? false))]
+                     """)
                     .padding(10)
                     .background(Rectangle().fill(.white))
             }
@@ -114,17 +137,58 @@ struct ProjectList: View {
         Text(R.string.localizable.wna_android_empty_title())
     }
     
-    var body: some View {
-        ZStack {
-            if viewModel.projects.count == 0 {
-                if viewModel.state == ProjectViewModel.STATE_LOAD_FINISHED {
-                    emptyView
-                } else if viewModel.state == ProjectViewModel.STATE_LOADING {
-                    loadingView
+    private func toolbar(proxy: GeometryProxy) -> some View {
+        VStack {
+            HStack {
+                Image(systemName: "chevron.backward")
+                    .frame(width: 44, height: 44)
+                    .onTapGesture {
+                        presentationMode.wrappedValue.dismiss()
+                    }
+                Spacer()
+                // 获取状态栏的高度，用 safeAreaInsets 的信息
+            }.frame(height: 44 + proxy.safeAreaInsets.top, alignment: .bottom)
+                .background(
+                    Rectangle()
+                        .fill(.white)
+                        .opacity(
+                            min(max(-(scrollOffset ?? 0) / 50, 0), 1)
+                        )
+                )
+                .onPreferenceChange(ScrollViewOffsetPreferenceKey.self) { value in
+                    debugPrint("received value \(String(describing: value))")
                 }
-            }
-            projectListView
+            Spacer()
         }
+    }
+    
+    var body: some View {
+        GeometryReader { proxy in
+            ZStack {
+                VStack {
+                    Color.black.frame(height: 300) // 下拉时露出的黑色背景
+                    Spacer() // 避免到底部上拉出现黑色背景
+                }
+                if viewModel.projects.count == 0 {
+                    if viewModel.state == ProjectViewModel.STATE_LOAD_FINISHED {
+                        emptyView
+                    } else if viewModel.state == ProjectViewModel.STATE_LOADING {
+                        loadingView
+                    }
+                }
+                projectListView
+                toolbar(proxy: proxy)
+                scrollInfoView
+//                Button("statusbar", action: {
+//                    statusBarStyle.current = .lightContent
+//                }).padding(40)
+            }.ignoresSafeArea()
+        }
+        .navigationBarHidden(true)
+        // 改变状态栏颜色，可行，但是实际上是改变了整个应用的主题，
+        // 返回的时候其他页面会改变，不建议通过这种方式修改状态栏
+//        .colorScheme(.light)
+//        .preferredColorScheme(lightStatusBar ? .dark : .light)
     }
 }
 
