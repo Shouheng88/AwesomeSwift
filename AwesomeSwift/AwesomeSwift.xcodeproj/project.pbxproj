@@ -15,6 +15,11 @@
 		9D4D229D29102714006E0075 /* AwesomeSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4D229C29102714006E0075 /* AwesomeSwiftTests.swift */; };
 		9D4D22A729102714006E0075 /* AwesomeSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4D22A629102714006E0075 /* AwesomeSwiftUITests.swift */; };
 		9D4D22A929102714006E0075 /* AwesomeSwiftUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4D22A829102714006E0075 /* AwesomeSwiftUITestsLaunchTests.swift */; };
+		9DA60597291F4E2100EFFA1D /* UtlisDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA60596291F4E2100EFFA1D /* UtlisDemoView.swift */; };
+		9DA6059B291F4EE600EFFA1D /* ListSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6059A291F4EE600EFFA1D /* ListSampleView.swift */; };
+		9DA6059D291F4F1300EFFA1D /* OptionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6059C291F4F1300EFFA1D /* OptionListView.swift */; };
+		9DA6059F291F516400EFFA1D /* SectionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6059E291F516400EFFA1D /* SectionListView.swift */; };
+		9DA605A1291FA10500EFFA1D /* StatusBarStyleEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA605A0291FA10500EFFA1D /* StatusBarStyleEnvironment.swift */; };
 		9DDD6905291A960B00E2CB69 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD6904291A960B00E2CB69 /* Events.swift */; };
 		9DDD6907291B897900E2CB69 /* KeyboardReadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD6906291B897900E2CB69 /* KeyboardReadable.swift */; };
 		9DDD6909291BF36F00E2CB69 /* CustomPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD6908291BF36F00E2CB69 /* CustomPreference.swift */; };
@@ -87,6 +92,12 @@
 		9D4D22A229102714006E0075 /* AwesomeSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwesomeSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D4D22A629102714006E0075 /* AwesomeSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwesomeSwiftUITests.swift; sourceTree = "<group>"; };
 		9D4D22A829102714006E0075 /* AwesomeSwiftUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwesomeSwiftUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9DA60596291F4E2100EFFA1D /* UtlisDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtlisDemoView.swift; sourceTree = "<group>"; };
+		9DA6059A291F4EE600EFFA1D /* ListSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSampleView.swift; sourceTree = "<group>"; };
+		9DA6059C291F4F1300EFFA1D /* OptionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionListView.swift; sourceTree = "<group>"; };
+		9DA6059E291F516400EFFA1D /* SectionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionListView.swift; sourceTree = "<group>"; };
+		9DA605A0291FA10500EFFA1D /* StatusBarStyleEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarStyleEnvironment.swift; sourceTree = "<group>"; };
+		9DA605A2291FB2CC00EFFA1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9DDD6904291A960B00E2CB69 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		9DDD6906291B897900E2CB69 /* KeyboardReadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardReadable.swift; sourceTree = "<group>"; };
 		9DDD6908291BF36F00E2CB69 /* CustomPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPreference.swift; sourceTree = "<group>"; };
@@ -197,6 +208,7 @@
 		9D4D228529102713006E0075 /* AwesomeSwift */ = {
 			isa = PBXGroup;
 			children = (
+				9DA605A2291FB2CC00EFFA1D /* Info.plist */,
 				9DE65C6F2913E69200804F13 /* Components */,
 				9DE65C692912CB7C00804F13 /* Extensions */,
 				9DE65C612912BD3200804F13 /* Resources */,
@@ -237,11 +249,23 @@
 			path = AwesomeSwiftUITests;
 			sourceTree = "<group>";
 		};
+		9DA60599291F4ED300EFFA1D /* List */ = {
+			isa = PBXGroup;
+			children = (
+				9DA6059A291F4EE600EFFA1D /* ListSampleView.swift */,
+				9DA6059C291F4F1300EFFA1D /* OptionListView.swift */,
+				9DA6059E291F516400EFFA1D /* SectionListView.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
 		9DDD690A291BFBBB00E2CB69 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				9DA60599291F4ED300EFFA1D /* List */,
 				9DDD690C291BFBD400E2CB69 /* Keyboard */,
 				9DDD690B291BFBCC00E2CB69 /* Events */,
+				9DA60596291F4E2100EFFA1D /* UtlisDemoView.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -300,6 +324,7 @@
 			children = (
 				9DE65C9729162D5700804F13 /* StyleExtension.swift */,
 				9DE65C6A2912CB9200804F13 /* DateExtension.swift */,
+				9DA605A0291FA10500EFFA1D /* StatusBarStyleEnvironment.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -549,17 +574,22 @@
 				9DE65C9E29163F6F00804F13 /* LynnRefreshDefaultViews.swift in Sources */,
 				9D4D228929102713006E0075 /* ContentView.swift in Sources */,
 				9DE65C712913E6B300804F13 /* NotificationBannerView.swift in Sources */,
+				9DA60597291F4E2100EFFA1D /* UtlisDemoView.swift in Sources */,
 				9D4D228729102713006E0075 /* AwesomeSwiftApp.swift in Sources */,
+				9DA6059D291F4F1300EFFA1D /* OptionListView.swift in Sources */,
 				9DE65C8B2916201100804F13 /* PullToRefreshViewDemo.swift in Sources */,
 				9DE65CB029164C1D00804F13 /* UserDefault.swift in Sources */,
 				9DE65C6B2912CB9200804F13 /* DateExtension.swift in Sources */,
+				9DA605A1291FA10500EFFA1D /* StatusBarStyleEnvironment.swift in Sources */,
 				9DE65C532911495800804F13 /* ProjectList.swift in Sources */,
+				9DA6059F291F516400EFFA1D /* SectionListView.swift in Sources */,
 				9DDD6909291BF36F00E2CB69 /* CustomPreference.swift in Sources */,
 				9DE65CBE291667BE00804F13 /* FormDemoView.swift in Sources */,
 				9DE65C9F29163F6F00804F13 /* LynnRefreshState.swift in Sources */,
 				9DE65CA029163F6F00804F13 /* LynnPullToRefreshModifier.swift in Sources */,
 				9DDD6905291A960B00E2CB69 /* Events.swift in Sources */,
 				9DE65CB129164C1D00804F13 /* ButtonDemoView.swift in Sources */,
+				9DA6059B291F4EE600EFFA1D /* ListSampleView.swift in Sources */,
 				9DE65C5929117E1F00804F13 /* ProjectViewModel.swift in Sources */,
 				9DE65CC02917E94D00804F13 /* ImmersiveView.swift in Sources */,
 				9DE65C7C29156FDD00804F13 /* WhatsNewKitView.swift in Sources */,
@@ -755,11 +785,12 @@
 				DEVELOPMENT_TEAM = CDVB26QGK3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AwesomeSwift/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -786,11 +817,12 @@
 				DEVELOPMENT_TEAM = CDVB26QGK3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AwesomeSwift/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

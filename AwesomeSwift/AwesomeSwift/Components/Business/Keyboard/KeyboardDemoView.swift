@@ -31,7 +31,7 @@ struct KeyboardDemoView: View {
             }, label: {
                 Text("Keyboard Aware Demo 3")
             }).frame(height: 40)
-        }
+        }.navigationBarTitleDisplayMode(.inline)
     }
 }
 
