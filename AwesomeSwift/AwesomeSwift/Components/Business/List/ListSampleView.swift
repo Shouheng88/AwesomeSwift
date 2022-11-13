@@ -21,6 +21,12 @@ struct ListSampleView: View {
             } label: {
                 Text("Section List")
             }.frame(height: 40)
+            
+            NavigationLink{
+                SwipeListView()
+            } label: {
+                Text("Swipe List")
+            }.frame(height: 40)
         }.navigationBarTitleDisplayMode(.inline)
     }
 }

@@ -24,6 +24,7 @@
 		9DA605A82920F71100EFFA1D /* StorageDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA605A72920F71100EFFA1D /* StorageDemoView.swift */; };
 		9DA605AA2920F76400EFFA1D /* KV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA605A92920F76400EFFA1D /* KV.swift */; };
 		9DA605AC2920FBF600EFFA1D /* AppInfoUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA605AB2920FBF600EFFA1D /* AppInfoUtils.swift */; };
+		9DA605AE29213EC700EFFA1D /* SwipeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA605AD29213EC700EFFA1D /* SwipeListView.swift */; };
 		9DDD6905291A960B00E2CB69 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD6904291A960B00E2CB69 /* Events.swift */; };
 		9DDD6907291B897900E2CB69 /* KeyboardReadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD6906291B897900E2CB69 /* KeyboardReadable.swift */; };
 		9DDD6909291BF36F00E2CB69 /* CustomPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD6908291BF36F00E2CB69 /* CustomPreference.swift */; };
@@ -105,6 +106,7 @@
 		9DA605A72920F71100EFFA1D /* StorageDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageDemoView.swift; sourceTree = "<group>"; };
 		9DA605A92920F76400EFFA1D /* KV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KV.swift; sourceTree = "<group>"; };
 		9DA605AB2920FBF600EFFA1D /* AppInfoUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoUtils.swift; sourceTree = "<group>"; };
+		9DA605AD29213EC700EFFA1D /* SwipeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeListView.swift; sourceTree = "<group>"; };
 		9DDD6904291A960B00E2CB69 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		9DDD6906291B897900E2CB69 /* KeyboardReadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardReadable.swift; sourceTree = "<group>"; };
 		9DDD6908291BF36F00E2CB69 /* CustomPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPreference.swift; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 				9DA6059A291F4EE600EFFA1D /* ListSampleView.swift */,
 				9DA6059C291F4F1300EFFA1D /* OptionListView.swift */,
 				9DA6059E291F516400EFFA1D /* SectionListView.swift */,
+				9DA605AD29213EC700EFFA1D /* SwipeListView.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -637,6 +640,7 @@
 				9DE65CA129163F6F00804F13 /* LynnPullToRefresh.swift in Sources */,
 				9DDD6907291B897900E2CB69 /* KeyboardReadable.swift in Sources */,
 				9D4D229329102714006E0075 /* AwesomeSwift.xcdatamodeld in Sources */,
+				9DA605AE29213EC700EFFA1D /* SwipeListView.swift in Sources */,
 				9DE65CBC29164C1D00804F13 /* TabPageDemoView.swift in Sources */,
 				9DA605AC2920FBF600EFFA1D /* AppInfoUtils.swift in Sources */,
 			);
