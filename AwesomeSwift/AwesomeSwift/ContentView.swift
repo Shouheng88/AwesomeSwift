@@ -58,6 +58,18 @@ struct ContentView: View {
             }, label: {
                 Text("List Demo")
             }).frame(height: 40)
+            
+            NavigationLink(destination: {
+                UtilsDemoView()
+            }, label: {
+                Text("Utils Demo")
+            }).frame(height: 40)
+            
+            NavigationLink(destination: {
+                StorageDemoView()
+            }, label: {
+                Text("Storage Demo")
+            }).frame(height: 40)
         }, header: {
             Text("Business Components Demo")
         })
