@@ -10,9 +10,9 @@ import SwiftUI
 
 struct ImageDemoView: View {
 
-    @State
-    private var tip: String = ""
-    
+    @State private var tip: String = ""
+    @State private var playLottie: Int = 0
+
     var resouceImageView: some View {
         Section(content: {
             VStack {
@@ -144,17 +144,32 @@ struct ImageDemoView: View {
         })
     }
     
+    var resourceSampleView: some View {
+        HStack {
+            Image(systemName: "3.circle").imageScale(.large)
+            Image(systemName: "13.circle").imageScale(.large)
+            Image(systemName: "50.circle").imageScale(.large) // max
+        }
+    }
+    
+    var lottieSampleView: some View {
+        VStack {
+            LottieView(lottieFile: "thank_you", play: self.$playLottie)
+                .frame(width: 300, height: 300)
+                .onTapGesture {
+                    self.playLottie = self.playLottie + 1
+                }
+        }
+    }
+    
     var body: some View {
         ScrollView {
             VStack {
                 resouceImageView
                 gradientSampleView
                 bigImageSampleView
-                HStack {
-                    Image(systemName: "3.circle").imageScale(.large)
-                    Image(systemName: "13.circle").imageScale(.large)
-                    Image(systemName: "50.circle").imageScale(.large) // max
-                }
+                resourceSampleView
+                lottieSampleView
             }
         }.navigationTitle(Text("The Title"))
             .navigationBarHidden(false)

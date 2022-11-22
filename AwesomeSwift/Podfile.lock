@@ -3,6 +3,7 @@ PODS:
   - HandyJSON (5.0.4-beta)
   - JXSegmentedView (1.3.0)
   - Kingfisher (7.4.1)
+  - lottie-ios (3.3.0)
   - MarqueeLabel (4.0.5)
   - NotificationBannerSwift (3.0.6):
     - MarqueeLabel (~> 4.0.5)
@@ -18,6 +19,7 @@ DEPENDENCIES:
   - "HandyJSON (from `git@github.com:alibaba/HandyJSON.git`)"
   - JXSegmentedView
   - "Kingfisher (from `git@github.com:onevcat/Kingfisher.git`)"
+  - lottie-ios
   - NotificationBannerSwift (~> 3.0.0)
   - R.swift
   - "Then (from `git@github.com:devxoul/Then.git`)"
@@ -25,6 +27,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - JXSegmentedView
+    - lottie-ios
     - MarqueeLabel
     - NotificationBannerSwift
     - R.swift
@@ -60,6 +63,7 @@ SPEC CHECKSUMS:
   HandyJSON: a9c67202df97805a0ba4a00e30b50e9a30ac28f3
   JXSegmentedView: fec0d335355b6e019c494fe2e030bde8a36d2df6
   Kingfisher: cd762a593a61b2fbecf7645c00f9a801a3ebfc9c
+  lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
   MarqueeLabel: 00cc0bcd087111dca575878b3531af980559707d
   NotificationBannerSwift: 7021be2338f8f29cf424b0aca43da462bf9e2a1a
   R.swift: ec98ff71c4ab2f6fd01dd077e5afd15e63a4834c
@@ -67,6 +71,6 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Then: 844265ae87834bbe1147d91d5d41a404da2ec27d
 
-PODFILE CHECKSUM: de2f0482bf8c5a26286953aeac2912c9f33425c5
+PODFILE CHECKSUM: e32fc2ee97275f6ff354e86fc49253f152be1d5f
 
 COCOAPODS: 1.11.3

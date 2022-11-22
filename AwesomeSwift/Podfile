@@ -24,7 +24,8 @@ target 'AwesomeSwift' do
   pod 'R.swift'#, :git => 'git@github.com:mac-cain13/R.swift.git', :tag => '6.1.0'
   # 图片
   pod 'Kingfisher', :git => 'git@github.com:onevcat/Kingfisher.git'
-  
+  pod 'lottie-ios'
+
   pod 'NotificationBannerSwift', '~> 3.0.0'
   pod 'JXSegmentedView'
   # pod 'WhatsNewKit', :git => 'git@github.com:SvenTiigi/WhatsNewKit.git', :tag => '2.0.3'
