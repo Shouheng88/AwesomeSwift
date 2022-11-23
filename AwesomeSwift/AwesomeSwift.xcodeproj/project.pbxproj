@@ -19,6 +19,7 @@
 		9D6436FB292C7CBA0074261A /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6436FA292C7CBA0074261A /* LottieView.swift */; };
 		9D6436FD292E51090074261A /* ThemeDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6436FC292E51090074261A /* ThemeDemoView.swift */; };
 		9D6436FF292E64EF0074261A /* AppInfoDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6436FE292E64EF0074261A /* AppInfoDemoView.swift */; };
+		9D643701292E6BF20074261A /* LaunchPhonePageDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D643700292E6BF20074261A /* LaunchPhonePageDemo.swift */; };
 		9DA60597291F4E2100EFFA1D /* PermissionDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA60596291F4E2100EFFA1D /* PermissionDemoView.swift */; };
 		9DA6059B291F4EE600EFFA1D /* ListSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6059A291F4EE600EFFA1D /* ListSampleView.swift */; };
 		9DA6059D291F4F1300EFFA1D /* OptionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6059C291F4F1300EFFA1D /* OptionListView.swift */; };
@@ -104,6 +105,7 @@
 		9D6436FA292C7CBA0074261A /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		9D6436FC292E51090074261A /* ThemeDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeDemoView.swift; sourceTree = "<group>"; };
 		9D6436FE292E64EF0074261A /* AppInfoDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoDemoView.swift; sourceTree = "<group>"; };
+		9D643700292E6BF20074261A /* LaunchPhonePageDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchPhonePageDemo.swift; sourceTree = "<group>"; };
 		9DA60596291F4E2100EFFA1D /* PermissionDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionDemoView.swift; sourceTree = "<group>"; };
 		9DA6059A291F4EE600EFFA1D /* ListSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSampleView.swift; sourceTree = "<group>"; };
 		9DA6059C291F4F1300EFFA1D /* OptionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionListView.swift; sourceTree = "<group>"; };
@@ -406,6 +408,7 @@
 				9DE65CBF2917E94D00804F13 /* ImmersiveView.swift */,
 				9D6436FC292E51090074261A /* ThemeDemoView.swift */,
 				9D6436FE292E64EF0074261A /* AppInfoDemoView.swift */,
+				9D643700292E6BF20074261A /* LaunchPhonePageDemo.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -651,6 +654,7 @@
 				9DE65C5929117E1F00804F13 /* ProjectViewModel.swift in Sources */,
 				9DE65CC02917E94D00804F13 /* ImmersiveView.swift in Sources */,
 				9DE65C7C29156FDD00804F13 /* WhatsNewKitView.swift in Sources */,
+				9D643701292E6BF20074261A /* LaunchPhonePageDemo.swift in Sources */,
 				9DE65C7E2916056B00804F13 /* SegmentedViewDemo.swift in Sources */,
 				9DE65CB229164C1D00804F13 /* TextFieldDemoView.swift in Sources */,
 				9DE65C9429162C7100804F13 /* TextDemoView.swift in Sources */,

@@ -35,6 +35,12 @@ struct ContentView: View {
                 }, label: {
                     Text("Permission Demo")
                 }).frame(height: 40)
+                
+                NavigationLink(destination: {
+                    LaunchPhonePageDemo()
+                }, label: {
+                    Text("Launch Phone Pages Demo")
+                }).frame(height: 40)
             }
         }, header: {
             Text("App Components Demo")
