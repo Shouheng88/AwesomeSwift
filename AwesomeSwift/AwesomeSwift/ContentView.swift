@@ -24,6 +24,12 @@ struct ContentView: View {
             }.frame(height: 40)
             
             NavigationLink(destination: {
+                ThemeDemoView()
+            }, label: {
+                Text("Themes")
+            }).frame(height: 40)
+            
+            NavigationLink(destination: {
                 TabPageDemoView()
             }, label: {
                 Text("Tab Picker Demo")
