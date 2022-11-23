@@ -18,7 +18,8 @@
 		9D6436F8292C7C320074261A /* thank_you.json in Resources */ = {isa = PBXBuildFile; fileRef = 9D6436F7292C7C320074261A /* thank_you.json */; };
 		9D6436FB292C7CBA0074261A /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6436FA292C7CBA0074261A /* LottieView.swift */; };
 		9D6436FD292E51090074261A /* ThemeDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6436FC292E51090074261A /* ThemeDemoView.swift */; };
-		9DA60597291F4E2100EFFA1D /* UtilsDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA60596291F4E2100EFFA1D /* UtilsDemoView.swift */; };
+		9D6436FF292E64EF0074261A /* AppInfoDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6436FE292E64EF0074261A /* AppInfoDemoView.swift */; };
+		9DA60597291F4E2100EFFA1D /* PermissionDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA60596291F4E2100EFFA1D /* PermissionDemoView.swift */; };
 		9DA6059B291F4EE600EFFA1D /* ListSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6059A291F4EE600EFFA1D /* ListSampleView.swift */; };
 		9DA6059D291F4F1300EFFA1D /* OptionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6059C291F4F1300EFFA1D /* OptionListView.swift */; };
 		9DA6059F291F516400EFFA1D /* SectionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6059E291F516400EFFA1D /* SectionListView.swift */; };
@@ -102,7 +103,8 @@
 		9D6436F7292C7C320074261A /* thank_you.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = thank_you.json; path = ../../../../../../../../Downloads/thank_you.json; sourceTree = "<group>"; };
 		9D6436FA292C7CBA0074261A /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		9D6436FC292E51090074261A /* ThemeDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeDemoView.swift; sourceTree = "<group>"; };
-		9DA60596291F4E2100EFFA1D /* UtilsDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsDemoView.swift; sourceTree = "<group>"; };
+		9D6436FE292E64EF0074261A /* AppInfoDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoDemoView.swift; sourceTree = "<group>"; };
+		9DA60596291F4E2100EFFA1D /* PermissionDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionDemoView.swift; sourceTree = "<group>"; };
 		9DA6059A291F4EE600EFFA1D /* ListSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSampleView.swift; sourceTree = "<group>"; };
 		9DA6059C291F4F1300EFFA1D /* OptionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionListView.swift; sourceTree = "<group>"; };
 		9DA6059E291F516400EFFA1D /* SectionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionListView.swift; sourceTree = "<group>"; };
@@ -290,14 +292,14 @@
 			path = List;
 			sourceTree = "<group>";
 		};
-		9DA605A32920F16000EFFA1D /* Utils */ = {
+		9DA605A32920F16000EFFA1D /* Permission */ = {
 			isa = PBXGroup;
 			children = (
-				9DA60596291F4E2100EFFA1D /* UtilsDemoView.swift */,
+				9DA60596291F4E2100EFFA1D /* PermissionDemoView.swift */,
 				9DA605A42920F17700EFFA1D /* AppPermisions.swift */,
 				9DA605AB2920FBF600EFFA1D /* AppInfoUtils.swift */,
 			);
-			path = Utils;
+			path = Permission;
 			sourceTree = "<group>";
 		};
 		9DA605A62920F6FD00EFFA1D /* Storage */ = {
@@ -314,7 +316,7 @@
 			children = (
 				9D6436F9292C7CAA0074261A /* Image */,
 				9DA605A62920F6FD00EFFA1D /* Storage */,
-				9DA605A32920F16000EFFA1D /* Utils */,
+				9DA605A32920F16000EFFA1D /* Permission */,
 				9DA60599291F4ED300EFFA1D /* List */,
 				9DDD690C291BFBD400E2CB69 /* Keyboard */,
 				9DDD690B291BFBCC00E2CB69 /* Events */,
@@ -403,6 +405,7 @@
 				9DE65CBD291667BE00804F13 /* FormDemoView.swift */,
 				9DE65CBF2917E94D00804F13 /* ImmersiveView.swift */,
 				9D6436FC292E51090074261A /* ThemeDemoView.swift */,
+				9D6436FE292E64EF0074261A /* AppInfoDemoView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -628,7 +631,8 @@
 				9DE65C9E29163F6F00804F13 /* LynnRefreshDefaultViews.swift in Sources */,
 				9D4D228929102713006E0075 /* ContentView.swift in Sources */,
 				9DE65C712913E6B300804F13 /* NotificationBannerView.swift in Sources */,
-				9DA60597291F4E2100EFFA1D /* UtilsDemoView.swift in Sources */,
+				9DA60597291F4E2100EFFA1D /* PermissionDemoView.swift in Sources */,
+				9D6436FF292E64EF0074261A /* AppInfoDemoView.swift in Sources */,
 				9D4D228729102713006E0075 /* AwesomeSwiftApp.swift in Sources */,
 				9DA605A82920F71100EFFA1D /* StorageDemoView.swift in Sources */,
 				9DA6059D291F4F1300EFFA1D /* OptionListView.swift in Sources */,

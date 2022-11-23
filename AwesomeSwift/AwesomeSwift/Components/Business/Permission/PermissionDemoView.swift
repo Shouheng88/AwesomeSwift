@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct UtilsDemoView: View {
+struct PermissionDemoView: View {
     
     private var permissionSampleView: some View {
         VStack {
@@ -24,21 +24,10 @@ struct UtilsDemoView: View {
         }
     }
     
-    private var appInfoSampleView: some View {
-        VStack {
-            Text("App Name: \(AppInfoUtils.appName)")
-            Text("App Version: \(AppInfoUtils.appVersion)")
-            Text("App Build: \(AppInfoUtils.appBuild)")
-            Text("App Build Date: \(AppInfoUtils.getDateString(date: AppInfoUtils.buildDate))")
-            Divider()
-        }.padding(.top, 10)
-    }
-    
     var body: some View {
         ScrollView{
             VStack {
                 permissionSampleView
-                appInfoSampleView
                 Spacer()
             }
         }.navigationBarTitleDisplayMode(.inline)
@@ -47,6 +36,6 @@ struct UtilsDemoView: View {
 
 struct UtlisDemoView_Previews: PreviewProvider {
     static var previews: some View {
-        UtilsDemoView()
+        PermissionDemoView()
     }
 }

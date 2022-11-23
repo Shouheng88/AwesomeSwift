@@ -15,20 +15,34 @@ struct ContentView: View {
     @State private var italic = false
     @State private var fontSize = 12.0
     
-    var businessComponentsDemo: some View {
+    private var appComponentsDemo: some View {
         Section(content: {
-            NavigationLink{
-                ProjectList()
-            } label: {
-                Text("WanAndroid")
-            }.frame(height: 40)
-            
-            NavigationLink(destination: {
-                ThemeDemoView()
-            }, label: {
-                Text("Themes")
-            }).frame(height: 40)
-            
+            VStack {
+                NavigationLink{
+                    ProjectList()
+                } label: {
+                    Text("WanAndroid")
+                }.frame(height: 40)
+                
+                NavigationLink(destination: {
+                    ThemeDemoView()
+                }, label: {
+                    Text("Themes")
+                }).frame(height: 40)
+                            
+                NavigationLink(destination: {
+                    PermissionDemoView()
+                }, label: {
+                    Text("Permission Demo")
+                }).frame(height: 40)
+            }
+        }, header: {
+            Text("App Components Demo")
+        })
+    }
+    
+    private var uiStructureComponentsDemo_Part1: some View {
+        VStack {
             NavigationLink(destination: {
                 TabPageDemoView()
             }, label: {
@@ -48,12 +62,6 @@ struct ContentView: View {
             }).frame(height: 40)
             
             NavigationLink(destination: {
-                EnvironmentDemoView()
-            }, label: {
-                Text("Environment Object Demo")
-            }).frame(height: 40)
-            
-            NavigationLink(destination: {
                 KeyboardDemoView()
             }, label: {
                 Text("Keyboard Demo")
@@ -64,35 +72,17 @@ struct ContentView: View {
             }, label: {
                 Text("List Demo")
             }).frame(height: 40)
-            
-            NavigationLink(destination: {
-                UtilsDemoView()
-            }, label: {
-                Text("Utils Demo")
-            }).frame(height: 40)
-            
-            NavigationLink(destination: {
-                StorageDemoView()
-            }, label: {
-                Text("Storage Demo")
-            }).frame(height: 40)
-        }, header: {
-            Text("Business Components Demo")
-        })
-    }
-    
-    var thirdPartComponentsDemo: some View {
-        Section(content: {
-            NavigationLink(destination: {
-                NotificationBannerView()
-            }, label: {
-                Text(R.string.localizable.banner_test_entry())
-            }).frame(height: 40)
-            
+         
             NavigationLink(destination: {
                 WhatsNewKitView()
             }, label: {
                 Text("WhatsNewKit Demo")
+            }).frame(height: 40)
+            
+            NavigationLink(destination: {
+                NotificationBannerView()
+            }, label: {
+                Text(R.string.localizable.banner_test_entry())
             }).frame(height: 40)
             
             NavigationLink(destination: {
@@ -106,12 +96,51 @@ struct ContentView: View {
             }, label: {
                 Text("Pull To Refresh View Demo")
             }).frame(height: 40)
+        }
+    }
+    
+    private var uiStructureComponentsDemo_Part2: some View {
+        VStack {
+            
+        }
+    }
+    
+    private var uiStructureComponentsDemo: some View {
+        Section(content: {
+            VStack {
+                uiStructureComponentsDemo_Part1
+                uiStructureComponentsDemo_Part2
+            }
         }, header: {
-            Text("Third Part Components Demo")
+            Text("UI Structure Components Demo")
         })
     }
     
-    var officialComponentsDemo: some View {
+    private var dataCompontntsDemo: some View {
+        Section(content: {
+            NavigationLink(destination: {
+                StorageDemoView()
+            }, label: {
+                Text("Storage Demo")
+            }).frame(height: 40)
+            
+            NavigationLink(destination: {
+                EnvironmentDemoView()
+            }, label: {
+                Text("Environment Object Demo")
+            }).frame(height: 40)
+            
+            NavigationLink(destination: {
+                AppInfoDemoView()
+            }, label: {
+                Text("App Info Demo")
+            }).frame(height: 40)
+        }, header: {
+            Text("Data Compontents Demo")
+        })
+    }
+    
+    private var widgetComponentsDemo: some View {
         Section(content: {
             NavigationLink(destination: {
                 TextDemoView()
@@ -161,7 +190,7 @@ struct ContentView: View {
                 Text("SwiftUI Popup Demo")
             }).frame(height: 40)
         }, header: {
-            Text("Official Components Demo")
+            Text("SwiftUI Widget Components Demo")
         })
     }
     
@@ -169,9 +198,10 @@ struct ContentView: View {
         NavigationView {
             ScrollView {
                 VStack(spacing: 10) {
-                    businessComponentsDemo
-                    thirdPartComponentsDemo
-                    officialComponentsDemo
+                    appComponentsDemo
+                    dataCompontntsDemo
+                    uiStructureComponentsDemo
+                    widgetComponentsDemo
                     Spacer()
                 }.frame(width: UIScreen.main.bounds.width)
             }.toolbar {
