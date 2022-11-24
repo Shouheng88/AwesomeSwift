@@ -7,6 +7,7 @@
 
 import SwiftUI
 import StoreKit
+import MessageUI
 
 //@available(iOS 16.0, *)
 struct LaunchPhonePageDemo: View {
@@ -17,6 +18,11 @@ struct LaunchPhonePageDemo: View {
     @AppStorage("version") static var version = ""
     static var limit = 10
 
+    @State var result: Result<MFMailComposeResult, Error>? = nil
+    @State var isShowingMailView = false
+
+    @State private var emailState: String = ""
+    
     private var showAppReviewDemo: some View {
         VStack {
             Text("Review runsSinceLastRequest [\(LaunchPhonePageDemo.runsSinceLastRequest)]")
@@ -36,6 +42,22 @@ struct LaunchPhonePageDemo: View {
 //                requestReview()
                 // Use this method on 16.0 and above.
             }).frame(height: 40)
+            
+            Button(action: {
+               self.isShowingMailView.toggle()
+            }) {
+                Text("Send Email")
+            }
+            .frame(height: 40)
+            .disabled(!MFMailComposeViewController.canSendMail())
+            .sheet(isPresented: $isShowingMailView) {
+                MailView(result: self.$result)
+            }
+            
+            Button("Send Email by URL", action: {
+                sendEmailByUrl()
+            }).frame(height: 40)
+            Text(emailState)
         }
     }
     
@@ -46,6 +68,33 @@ struct LaunchPhonePageDemo: View {
             }).frame(height: 40)
             
             showAppReviewDemo
+        }
+    }
+    
+    private func sendEmailByUrl() {
+        let subject = "Sample Email Subject"
+        let body = "Sample message body"
+        let mailto = "mailto:shouheng2015@gmail.com?subject=\(subject)&body=\(body)"
+
+        guard let escapedMailto = mailto.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
+            self.emailState = "email addingPercentEncoding failed"
+            return
+        }
+        guard let url = URL(string: escapedMailto) else {
+            self.emailState = "email url encode failed"
+            return
+        }
+
+        guard UIApplication.shared.canOpenURL(url) else {
+            self.emailState = "canOpenURL: Unable to determine email sending state"
+            return
+        }
+
+        UIApplication.shared.open(url, options: [.universalLinksOnly : false]) { (success) in
+            // Handle success/failure
+            if !success {
+                self.emailState = "Unable to determine email sending state"
+            }
         }
     }
     
