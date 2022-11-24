@@ -34,6 +34,13 @@ struct AppInfoDemoView: View {
         }
     }
     
+    private var screenInfoView: some View {
+        VStack {
+            Text("Screen width: \(UIScreen.main.bounds.width)")
+            Text("Screen width: \(UIScreen.main.bounds.height)")
+        }
+    }
+    
     private func getOrientationString() -> String {
         switch UIDevice.current.orientation {
         case .unknown:
@@ -72,8 +79,9 @@ struct AppInfoDemoView: View {
     
     var body: some View {
         VStack {
-            appInfoView
-            deviceInfoView
+            appInfoView.padding(.vertical, 10)
+            screenInfoView.padding(.vertical, 10)
+            deviceInfoView.padding(.vertical, 10)
         }
     }
 }

@@ -45,6 +45,9 @@ struct LaunchPhonePageDemo: View {
             Button("Open App Settings", action: {
                 openAppSpecificSettings()
             }).frame(height: 40)
+            Button("Open Web External", action: {
+                openWebpageExternal()
+            }).frame(height: 40)
             showAppReviewDemo
         }
     }
@@ -57,6 +60,11 @@ struct LaunchPhonePageDemo: View {
 
         let optionsKeyDictionary = [UIApplication.OpenExternalURLOptionsKey(rawValue: "universalLinksOnly"): NSNumber(value: true)]
         UIApplication.shared.open(url, options: optionsKeyDictionary, completionHandler: nil)
+    }
+    
+    private func openWebpageExternal() {
+        guard let url = URL(string: "https://github.com") else { return }
+        UIApplication.shared.open(url)
     }
     
     static func showReview() {
