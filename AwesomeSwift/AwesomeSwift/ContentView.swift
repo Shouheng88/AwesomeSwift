@@ -41,6 +41,18 @@ struct ContentView: View {
                 }, label: {
                     Text("Launch Phone Pages Demo")
                 }).frame(height: 40)
+                
+                NavigationLink(destination: {
+                    EmailDemoView()
+                }, label: {
+                    Text("Email Demo")
+                }).frame(height: 40)
+                
+                NavigationLink(destination: {
+                    ShareDemoView()
+                }, label: {
+                    Text("Share Demo")
+                }).frame(height: 40)
             }
         }, header: {
             Text("App Components Demo")

@@ -21,6 +21,8 @@
 		9D643701292E6BF20074261A /* LaunchPhonePageDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D643700292E6BF20074261A /* LaunchPhonePageDemo.swift */; };
 		9D643703292E76980074261A /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D643702292E76980074261A /* MailView.swift */; };
 		9D643709292F638A0074261A /* thank_you.json in Resources */ = {isa = PBXBuildFile; fileRef = 9D643708292F638A0074261A /* thank_you.json */; };
+		9D64370B292F8FC90074261A /* ShareDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D64370A292F8FC90074261A /* ShareDemoView.swift */; };
+		9D64370D292F90510074261A /* EmailDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D64370C292F90510074261A /* EmailDemoView.swift */; };
 		9DA60597291F4E2100EFFA1D /* PermissionDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA60596291F4E2100EFFA1D /* PermissionDemoView.swift */; };
 		9DA6059B291F4EE600EFFA1D /* ListSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6059A291F4EE600EFFA1D /* ListSampleView.swift */; };
 		9DA6059D291F4F1300EFFA1D /* OptionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6059C291F4F1300EFFA1D /* OptionListView.swift */; };
@@ -108,6 +110,8 @@
 		9D643700292E6BF20074261A /* LaunchPhonePageDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchPhonePageDemo.swift; sourceTree = "<group>"; };
 		9D643702292E76980074261A /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		9D643708292F638A0074261A /* thank_you.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = thank_you.json; sourceTree = "<group>"; };
+		9D64370A292F8FC90074261A /* ShareDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareDemoView.swift; sourceTree = "<group>"; };
+		9D64370C292F90510074261A /* EmailDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailDemoView.swift; sourceTree = "<group>"; };
 		9DA60596291F4E2100EFFA1D /* PermissionDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionDemoView.swift; sourceTree = "<group>"; };
 		9DA6059A291F4EE600EFFA1D /* ListSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSampleView.swift; sourceTree = "<group>"; };
 		9DA6059C291F4F1300EFFA1D /* OptionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionListView.swift; sourceTree = "<group>"; };
@@ -412,6 +416,8 @@
 				9D6436FC292E51090074261A /* ThemeDemoView.swift */,
 				9D6436FE292E64EF0074261A /* AppInfoDemoView.swift */,
 				9D643700292E6BF20074261A /* LaunchPhonePageDemo.swift */,
+				9D64370A292F8FC90074261A /* ShareDemoView.swift */,
+				9D64370C292F90510074261A /* EmailDemoView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -633,6 +639,7 @@
 				9DE65C5729116EDB00804F13 /* ProjectRow.swift in Sources */,
 				9DE65C682912C6A300804F13 /* WebView.swift in Sources */,
 				9DDD6910291BFD4F00E2CB69 /* KeyboardDemoView.swift in Sources */,
+				9D64370D292F90510074261A /* EmailDemoView.swift in Sources */,
 				9DE65C9829162D5700804F13 /* StyleExtension.swift in Sources */,
 				9DE65C9E29163F6F00804F13 /* LynnRefreshDefaultViews.swift in Sources */,
 				9D4D228929102713006E0075 /* ContentView.swift in Sources */,
@@ -661,6 +668,7 @@
 				9DE65C7E2916056B00804F13 /* SegmentedViewDemo.swift in Sources */,
 				9DE65CB229164C1D00804F13 /* TextFieldDemoView.swift in Sources */,
 				9DE65C9429162C7100804F13 /* TextDemoView.swift in Sources */,
+				9D64370B292F8FC90074261A /* ShareDemoView.swift in Sources */,
 				9DE65CB629164C1D00804F13 /* PopupDemoView.swift in Sources */,
 				9DE65CC42918096A00804F13 /* KeyboardAwareDemoView2.swift in Sources */,
 				9DA605AA2920F76400EFFA1D /* KV.swift in Sources */,
