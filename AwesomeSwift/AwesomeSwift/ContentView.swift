@@ -53,6 +53,12 @@ struct ContentView: View {
                 }, label: {
                     Text("Share Demo")
                 }).frame(height: 40)
+                
+                NavigationLink(destination: {
+                    ChangeIconDemoView()
+                }, label: {
+                    Text("Change Icon Demo")
+                }).frame(height: 40)
             }
         }, header: {
             Text("App Components Demo")

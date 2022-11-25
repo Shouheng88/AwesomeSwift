@@ -23,6 +23,12 @@
 		9D643709292F638A0074261A /* thank_you.json in Resources */ = {isa = PBXBuildFile; fileRef = 9D643708292F638A0074261A /* thank_you.json */; };
 		9D64370B292F8FC90074261A /* ShareDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D64370A292F8FC90074261A /* ShareDemoView.swift */; };
 		9D64370D292F90510074261A /* EmailDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D64370C292F90510074261A /* EmailDemoView.swift */; };
+		9D64370F292F978A0074261A /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 9D64370E292F978A0074261A /* Intents.intentdefinition */; };
+		9D6437112930BD510074261A /* ChangeIconDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6437102930BD510074261A /* ChangeIconDemoView.swift */; };
+		9D6437172930BEAE0074261A /* Calendar_120.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D6437152930BEAE0074261A /* Calendar_120.png */; };
+		9D6437182930BEAE0074261A /* Calendar_180.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D6437162930BEAE0074261A /* Calendar_180.png */; };
+		9D9D0AC12930C5F200605056 /* Swift_180.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D9D0ABF2930C5F200605056 /* Swift_180.png */; };
+		9D9D0AC22930C5F200605056 /* Swift_120.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D9D0AC02930C5F200605056 /* Swift_120.png */; };
 		9DA60597291F4E2100EFFA1D /* PermissionDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA60596291F4E2100EFFA1D /* PermissionDemoView.swift */; };
 		9DA6059B291F4EE600EFFA1D /* ListSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6059A291F4EE600EFFA1D /* ListSampleView.swift */; };
 		9DA6059D291F4F1300EFFA1D /* OptionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6059C291F4F1300EFFA1D /* OptionListView.swift */; };
@@ -112,6 +118,12 @@
 		9D643708292F638A0074261A /* thank_you.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = thank_you.json; sourceTree = "<group>"; };
 		9D64370A292F8FC90074261A /* ShareDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareDemoView.swift; sourceTree = "<group>"; };
 		9D64370C292F90510074261A /* EmailDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailDemoView.swift; sourceTree = "<group>"; };
+		9D64370E292F978A0074261A /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = Intents.intentdefinition; path = AwesomeSwift/Intents.intentdefinition; sourceTree = SOURCE_ROOT; };
+		9D6437102930BD510074261A /* ChangeIconDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeIconDemoView.swift; sourceTree = "<group>"; };
+		9D6437152930BEAE0074261A /* Calendar_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Calendar_120.png; sourceTree = "<group>"; };
+		9D6437162930BEAE0074261A /* Calendar_180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Calendar_180.png; sourceTree = "<group>"; };
+		9D9D0ABF2930C5F200605056 /* Swift_180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Swift_180.png; sourceTree = "<group>"; };
+		9D9D0AC02930C5F200605056 /* Swift_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Swift_120.png; sourceTree = "<group>"; };
 		9DA60596291F4E2100EFFA1D /* PermissionDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionDemoView.swift; sourceTree = "<group>"; };
 		9DA6059A291F4EE600EFFA1D /* ListSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSampleView.swift; sourceTree = "<group>"; };
 		9DA6059C291F4F1300EFFA1D /* OptionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionListView.swift; sourceTree = "<group>"; };
@@ -233,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				9DA605A2291FB2CC00EFFA1D /* Info.plist */,
+				9D64370E292F978A0074261A /* Intents.intentdefinition */,
 				9DE65C6F2913E69200804F13 /* Components */,
 				9DE65C692912CB7C00804F13 /* Extensions */,
 				9DE65C612912BD3200804F13 /* Resources */,
@@ -287,6 +300,33 @@
 				9D6436FA292C7CBA0074261A /* LottieView.swift */,
 			);
 			path = Image;
+			sourceTree = "<group>";
+		};
+		9D6437132930BEAE0074261A /* AppIcons */ = {
+			isa = PBXGroup;
+			children = (
+				9D9D0ABE2930C5F200605056 /* Swift */,
+				9D6437142930BEAE0074261A /* Calendar */,
+			);
+			path = AppIcons;
+			sourceTree = "<group>";
+		};
+		9D6437142930BEAE0074261A /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				9D6437152930BEAE0074261A /* Calendar_120.png */,
+				9D6437162930BEAE0074261A /* Calendar_180.png */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		9D9D0ABE2930C5F200605056 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				9D9D0AC02930C5F200605056 /* Swift_120.png */,
+				9D9D0ABF2930C5F200605056 /* Swift_180.png */,
+			);
+			path = Swift;
 			sourceTree = "<group>";
 		};
 		9DA60599291F4ED300EFFA1D /* List */ = {
@@ -369,6 +409,7 @@
 		9DE65C612912BD3200804F13 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9D6437132930BEAE0074261A /* AppIcons */,
 				9D6436F6292C7BF00074261A /* Lottie */,
 				9DE65C622912BD3200804F13 /* Localization */,
 			);
@@ -418,6 +459,7 @@
 				9D643700292E6BF20074261A /* LaunchPhonePageDemo.swift */,
 				9D64370A292F8FC90074261A /* ShareDemoView.swift */,
 				9D64370C292F90510074261A /* EmailDemoView.swift */,
+				9D6437102930BD510074261A /* ChangeIconDemoView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -547,10 +589,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D6437182930BEAE0074261A /* Calendar_180.png in Resources */,
+				9D9D0AC12930C5F200605056 /* Swift_180.png in Resources */,
 				9D643709292F638A0074261A /* thank_you.json in Resources */,
 				9D4D228E29102714006E0075 /* Preview Assets.xcassets in Resources */,
 				9DE65C662912BD3200804F13 /* Localizable.strings in Resources */,
 				9D4D228B29102714006E0075 /* Assets.xcassets in Resources */,
+				9D6437172930BEAE0074261A /* Calendar_120.png in Resources */,
+				9D9D0AC22930C5F200605056 /* Swift_120.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -650,6 +696,7 @@
 				9DA605A82920F71100EFFA1D /* StorageDemoView.swift in Sources */,
 				9DA6059D291F4F1300EFFA1D /* OptionListView.swift in Sources */,
 				9DE65C8B2916201100804F13 /* PullToRefreshViewDemo.swift in Sources */,
+				9D64370F292F978A0074261A /* Intents.intentdefinition in Sources */,
 				9DE65C6B2912CB9200804F13 /* DateExtension.swift in Sources */,
 				9DA605A1291FA10500EFFA1D /* StatusBarStyleEnvironment.swift in Sources */,
 				9DE65C532911495800804F13 /* ProjectList.swift in Sources */,
@@ -677,6 +724,7 @@
 				9D643703292E76980074261A /* MailView.swift in Sources */,
 				9DE65CC22917F38800804F13 /* KeyboardAwareDemoView.swift in Sources */,
 				9DE65CB429164C1D00804F13 /* AnimationDemoView.swift in Sources */,
+				9D6437112930BD510074261A /* ChangeIconDemoView.swift in Sources */,
 				9DE65CB529164C1D00804F13 /* ImageDemoView.swift in Sources */,
 				9DA605A52920F17700EFFA1D /* AppPermisions.swift in Sources */,
 				9DE65CB729164C1D00804F13 /* TabDemoView.swift in Sources */,
