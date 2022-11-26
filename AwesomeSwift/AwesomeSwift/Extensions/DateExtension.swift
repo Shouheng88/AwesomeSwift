@@ -7,4 +7,12 @@
 
 import Foundation
 
-
+extension Date {
+    func format(format: String) -> String {
+        let formatter = DateFormatter()
+        formatter.locale = Locale.autoupdatingCurrent
+        formatter.setLocalizedDateFormatFromTemplate(format)
+        formatter.timeZone = TimeZone(abbreviation: "UTC")
+        return formatter.string(from: self)
+    }
+}

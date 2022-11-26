@@ -16,7 +16,7 @@ struct AppInfoDemoView: View {
             Text("App Name: \(AppInfoUtils.appName)")
             Text("App Version: \(AppInfoUtils.appVersion)")
             Text("App Build: \(AppInfoUtils.appBuild)")
-            Text("App Build Date: \(AppInfoUtils.getDateString(date: AppInfoUtils.buildDate))")
+            Text("App Build Date: \(AppInfoUtils.buildDate?.format(format: "yyyy-MM-dd HH:mm:ss") ?? "")")
         }.padding(.top, 10)
     }
     

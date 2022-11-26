@@ -29,6 +29,17 @@
 		9D6437182930BEAE0074261A /* Calendar_180.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D6437162930BEAE0074261A /* Calendar_180.png */; };
 		9D9D0AC12930C5F200605056 /* Swift_180.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D9D0ABF2930C5F200605056 /* Swift_180.png */; };
 		9D9D0AC22930C5F200605056 /* Swift_120.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D9D0AC02930C5F200605056 /* Swift_120.png */; };
+		9D9D0AC92930D7E300605056 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D9D0AC82930D7E300605056 /* WidgetKit.framework */; };
+		9D9D0ACB2930D7E300605056 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D9D0ACA2930D7E300605056 /* SwiftUI.framework */; };
+		9D9D0ACE2930D7E300605056 /* AwesomeWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9D0ACD2930D7E300605056 /* AwesomeWidget.swift */; };
+		9D9D0AD12930D7E500605056 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D9D0AD02930D7E500605056 /* Assets.xcassets */; };
+		9D9D0AD32930D7E500605056 /* AwesomeWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 9D9D0ACF2930D7E300605056 /* AwesomeWidget.intentdefinition */; };
+		9D9D0AD42930D7E500605056 /* AwesomeWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 9D9D0ACF2930D7E300605056 /* AwesomeWidget.intentdefinition */; };
+		9D9D0AD72930D7E500605056 /* AwesomeWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9D9D0AC72930D7E300605056 /* AwesomeWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9D9D0AE02932185A00605056 /* ClockWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9D0ADC2932172700605056 /* ClockWidget.swift */; };
+		9D9D0AE12932186100605056 /* MainWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9D0ADE2932179000605056 /* MainWidget.swift */; };
+		9D9D0AE42932238500605056 /* CountdownWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9D0AE22932231600605056 /* CountdownWidget.swift */; };
+		9D9D0AE7293248BB00605056 /* TimerWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9D0AE5293248A200605056 /* TimerWidget.swift */; };
 		9DA60597291F4E2100EFFA1D /* PermissionDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA60596291F4E2100EFFA1D /* PermissionDemoView.swift */; };
 		9DA6059B291F4EE600EFFA1D /* ListSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6059A291F4EE600EFFA1D /* ListSampleView.swift */; };
 		9DA6059D291F4F1300EFFA1D /* OptionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6059C291F4F1300EFFA1D /* OptionListView.swift */; };
@@ -94,7 +105,28 @@
 			remoteGlobalIDString = 9D4D228229102713006E0075;
 			remoteInfo = AwesomeSwift;
 		};
+		9D9D0AD52930D7E500605056 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9D4D227B29102712006E0075 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9D9D0AC62930D7E300605056;
+			remoteInfo = AwesomeWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9D9D0AD82930D7E500605056 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9D9D0AD72930D7E500605056 /* AwesomeWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2D9DFFE19ED7BC4AEDC509FA /* Pods-AwesomeSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeSwift.release.xcconfig"; path = "Target Support Files/Pods-AwesomeSwift/Pods-AwesomeSwift.release.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +156,17 @@
 		9D6437162930BEAE0074261A /* Calendar_180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Calendar_180.png; sourceTree = "<group>"; };
 		9D9D0ABF2930C5F200605056 /* Swift_180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Swift_180.png; sourceTree = "<group>"; };
 		9D9D0AC02930C5F200605056 /* Swift_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Swift_120.png; sourceTree = "<group>"; };
+		9D9D0AC72930D7E300605056 /* AwesomeWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AwesomeWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D9D0AC82930D7E300605056 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		9D9D0ACA2930D7E300605056 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		9D9D0ACD2930D7E300605056 /* AwesomeWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwesomeWidget.swift; sourceTree = "<group>"; };
+		9D9D0ACF2930D7E300605056 /* AwesomeWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = AwesomeWidget.intentdefinition; sourceTree = "<group>"; };
+		9D9D0AD02930D7E500605056 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9D9D0AD22930D7E500605056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D9D0ADC2932172700605056 /* ClockWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockWidget.swift; sourceTree = "<group>"; };
+		9D9D0ADE2932179000605056 /* MainWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWidget.swift; sourceTree = "<group>"; };
+		9D9D0AE22932231600605056 /* CountdownWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownWidget.swift; sourceTree = "<group>"; };
+		9D9D0AE5293248A200605056 /* TimerWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerWidget.swift; sourceTree = "<group>"; };
 		9DA60596291F4E2100EFFA1D /* PermissionDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionDemoView.swift; sourceTree = "<group>"; };
 		9DA6059A291F4EE600EFFA1D /* ListSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSampleView.swift; sourceTree = "<group>"; };
 		9DA6059C291F4F1300EFFA1D /* OptionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionListView.swift; sourceTree = "<group>"; };
@@ -199,6 +242,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9D9D0AC42930D7E300605056 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D9D0ACB2930D7E300605056 /* SwiftUI.framework in Frameworks */,
+				9D9D0AC92930D7E300605056 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -215,6 +267,8 @@
 			isa = PBXGroup;
 			children = (
 				50099D577C029A65A007F832 /* Pods_AwesomeSwift.framework */,
+				9D9D0AC82930D7E300605056 /* WidgetKit.framework */,
+				9D9D0ACA2930D7E300605056 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -225,6 +279,7 @@
 				9D4D228529102713006E0075 /* AwesomeSwift */,
 				9D4D229B29102714006E0075 /* AwesomeSwiftTests */,
 				9D4D22A529102714006E0075 /* AwesomeSwiftUITests */,
+				9D9D0ACC2930D7E300605056 /* AwesomeWidget */,
 				9D4D228429102713006E0075 /* Products */,
 				2C7C62C84EE2E2C8234F6001 /* Pods */,
 				63E160AF2042F4ABE42FA3AF /* Frameworks */,
@@ -237,6 +292,7 @@
 				9D4D228329102713006E0075 /* AwesomeSwift.app */,
 				9D4D229829102714006E0075 /* AwesomeSwiftTests.xctest */,
 				9D4D22A229102714006E0075 /* AwesomeSwiftUITests.xctest */,
+				9D9D0AC72930D7E300605056 /* AwesomeWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -329,6 +385,21 @@
 			path = Swift;
 			sourceTree = "<group>";
 		};
+		9D9D0ACC2930D7E300605056 /* AwesomeWidget */ = {
+			isa = PBXGroup;
+			children = (
+				9D9D0AE5293248A200605056 /* TimerWidget.swift */,
+				9D9D0ACD2930D7E300605056 /* AwesomeWidget.swift */,
+				9D9D0ADC2932172700605056 /* ClockWidget.swift */,
+				9D9D0ADE2932179000605056 /* MainWidget.swift */,
+				9D9D0AE22932231600605056 /* CountdownWidget.swift */,
+				9D9D0ACF2930D7E300605056 /* AwesomeWidget.intentdefinition */,
+				9D9D0AD02930D7E500605056 /* Assets.xcassets */,
+				9D9D0AD22930D7E500605056 /* Info.plist */,
+			);
+			path = AwesomeWidget;
+			sourceTree = "<group>";
+		};
 		9DA60599291F4ED300EFFA1D /* List */ = {
 			isa = PBXGroup;
 			children = (
@@ -345,7 +416,6 @@
 			children = (
 				9DA60596291F4E2100EFFA1D /* PermissionDemoView.swift */,
 				9DA605A42920F17700EFFA1D /* AppPermisions.swift */,
-				9DA605AB2920FBF600EFFA1D /* AppInfoUtils.swift */,
 			);
 			path = Permission;
 			sourceTree = "<group>";
@@ -369,6 +439,7 @@
 				9DDD690C291BFBD400E2CB69 /* Keyboard */,
 				9DDD690B291BFBCC00E2CB69 /* Events */,
 				9D643702292E76980074261A /* MailView.swift */,
+				9DA605AB2920FBF600EFFA1D /* AppInfoUtils.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -488,10 +559,12 @@
 				9D4D228029102713006E0075 /* Frameworks */,
 				9D4D228129102713006E0075 /* Resources */,
 				B6F4940062E8F82151B1A53F /* [CP] Embed Pods Frameworks */,
+				9D9D0AD82930D7E500605056 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9D9D0AD62930D7E500605056 /* PBXTargetDependency */,
 			);
 			name = AwesomeSwift;
 			packageProductDependencies = (
@@ -537,6 +610,23 @@
 			productReference = 9D4D22A229102714006E0075 /* AwesomeSwiftUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		9D9D0AC62930D7E300605056 /* AwesomeWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D9D0ADB2930D7E500605056 /* Build configuration list for PBXNativeTarget "AwesomeWidgetExtension" */;
+			buildPhases = (
+				9D9D0AC32930D7E300605056 /* Sources */,
+				9D9D0AC42930D7E300605056 /* Frameworks */,
+				9D9D0AC52930D7E300605056 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AwesomeWidgetExtension;
+			productName = AwesomeWidgetExtension;
+			productReference = 9D9D0AC72930D7E300605056 /* AwesomeWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -557,6 +647,9 @@
 					9D4D22A129102714006E0075 = {
 						CreatedOnToolsVersion = 14.1;
 						TestTargetID = 9D4D228229102713006E0075;
+					};
+					9D9D0AC62930D7E300605056 = {
+						CreatedOnToolsVersion = 14.1;
 					};
 				};
 			};
@@ -580,6 +673,7 @@
 				9D4D228229102713006E0075 /* AwesomeSwift */,
 				9D4D229729102714006E0075 /* AwesomeSwiftTests */,
 				9D4D22A129102714006E0075 /* AwesomeSwiftUITests */,
+				9D9D0AC62930D7E300605056 /* AwesomeWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -611,6 +705,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D9D0AC52930D7E300605056 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D9D0AD12930D7E500605056 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -698,6 +800,7 @@
 				9DE65C8B2916201100804F13 /* PullToRefreshViewDemo.swift in Sources */,
 				9D64370F292F978A0074261A /* Intents.intentdefinition in Sources */,
 				9DE65C6B2912CB9200804F13 /* DateExtension.swift in Sources */,
+				9D9D0AD42930D7E500605056 /* AwesomeWidget.intentdefinition in Sources */,
 				9DA605A1291FA10500EFFA1D /* StatusBarStyleEnvironment.swift in Sources */,
 				9DE65C532911495800804F13 /* ProjectList.swift in Sources */,
 				9DA6059F291F516400EFFA1D /* SectionListView.swift in Sources */,
@@ -759,6 +862,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9D9D0AC32930D7E300605056 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D9D0AE42932238500605056 /* CountdownWidget.swift in Sources */,
+				9D9D0AE12932186100605056 /* MainWidget.swift in Sources */,
+				9D9D0AD32930D7E500605056 /* AwesomeWidget.intentdefinition in Sources */,
+				9D9D0ACE2930D7E300605056 /* AwesomeWidget.swift in Sources */,
+				9D9D0AE02932185A00605056 /* ClockWidget.swift in Sources */,
+				9D9D0AE7293248BB00605056 /* TimerWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -771,6 +887,11 @@
 			isa = PBXTargetDependency;
 			target = 9D4D228229102713006E0075 /* AwesomeSwift */;
 			targetProxy = 9D4D22A329102714006E0075 /* PBXContainerItemProxy */;
+		};
+		9D9D0AD62930D7E500605056 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9D9D0AC62930D7E300605056 /* AwesomeWidgetExtension */;
+			targetProxy = 9D9D0AD52930D7E500605056 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -905,6 +1026,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D97B031A2C8DA6B18B475D85 /* Pods-AwesomeSwift.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -939,6 +1061,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2D9DFFE19ED7BC4AEDC509FA /* Pods-AwesomeSwift.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -1045,6 +1168,62 @@
 			};
 			name = Release;
 		};
+		9D9D0AD92930D7E500605056 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CDVB26QGK3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AwesomeWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AwesomeWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.shouheng.AwesomeSwift.AwesomeWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9D9D0ADA2930D7E500605056 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CDVB26QGK3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AwesomeWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AwesomeWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.shouheng.AwesomeSwift.AwesomeWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1080,6 +1259,15 @@
 			buildConfigurations = (
 				9D4D22B329102714006E0075 /* Debug */,
 				9D4D22B429102714006E0075 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D9D0ADB2930D7E500605056 /* Build configuration list for PBXNativeTarget "AwesomeWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D9D0AD92930D7E500605056 /* Debug */,
+				9D9D0ADA2930D7E500605056 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
