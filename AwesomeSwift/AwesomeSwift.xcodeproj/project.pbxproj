@@ -40,6 +40,7 @@
 		9D9D0AE12932186100605056 /* MainWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9D0ADE2932179000605056 /* MainWidget.swift */; };
 		9D9D0AE42932238500605056 /* CountdownWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9D0AE22932231600605056 /* CountdownWidget.swift */; };
 		9D9D0AE7293248BB00605056 /* TimerWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9D0AE5293248A200605056 /* TimerWidget.swift */; };
+		9D9D0AE929335E7700605056 /* FileDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9D0AE829335E7700605056 /* FileDemoView.swift */; };
 		9DA60597291F4E2100EFFA1D /* PermissionDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA60596291F4E2100EFFA1D /* PermissionDemoView.swift */; };
 		9DA6059B291F4EE600EFFA1D /* ListSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6059A291F4EE600EFFA1D /* ListSampleView.swift */; };
 		9DA6059D291F4F1300EFFA1D /* OptionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6059C291F4F1300EFFA1D /* OptionListView.swift */; };
@@ -167,6 +168,7 @@
 		9D9D0ADE2932179000605056 /* MainWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWidget.swift; sourceTree = "<group>"; };
 		9D9D0AE22932231600605056 /* CountdownWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownWidget.swift; sourceTree = "<group>"; };
 		9D9D0AE5293248A200605056 /* TimerWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerWidget.swift; sourceTree = "<group>"; };
+		9D9D0AE829335E7700605056 /* FileDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDemoView.swift; sourceTree = "<group>"; };
 		9DA60596291F4E2100EFFA1D /* PermissionDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionDemoView.swift; sourceTree = "<group>"; };
 		9DA6059A291F4EE600EFFA1D /* ListSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSampleView.swift; sourceTree = "<group>"; };
 		9DA6059C291F4F1300EFFA1D /* OptionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionListView.swift; sourceTree = "<group>"; };
@@ -425,6 +427,7 @@
 			children = (
 				9DA605A72920F71100EFFA1D /* StorageDemoView.swift */,
 				9DA605A92920F76400EFFA1D /* KV.swift */,
+				9D9D0AE829335E7700605056 /* FileDemoView.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -824,6 +827,7 @@
 				9DA605AA2920F76400EFFA1D /* KV.swift in Sources */,
 				9DDD6912291BFF5600E2CB69 /* KeyboardAwareDemo3.swift in Sources */,
 				9DE65C6E29135B9400804F13 /* R.generated.swift in Sources */,
+				9D9D0AE929335E7700605056 /* FileDemoView.swift in Sources */,
 				9D643703292E76980074261A /* MailView.swift in Sources */,
 				9DE65CC22917F38800804F13 /* KeyboardAwareDemoView.swift in Sources */,
 				9DE65CB429164C1D00804F13 /* AnimationDemoView.swift in Sources */,

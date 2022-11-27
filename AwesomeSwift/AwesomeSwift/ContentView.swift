@@ -149,6 +149,12 @@ struct ContentView: View {
             }).frame(height: 40)
             
             NavigationLink(destination: {
+                FileDemoView()
+            }, label: {
+                Text("File Demo")
+            }).frame(height: 40)
+            
+            NavigationLink(destination: {
                 EnvironmentDemoView()
             }, label: {
                 Text("Environment Object Demo")
