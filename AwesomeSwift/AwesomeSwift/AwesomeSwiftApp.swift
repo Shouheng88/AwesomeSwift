@@ -7,9 +7,10 @@
 
 import SwiftUI
 import Rswift
+import FirebaseCore
+import FirebaseCrashlytics
 
-// TODO: 文件读写
-// TODO: 异常捕获
+// TODO: SQL
 // TODO: 图片选择
 // TODO: 文件选择
 // TODO: 相机
@@ -23,6 +24,17 @@ import Rswift
 @main
 struct AwesomeSwiftApp: App {
 
+    init() {
+        FirebaseApp.configure()
+        // Firebase Crashlytics 使用说明：
+        // 按照官网的说明，添加 Firebase Crashlytics 依赖
+        // 修改 Build Settings，输出 dSYM 文件
+        // 修改 Build Phase，添加上传 dSYM 文件的逻辑
+        // 添加崩溃，然后测试，测试的时候需要构建完成并 Stop 再测试，因为处于 debug 状态的时候，xcode 会拦截崩溃
+        // 参考：https://firebase.google.com/docs/crashlytics/get-started?platform=ios#add-sdk
+        Crashlytics.crashlytics().log("App loaded")
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

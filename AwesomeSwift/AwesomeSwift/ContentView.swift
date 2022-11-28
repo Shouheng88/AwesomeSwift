@@ -59,6 +59,10 @@ struct ContentView: View {
                 }, label: {
                     Text("Change Icon Demo")
                 }).frame(height: 40)
+                
+                Button("Cause a Crash", action: {
+                    fatalError("Guess who's crashed")
+                }).frame(height: 40)
             }
         }, header: {
             Text("App Components Demo")
