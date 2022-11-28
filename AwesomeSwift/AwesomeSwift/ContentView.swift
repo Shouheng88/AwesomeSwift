@@ -15,60 +15,77 @@ struct ContentView: View {
     @State private var italic = false
     @State private var fontSize = 12.0
     
+    private var appComponentsDemo_part1: some View {
+        VStack {
+            NavigationLink{
+                ProjectList()
+            } label: {
+                Text("WanAndroid")
+            }.frame(height: 40)
+            
+            NavigationLink(destination: {
+                ThemeDemoView()
+            }, label: {
+                Text("Themes")
+            }).frame(height: 40)
+                        
+            NavigationLink(destination: {
+                PermissionDemoView()
+            }, label: {
+                Text("Permission Demo")
+            }).frame(height: 40)
+            
+            NavigationLink(destination: {
+                LaunchPhonePageDemo()
+            }, label: {
+                Text("Launch Phone Pages Demo")
+            }).frame(height: 40)
+            
+            NavigationLink(destination: {
+                EmailDemoView()
+            }, label: {
+                Text("Email Demo")
+            }).frame(height: 40)
+            
+            NavigationLink(destination: {
+                ShareDemoView()
+            }, label: {
+                Text("Share Demo")
+            }).frame(height: 40)
+            
+            NavigationLink(destination: {
+                ChangeIconDemoView()
+            }, label: {
+                Text("Change Icon Demo")
+            }).frame(height: 40)
+            
+            Button("Cause a Crash", action: {
+                fatalError("Guess who's crashed")
+            }).frame(height: 40)
+            
+            NavigationLink(destination: {
+                SqlLiteDemoView()
+            }, label: {
+                Text("SQLite Demo")
+            }).frame(height: 40)
+        }
+    }
+    
+    private var appComponentsDemo_part2: some View {
+        VStack {
+            NavigationLink(destination: {
+                ImagePickDemoView()
+            }, label: {
+                Text("Image Picker Demo")
+            }).frame(height: 40)
+        }
+    }
+    
     private var appComponentsDemo: some View {
         Section(content: {
             VStack {
-                NavigationLink{
-                    ProjectList()
-                } label: {
-                    Text("WanAndroid")
-                }.frame(height: 40)
-                
-                NavigationLink(destination: {
-                    ThemeDemoView()
-                }, label: {
-                    Text("Themes")
-                }).frame(height: 40)
-                            
-                NavigationLink(destination: {
-                    PermissionDemoView()
-                }, label: {
-                    Text("Permission Demo")
-                }).frame(height: 40)
-                
-                NavigationLink(destination: {
-                    LaunchPhonePageDemo()
-                }, label: {
-                    Text("Launch Phone Pages Demo")
-                }).frame(height: 40)
-                
-                NavigationLink(destination: {
-                    EmailDemoView()
-                }, label: {
-                    Text("Email Demo")
-                }).frame(height: 40)
-                
-                NavigationLink(destination: {
-                    ShareDemoView()
-                }, label: {
-                    Text("Share Demo")
-                }).frame(height: 40)
-                
-                NavigationLink(destination: {
-                    ChangeIconDemoView()
-                }, label: {
-                    Text("Change Icon Demo")
-                }).frame(height: 40)
-                
-                Button("Cause a Crash", action: {
-                    fatalError("Guess who's crashed")
-                }).frame(height: 40)
-                
-                NavigationLink(destination: {
-                    SqlLiteDemoView()
-                }, label: {
-                    Text("SQLite Demo")
-                }).frame(height: 40)
+                appComponentsDemo_part1
+                appComponentsDemo_part2
             }
         }, header: {
             Text("App Components Demo")

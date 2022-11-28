@@ -31,6 +31,8 @@
 		9D87B0A52934C8270072B307 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 9D87B0A42934C8270072B307 /* FirebaseCrashlytics */; };
 		9D87B0A92934D3860072B307 /* SqlLiteDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D87B0A82934D3860072B307 /* SqlLiteDemoView.swift */; };
 		9D87B0AC2934D3D00072B307 /* TaskDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D87B0AB2934D3D00072B307 /* TaskDataStore.swift */; };
+		9D87B0AE2934F6010072B307 /* ImagePickDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D87B0AD2934F6010072B307 /* ImagePickDemoView.swift */; };
+		9D87B0B02934F6350072B307 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D87B0AF2934F6350072B307 /* ImagePicker.swift */; };
 		9D9D0AC12930C5F200605056 /* Swift_180.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D9D0ABF2930C5F200605056 /* Swift_180.png */; };
 		9D9D0AC22930C5F200605056 /* Swift_120.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D9D0AC02930C5F200605056 /* Swift_120.png */; };
 		9D9D0AC92930D7E300605056 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D9D0AC82930D7E300605056 /* WidgetKit.framework */; };
@@ -162,6 +164,8 @@
 		9D87B0A12934BD0C0072B307 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9D87B0A82934D3860072B307 /* SqlLiteDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqlLiteDemoView.swift; sourceTree = "<group>"; };
 		9D87B0AB2934D3D00072B307 /* TaskDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDataStore.swift; sourceTree = "<group>"; };
+		9D87B0AD2934F6010072B307 /* ImagePickDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickDemoView.swift; sourceTree = "<group>"; };
+		9D87B0AF2934F6350072B307 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		9D9D0ABF2930C5F200605056 /* Swift_180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Swift_180.png; sourceTree = "<group>"; };
 		9D9D0AC02930C5F200605056 /* Swift_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Swift_120.png; sourceTree = "<group>"; };
 		9D9D0AC72930D7E300605056 /* AwesomeWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AwesomeWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -365,6 +369,8 @@
 			isa = PBXGroup;
 			children = (
 				9D6436FA292C7CBA0074261A /* LottieView.swift */,
+				9D87B0AD2934F6010072B307 /* ImagePickDemoView.swift */,
+				9D87B0AF2934F6350072B307 /* ImagePicker.swift */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -831,6 +837,8 @@
 			files = (
 				9DE65C5729116EDB00804F13 /* ProjectRow.swift in Sources */,
 				9DE65C682912C6A300804F13 /* WebView.swift in Sources */,
+				9D87B0AE2934F6010072B307 /* ImagePickDemoView.swift in Sources */,
+				9D87B0B02934F6350072B307 /* ImagePicker.swift in Sources */,
 				9DDD6910291BFD4F00E2CB69 /* KeyboardDemoView.swift in Sources */,
 				9D64370D292F90510074261A /* EmailDemoView.swift in Sources */,
 				9DE65C9829162D5700804F13 /* StyleExtension.swift in Sources */,
@@ -1085,6 +1093,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AwesomeSwift/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "I need camera!";
 				INFOPLIST_KEY_NSContactsUsageDescription = "We need this to make a contact test.";
 				INFOPLIST_KEY_NSLocationUsageDescription = "We need this to make a location test.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -1120,6 +1129,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AwesomeSwift/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "I need camera!";
 				INFOPLIST_KEY_NSContactsUsageDescription = "We need this to make a contact test.";
 				INFOPLIST_KEY_NSLocationUsageDescription = "We need this to make a location test.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
