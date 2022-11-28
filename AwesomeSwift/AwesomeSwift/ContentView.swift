@@ -63,6 +63,12 @@ struct ContentView: View {
                 Button("Cause a Crash", action: {
                     fatalError("Guess who's crashed")
                 }).frame(height: 40)
+                
+                NavigationLink(destination: {
+                    SqlLiteDemoView()
+                }, label: {
+                    Text("SQLite Demo")
+                }).frame(height: 40)
             }
         }, header: {
             Text("App Components Demo")

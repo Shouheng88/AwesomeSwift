@@ -26,6 +26,8 @@ target 'AwesomeSwift' do
   pod 'Kingfisher', :git => 'git@github.com:onevcat/Kingfisher.git'
   pod 'lottie-ios'
 
+  pod 'SQLite.swift', '~> 0.14.0'
+  
   pod 'NotificationBannerSwift', '~> 3.0.0'
   pod 'JXSegmentedView'
   # pod 'WhatsNewKit', :git => 'git@github.com:SvenTiigi/WhatsNewKit.git', :tag => '2.0.3'

@@ -12,6 +12,9 @@ PODS:
     - R.swift.Library (~> 5.3.0)
   - R.swift.Library (5.3.0)
   - SnapKit (5.0.1)
+  - SQLite.swift (0.14.1):
+    - SQLite.swift/standard (= 0.14.1)
+  - SQLite.swift/standard (0.14.1)
   - Then (3.0.0)
 
 DEPENDENCIES:
@@ -22,6 +25,7 @@ DEPENDENCIES:
   - lottie-ios
   - NotificationBannerSwift (~> 3.0.0)
   - R.swift
+  - SQLite.swift (~> 0.14.0)
   - "Then (from `git@github.com:devxoul/Then.git`)"
 
 SPEC REPOS:
@@ -33,6 +37,7 @@ SPEC REPOS:
     - R.swift
     - R.swift.Library
     - SnapKit
+    - SQLite.swift
 
 EXTERNAL SOURCES:
   Alamofire:
@@ -69,8 +74,9 @@ SPEC CHECKSUMS:
   R.swift: ec98ff71c4ab2f6fd01dd077e5afd15e63a4834c
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SQLite.swift: 2992550ebf3c5b268bf4352603e3df87d2a4ed72
   Then: 844265ae87834bbe1147d91d5d41a404da2ec27d
 
-PODFILE CHECKSUM: e32fc2ee97275f6ff354e86fc49253f152be1d5f
+PODFILE CHECKSUM: 12aeb226619d361db07c2961f428a8340ccb9307
 
 COCOAPODS: 1.11.3

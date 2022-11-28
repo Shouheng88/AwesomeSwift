@@ -29,6 +29,8 @@
 		9D6437182930BEAE0074261A /* Calendar_180.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D6437162930BEAE0074261A /* Calendar_180.png */; };
 		9D87B0A22934BD0D0072B307 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D87B0A12934BD0C0072B307 /* GoogleService-Info.plist */; };
 		9D87B0A52934C8270072B307 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 9D87B0A42934C8270072B307 /* FirebaseCrashlytics */; };
+		9D87B0A92934D3860072B307 /* SqlLiteDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D87B0A82934D3860072B307 /* SqlLiteDemoView.swift */; };
+		9D87B0AC2934D3D00072B307 /* TaskDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D87B0AB2934D3D00072B307 /* TaskDataStore.swift */; };
 		9D9D0AC12930C5F200605056 /* Swift_180.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D9D0ABF2930C5F200605056 /* Swift_180.png */; };
 		9D9D0AC22930C5F200605056 /* Swift_120.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D9D0AC02930C5F200605056 /* Swift_120.png */; };
 		9D9D0AC92930D7E300605056 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D9D0AC82930D7E300605056 /* WidgetKit.framework */; };
@@ -158,6 +160,8 @@
 		9D6437152930BEAE0074261A /* Calendar_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Calendar_120.png; sourceTree = "<group>"; };
 		9D6437162930BEAE0074261A /* Calendar_180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Calendar_180.png; sourceTree = "<group>"; };
 		9D87B0A12934BD0C0072B307 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9D87B0A82934D3860072B307 /* SqlLiteDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqlLiteDemoView.swift; sourceTree = "<group>"; };
+		9D87B0AB2934D3D00072B307 /* TaskDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDataStore.swift; sourceTree = "<group>"; };
 		9D9D0ABF2930C5F200605056 /* Swift_180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Swift_180.png; sourceTree = "<group>"; };
 		9D9D0AC02930C5F200605056 /* Swift_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Swift_120.png; sourceTree = "<group>"; };
 		9D9D0AC72930D7E300605056 /* AwesomeWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AwesomeWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -383,6 +387,15 @@
 			path = Calendar;
 			sourceTree = "<group>";
 		};
+		9D87B0AA2934D3BB0072B307 /* Sql */ = {
+			isa = PBXGroup;
+			children = (
+				9D87B0A82934D3860072B307 /* SqlLiteDemoView.swift */,
+				9D87B0AB2934D3D00072B307 /* TaskDataStore.swift */,
+			);
+			path = Sql;
+			sourceTree = "<group>";
+		};
 		9D9D0ABE2930C5F200605056 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
@@ -440,6 +453,7 @@
 		9DDD690A291BFBBB00E2CB69 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				9D87B0AA2934D3BB0072B307 /* Sql */,
 				9D6436F9292C7CAA0074261A /* Image */,
 				9DA605A62920F6FD00EFFA1D /* Storage */,
 				9DA605A32920F16000EFFA1D /* Permission */,
@@ -841,6 +855,8 @@
 				9DE65CA029163F6F00804F13 /* LynnPullToRefreshModifier.swift in Sources */,
 				9DDD6905291A960B00E2CB69 /* Events.swift in Sources */,
 				9DE65CB129164C1D00804F13 /* ButtonDemoView.swift in Sources */,
+				9D87B0A92934D3860072B307 /* SqlLiteDemoView.swift in Sources */,
+				9D87B0AC2934D3D00072B307 /* TaskDataStore.swift in Sources */,
 				9DA6059B291F4EE600EFFA1D /* ListSampleView.swift in Sources */,
 				9DE65C5929117E1F00804F13 /* ProjectViewModel.swift in Sources */,
 				9DE65CC02917E94D00804F13 /* ImmersiveView.swift in Sources */,
