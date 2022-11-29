@@ -10,7 +10,6 @@ import Rswift
 import FirebaseCore
 import FirebaseCrashlytics
 
-// TODO: 文件选择
 // TODO: 视频
 // TODO: 音频
 // TODO: iCloud

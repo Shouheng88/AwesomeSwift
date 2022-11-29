@@ -59,6 +59,8 @@
 		9DA605AE29213EC700EFFA1D /* SwipeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA605AD29213EC700EFFA1D /* SwipeListView.swift */; };
 		9DB8A3892935C6A3003DAC4A /* DocumentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB8A3882935C6A3003DAC4A /* DocumentPicker.swift */; };
 		9DB8A38B2935C732003DAC4A /* DocumentPickerDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB8A38A2935C732003DAC4A /* DocumentPickerDemoView.swift */; };
+		9DB8A38E293660EA003DAC4A /* y1309.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DB8A38D293660EA003DAC4A /* y1309.mp3 */; };
+		9DB8A39029366110003DAC4A /* AudioPlayDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB8A38F29366110003DAC4A /* AudioPlayDemoView.swift */; };
 		9DDD6905291A960B00E2CB69 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD6904291A960B00E2CB69 /* Events.swift */; };
 		9DDD6907291B897900E2CB69 /* KeyboardReadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD6906291B897900E2CB69 /* KeyboardReadable.swift */; };
 		9DDD6909291BF36F00E2CB69 /* CustomPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD6908291BF36F00E2CB69 /* CustomPreference.swift */; };
@@ -195,6 +197,8 @@
 		9DA605AD29213EC700EFFA1D /* SwipeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeListView.swift; sourceTree = "<group>"; };
 		9DB8A3882935C6A3003DAC4A /* DocumentPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPicker.swift; sourceTree = "<group>"; };
 		9DB8A38A2935C732003DAC4A /* DocumentPickerDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerDemoView.swift; sourceTree = "<group>"; };
+		9DB8A38D293660EA003DAC4A /* y1309.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = y1309.mp3; sourceTree = "<group>"; };
+		9DB8A38F29366110003DAC4A /* AudioPlayDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayDemoView.swift; sourceTree = "<group>"; };
 		9DDD6904291A960B00E2CB69 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		9DDD6906291B897900E2CB69 /* KeyboardReadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardReadable.swift; sourceTree = "<group>"; };
 		9DDD6908291BF36F00E2CB69 /* CustomPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPreference.swift; sourceTree = "<group>"; };
@@ -469,6 +473,14 @@
 			path = FilePick;
 			sourceTree = "<group>";
 		};
+		9DB8A38C293660CB003DAC4A /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				9DB8A38D293660EA003DAC4A /* y1309.mp3 */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
 		9DDD690A291BFBBB00E2CB69 /* Business */ = {
 			isa = PBXGroup;
 			children = (
@@ -482,6 +494,7 @@
 				9DDD690B291BFBCC00E2CB69 /* Events */,
 				9D643702292E76980074261A /* MailView.swift */,
 				9DA605AB2920FBF600EFFA1D /* AppInfoUtils.swift */,
+				9DB8A38F29366110003DAC4A /* AudioPlayDemoView.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -522,6 +535,7 @@
 		9DE65C612912BD3200804F13 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9DB8A38C293660CB003DAC4A /* Audio */,
 				9D6437132930BEAE0074261A /* AppIcons */,
 				9D6436F6292C7BF00074261A /* Lottie */,
 				9DE65C622912BD3200804F13 /* Localization */,
@@ -731,6 +745,7 @@
 				9D6437182930BEAE0074261A /* Calendar_180.png in Resources */,
 				9D9D0AC12930C5F200605056 /* Swift_180.png in Resources */,
 				9D87B0A22934BD0D0072B307 /* GoogleService-Info.plist in Resources */,
+				9DB8A38E293660EA003DAC4A /* y1309.mp3 in Resources */,
 				9D643709292F638A0074261A /* thank_you.json in Resources */,
 				9D4D228E29102714006E0075 /* Preview Assets.xcassets in Resources */,
 				9DE65C662912BD3200804F13 /* Localizable.strings in Resources */,
@@ -887,6 +902,7 @@
 				9DE65CC02917E94D00804F13 /* ImmersiveView.swift in Sources */,
 				9DE65C7C29156FDD00804F13 /* WhatsNewKitView.swift in Sources */,
 				9D643701292E6BF20074261A /* LaunchPhonePageDemo.swift in Sources */,
+				9DB8A39029366110003DAC4A /* AudioPlayDemoView.swift in Sources */,
 				9DE65C7E2916056B00804F13 /* SegmentedViewDemo.swift in Sources */,
 				9DE65CB229164C1D00804F13 /* TextFieldDemoView.swift in Sources */,
 				9DE65C9429162C7100804F13 /* TextDemoView.swift in Sources */,

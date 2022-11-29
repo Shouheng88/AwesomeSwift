@@ -83,6 +83,11 @@ struct ContentView: View {
             }, label: {
                 Text("Document Picker Demo")
             }).frame(height: 40)
+            NavigationLink(destination: {
+                AudioPlayDemoView()
+            }, label: {
+                Text("Audio Play Demo")
+            }).frame(height: 40)
         }
     }
     
