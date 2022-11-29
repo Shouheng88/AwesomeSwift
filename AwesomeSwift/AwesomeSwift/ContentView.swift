@@ -78,6 +78,11 @@ struct ContentView: View {
             }, label: {
                 Text("Image Picker Demo")
             }).frame(height: 40)
+            NavigationLink(destination: {
+                DocumentPickerDemoView()
+            }, label: {
+                Text("Document Picker Demo")
+            }).frame(height: 40)
         }
     }
     
