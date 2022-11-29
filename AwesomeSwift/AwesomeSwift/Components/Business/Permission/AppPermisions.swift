@@ -8,6 +8,8 @@
 import Foundation
 import Contacts
 import CoreLocation
+import PhotosUI
+import AVFoundation
 
 // 需要在 xcode info 中添加 “Privacy - Contacts Usage Description”
 struct ContactsPermission {
@@ -44,6 +46,74 @@ struct LocationPermission {
             return
         }
         CLLocationManager().requestWhenInUseAuthorization()
+    }
+}
+
+// 权限：Privacy - Photo Library Usage Description
+struct PhotoLibraryPermission {
+    
+    static var authorizationStatus: PHAuthorizationStatus {
+        PHPhotoLibrary.authorizationStatus()
+    }
+
+    static var authorizationStatusText: String {
+        return textOfStatus(status: authorizationStatus)
+    }
+
+    private static func textOfStatus(status: PHAuthorizationStatus) -> String {
+        switch status {
+        case .notDetermined:
+            return "notDetermined"
+        case .restricted:
+            return "restricted"
+        case .denied:
+            return "denied"
+        case .authorized:
+            return "authorized"
+        case .limited:
+            return "limited"
+        @unknown default:
+            return "@unknown"
+        }
+    }
+    
+    static func request() {
+        PHPhotoLibrary.requestAuthorization(for: .readWrite, handler: { status in
+            print("request status: \(textOfStatus(status: status))")
+        })
+    }
+}
+
+// 权限：Privacy - Camera Usage Description
+struct CameraPermission {
+    
+    static var authorizationStatus: AVAuthorizationStatus {
+        AVCaptureDevice.authorizationStatus(for: AVMediaType.video)
+    }
+    
+    static var authorizationStatusText: String {
+        return textOfStatus(status: authorizationStatus)
+    }
+    
+    private static func textOfStatus(status: AVAuthorizationStatus) -> String {
+        switch status {
+        case .notDetermined:
+            return "notDetermined"
+        case .restricted:
+            return "restricted"
+        case .denied:
+            return "denied"
+        case .authorized:
+            return "authorized"
+        @unknown default:
+            return "@unknown"
+        }
+    }
+    
+    static func request() {
+        AVCaptureDevice.requestAccess(for: .video, completionHandler: { ret in
+            print("request status: \(ret)")
+        })
     }
 }
 
