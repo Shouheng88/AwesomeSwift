@@ -88,6 +88,11 @@ struct ContentView: View {
             }, label: {
                 Text("Audio Play Demo")
             }).frame(height: 40)
+            NavigationLink(destination: {
+                VisionDemoView()
+            }, label: {
+                Text("AI Vision Demo")
+            }).frame(height: 40)
         }
     }
     
