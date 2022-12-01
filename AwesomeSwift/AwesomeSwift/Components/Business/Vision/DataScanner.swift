@@ -26,7 +26,9 @@ struct DataScanner: UIViewControllerRepresentable {
             switch item {
             case .text(let text):
                 parent.scanText = text.transcript
+                print("text: \(text.transcript)")
             case .barcode(let barcode):
+                print("barcode: \(barcode.payloadStringValue ?? "unknown")")
                 break
             default: break
             }
@@ -35,7 +37,9 @@ struct DataScanner: UIViewControllerRepresentable {
     
     func makeUIViewController(context: Context) -> DataScannerViewController {
         let controller = DataScannerViewController(
-            recognizedDataTypes: [.text()],
+            recognizedDataTypes: [.text(), .barcode(symbologies: [.qr, .ean13])],
+            // 另一种指定方式，可以指定识别的语言
+//            recognizedDataTypes: [.text(languages: ["en"]), .barcode(symbologies: [.qr, .ean13])],
             qualityLevel: .balanced,
             isHighlightingEnabled: true
         )

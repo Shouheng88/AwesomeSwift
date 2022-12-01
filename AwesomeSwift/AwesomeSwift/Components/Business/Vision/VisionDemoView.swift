@@ -23,7 +23,7 @@ struct VisionDemoView: View {
                     Text("Scanner Feature Not Supported For You OS Version")
                 }
             }.frame(height: 40)
-            // 拍照识别：不支持中文
+            // 拍照识别
             NavigationLink(destination: {
                 DocScanDemoView()
             }, label: {
