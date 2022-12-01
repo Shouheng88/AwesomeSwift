@@ -64,6 +64,9 @@
 		9DB8A3932937AB20003DAC4A /* VisionDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB8A3922937AB20003DAC4A /* VisionDemoView.swift */; };
 		9DB8A3952937ABCE003DAC4A /* DataScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB8A3942937ABCE003DAC4A /* DataScanner.swift */; };
 		9DB8A3972937AED2003DAC4A /* ScannerDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB8A3962937AED2003DAC4A /* ScannerDemoView.swift */; };
+		9DB8A39929384773003DAC4A /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB8A39829384773003DAC4A /* ScannerView.swift */; };
+		9DB8A39B293847A2003DAC4A /* TextRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB8A39A293847A2003DAC4A /* TextRecognition.swift */; };
+		9DB8A39D293847EC003DAC4A /* DocScanDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB8A39C293847EC003DAC4A /* DocScanDemoView.swift */; };
 		9DDD6905291A960B00E2CB69 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD6904291A960B00E2CB69 /* Events.swift */; };
 		9DDD6907291B897900E2CB69 /* KeyboardReadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD6906291B897900E2CB69 /* KeyboardReadable.swift */; };
 		9DDD6909291BF36F00E2CB69 /* CustomPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD6908291BF36F00E2CB69 /* CustomPreference.swift */; };
@@ -205,6 +208,9 @@
 		9DB8A3922937AB20003DAC4A /* VisionDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionDemoView.swift; sourceTree = "<group>"; };
 		9DB8A3942937ABCE003DAC4A /* DataScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataScanner.swift; sourceTree = "<group>"; };
 		9DB8A3962937AED2003DAC4A /* ScannerDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerDemoView.swift; sourceTree = "<group>"; };
+		9DB8A39829384773003DAC4A /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		9DB8A39A293847A2003DAC4A /* TextRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognition.swift; sourceTree = "<group>"; };
+		9DB8A39C293847EC003DAC4A /* DocScanDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocScanDemoView.swift; sourceTree = "<group>"; };
 		9DDD6904291A960B00E2CB69 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		9DDD6906291B897900E2CB69 /* KeyboardReadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardReadable.swift; sourceTree = "<group>"; };
 		9DDD6908291BF36F00E2CB69 /* CustomPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPreference.swift; sourceTree = "<group>"; };
@@ -493,6 +499,9 @@
 				9DB8A3922937AB20003DAC4A /* VisionDemoView.swift */,
 				9DB8A3942937ABCE003DAC4A /* DataScanner.swift */,
 				9DB8A3962937AED2003DAC4A /* ScannerDemoView.swift */,
+				9DB8A39829384773003DAC4A /* ScannerView.swift */,
+				9DB8A39A293847A2003DAC4A /* TextRecognition.swift */,
+				9DB8A39C293847EC003DAC4A /* DocScanDemoView.swift */,
 			);
 			path = Vision;
 			sourceTree = "<group>";
@@ -885,6 +894,7 @@
 				9DB8A3932937AB20003DAC4A /* VisionDemoView.swift in Sources */,
 				9DE65C5729116EDB00804F13 /* ProjectRow.swift in Sources */,
 				9DE65C682912C6A300804F13 /* WebView.swift in Sources */,
+				9DB8A39D293847EC003DAC4A /* DocScanDemoView.swift in Sources */,
 				9D87B0AE2934F6010072B307 /* ImagePickDemoView.swift in Sources */,
 				9D87B0B02934F6350072B307 /* ImagePicker.swift in Sources */,
 				9DDD6910291BFD4F00E2CB69 /* KeyboardDemoView.swift in Sources */,
@@ -901,6 +911,7 @@
 				9DA605A82920F71100EFFA1D /* StorageDemoView.swift in Sources */,
 				9DA6059D291F4F1300EFFA1D /* OptionListView.swift in Sources */,
 				9DB8A38B2935C732003DAC4A /* DocumentPickerDemoView.swift in Sources */,
+				9DB8A39929384773003DAC4A /* ScannerView.swift in Sources */,
 				9DE65C8B2916201100804F13 /* PullToRefreshViewDemo.swift in Sources */,
 				9D64370F292F978A0074261A /* Intents.intentdefinition in Sources */,
 				9DE65C6B2912CB9200804F13 /* DateExtension.swift in Sources */,
@@ -947,6 +958,7 @@
 				9DE65C5529116DDF00804F13 /* Project.swift in Sources */,
 				9DE65CA129163F6F00804F13 /* LynnPullToRefresh.swift in Sources */,
 				9DDD6907291B897900E2CB69 /* KeyboardReadable.swift in Sources */,
+				9DB8A39B293847A2003DAC4A /* TextRecognition.swift in Sources */,
 				9D4D229329102714006E0075 /* AwesomeSwift.xcdatamodeld in Sources */,
 				9DA605AE29213EC700EFFA1D /* SwipeListView.swift in Sources */,
 				9DE65CBC29164C1D00804F13 /* TabPageDemoView.swift in Sources */,
