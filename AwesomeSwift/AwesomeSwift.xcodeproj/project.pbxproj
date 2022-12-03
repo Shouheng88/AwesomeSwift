@@ -33,6 +33,10 @@
 		9D87B0AC2934D3D00072B307 /* TaskDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D87B0AB2934D3D00072B307 /* TaskDataStore.swift */; };
 		9D87B0AE2934F6010072B307 /* ImagePickDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D87B0AD2934F6010072B307 /* ImagePickDemoView.swift */; };
 		9D87B0B02934F6350072B307 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D87B0AF2934F6350072B307 /* ImagePicker.swift */; };
+		9D92EFE6293B185400061967 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D92EFE3293B185400061967 /* BlurView.swift */; };
+		9D92EFE7293B185400061967 /* AlertToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D92EFE4293B185400061967 /* AlertToast.swift */; };
+		9D92EFE8293B185400061967 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D92EFE5293B185400061967 /* ActivityIndicator.swift */; };
+		9D92EFEA293B18A300061967 /* AlertDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D92EFE9293B18A300061967 /* AlertDemoView.swift */; };
 		9D9D0AC12930C5F200605056 /* Swift_180.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D9D0ABF2930C5F200605056 /* Swift_180.png */; };
 		9D9D0AC22930C5F200605056 /* Swift_120.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D9D0AC02930C5F200605056 /* Swift_120.png */; };
 		9D9D0AC92930D7E300605056 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D9D0AC82930D7E300605056 /* WidgetKit.framework */; };
@@ -176,6 +180,10 @@
 		9D87B0AB2934D3D00072B307 /* TaskDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDataStore.swift; sourceTree = "<group>"; };
 		9D87B0AD2934F6010072B307 /* ImagePickDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickDemoView.swift; sourceTree = "<group>"; };
 		9D87B0AF2934F6350072B307 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		9D92EFE3293B185400061967 /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		9D92EFE4293B185400061967 /* AlertToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertToast.swift; sourceTree = "<group>"; };
+		9D92EFE5293B185400061967 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		9D92EFE9293B18A300061967 /* AlertDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDemoView.swift; sourceTree = "<group>"; };
 		9D9D0ABF2930C5F200605056 /* Swift_180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Swift_180.png; sourceTree = "<group>"; };
 		9D9D0AC02930C5F200605056 /* Swift_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Swift_120.png; sourceTree = "<group>"; };
 		9D9D0AC72930D7E300605056 /* AwesomeWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AwesomeWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -422,6 +430,24 @@
 			path = Sql;
 			sourceTree = "<group>";
 		};
+		9D92EFD9293B17E500061967 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				9D92EFE2293B185400061967 /* AlertToast */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		9D92EFE2293B185400061967 /* AlertToast */ = {
+			isa = PBXGroup;
+			children = (
+				9D92EFE3293B185400061967 /* BlurView.swift */,
+				9D92EFE4293B185400061967 /* AlertToast.swift */,
+				9D92EFE5293B185400061967 /* ActivityIndicator.swift */,
+			);
+			path = AlertToast;
+			sourceTree = "<group>";
+		};
 		9D9D0ABE2930C5F200605056 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
@@ -521,6 +547,7 @@
 				9D643702292E76980074261A /* MailView.swift */,
 				9DA605AB2920FBF600EFFA1D /* AppInfoUtils.swift */,
 				9DB8A38F29366110003DAC4A /* AudioPlayDemoView.swift */,
+				9D92EFE9293B18A300061967 /* AlertDemoView.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -590,6 +617,7 @@
 		9DE65C6F2913E69200804F13 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				9D92EFD9293B17E500061967 /* Libraries */,
 				9DDD690A291BFBBB00E2CB69 /* Business */,
 				9DE65C9929163F6F00804F13 /* PullToRefresh */,
 				9DE65CA829164C1D00804F13 /* PopupDemoView.swift */,
@@ -907,6 +935,7 @@
 				9DB8A3952937ABCE003DAC4A /* DataScanner.swift in Sources */,
 				9D6436FF292E64EF0074261A /* AppInfoDemoView.swift in Sources */,
 				9DB8A3892935C6A3003DAC4A /* DocumentPicker.swift in Sources */,
+				9D92EFE8293B185400061967 /* ActivityIndicator.swift in Sources */,
 				9D4D228729102713006E0075 /* AwesomeSwiftApp.swift in Sources */,
 				9DA605A82920F71100EFFA1D /* StorageDemoView.swift in Sources */,
 				9DA6059D291F4F1300EFFA1D /* OptionListView.swift in Sources */,
@@ -925,8 +954,10 @@
 				9DE65CA029163F6F00804F13 /* LynnPullToRefreshModifier.swift in Sources */,
 				9DDD6905291A960B00E2CB69 /* Events.swift in Sources */,
 				9DE65CB129164C1D00804F13 /* ButtonDemoView.swift in Sources */,
+				9D92EFE7293B185400061967 /* AlertToast.swift in Sources */,
 				9D87B0A92934D3860072B307 /* SqlLiteDemoView.swift in Sources */,
 				9D87B0AC2934D3D00072B307 /* TaskDataStore.swift in Sources */,
+				9D92EFEA293B18A300061967 /* AlertDemoView.swift in Sources */,
 				9DA6059B291F4EE600EFFA1D /* ListSampleView.swift in Sources */,
 				9DE65C5929117E1F00804F13 /* ProjectViewModel.swift in Sources */,
 				9DB8A3972937AED2003DAC4A /* ScannerDemoView.swift in Sources */,
@@ -946,6 +977,7 @@
 				9D9D0AE929335E7700605056 /* FileDemoView.swift in Sources */,
 				9D643703292E76980074261A /* MailView.swift in Sources */,
 				9DE65CC22917F38800804F13 /* KeyboardAwareDemoView.swift in Sources */,
+				9D92EFE6293B185400061967 /* BlurView.swift in Sources */,
 				9DE65CB429164C1D00804F13 /* AnimationDemoView.swift in Sources */,
 				9D6437112930BD510074261A /* ChangeIconDemoView.swift in Sources */,
 				9DE65CB529164C1D00804F13 /* ImageDemoView.swift in Sources */,

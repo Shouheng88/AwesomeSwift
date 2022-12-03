@@ -167,7 +167,11 @@ struct ContentView: View {
     
     private var uiStructureComponentsDemo_Part2: some View {
         VStack {
-            
+            NavigationLink(destination: {
+                AlertDemoView()
+            }, label: {
+                Text("Alert Demo")
+            }).frame(height: 40)
         }
     }
     

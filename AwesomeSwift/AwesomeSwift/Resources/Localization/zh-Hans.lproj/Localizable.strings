@@ -13,3 +13,6 @@ wna_android_empty_title = "数据为空 ;)";
 
 banner_test_entry = "Banner 通知示例";
 banner_success_type = "Success 类通知";
+
+alert_title_short = "Message Sent!";
+alert_title_long = "This is a long sample title for alert demo. The message was successfully sent to the final receiver, namely, kingsoftware maker! The super hero is here! Nobody could do it without your helllllllllp!";
