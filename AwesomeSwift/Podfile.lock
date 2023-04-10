@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.6.2)
+  - FilesProvider (0.26.0)
   - HandyJSON (5.0.4-beta)
   - JXSegmentedView (1.3.0)
   - Kingfisher (7.4.1)
@@ -15,10 +16,12 @@ PODS:
   - SQLite.swift (0.14.1):
     - SQLite.swift/standard (= 0.14.1)
   - SQLite.swift/standard (0.14.1)
+  - SSZipArchive (2.4.3)
   - Then (3.0.0)
 
 DEPENDENCIES:
   - "Alamofire (from `git@github.com:Alamofire/Alamofire.git`)"
+  - FilesProvider
   - "HandyJSON (from `git@github.com:alibaba/HandyJSON.git`)"
   - JXSegmentedView
   - "Kingfisher (from `git@github.com:onevcat/Kingfisher.git`)"
@@ -26,10 +29,12 @@ DEPENDENCIES:
   - NotificationBannerSwift (~> 3.0.0)
   - R.swift
   - SQLite.swift (~> 0.14.0)
+  - SSZipArchive
   - "Then (from `git@github.com:devxoul/Then.git`)"
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - FilesProvider
     - JXSegmentedView
     - lottie-ios
     - MarqueeLabel
@@ -38,6 +43,7 @@ SPEC REPOS:
     - R.swift.Library
     - SnapKit
     - SQLite.swift
+    - SSZipArchive
 
 EXTERNAL SOURCES:
   Alamofire:
@@ -65,6 +71,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
+  FilesProvider: 2a8ae17d8b9c23a6feadb1308ee638fa31d21065
   HandyJSON: a9c67202df97805a0ba4a00e30b50e9a30ac28f3
   JXSegmentedView: fec0d335355b6e019c494fe2e030bde8a36d2df6
   Kingfisher: cd762a593a61b2fbecf7645c00f9a801a3ebfc9c
@@ -75,8 +82,9 @@ SPEC CHECKSUMS:
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SQLite.swift: 2992550ebf3c5b268bf4352603e3df87d2a4ed72
+  SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
   Then: 844265ae87834bbe1147d91d5d41a404da2ec27d
 
-PODFILE CHECKSUM: 12aeb226619d361db07c2961f428a8340ccb9307
+PODFILE CHECKSUM: 5303ef71f58a1fb3f3fdedfd8b5126de96ca3f1b
 
 COCOAPODS: 1.11.3

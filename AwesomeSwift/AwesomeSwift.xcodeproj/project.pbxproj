@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D2052F429CB590E006EBFDF /* ProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2052F329CB590E006EBFDF /* ProjectViewModel.swift */; };
 		9D4D228729102713006E0075 /* AwesomeSwiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4D228629102713006E0075 /* AwesomeSwiftApp.swift */; };
 		9D4D228929102713006E0075 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4D228829102713006E0075 /* ContentView.swift */; };
 		9D4D228B29102714006E0075 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D4D228A29102714006E0075 /* Assets.xcassets */; };
@@ -80,7 +81,6 @@
 		9DE65C532911495800804F13 /* ProjectList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE65C522911495800804F13 /* ProjectList.swift */; };
 		9DE65C5529116DDF00804F13 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE65C5429116DDF00804F13 /* Project.swift */; };
 		9DE65C5729116EDB00804F13 /* ProjectRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE65C5629116EDB00804F13 /* ProjectRow.swift */; };
-		9DE65C5929117E1F00804F13 /* ProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE65C5829117E1F00804F13 /* ProjectViewModel.swift */; };
 		9DE65C662912BD3200804F13 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9DE65C632912BD3200804F13 /* Localizable.strings */; };
 		9DE65C682912C6A300804F13 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE65C672912C6A300804F13 /* WebView.swift */; };
 		9DE65C6B2912CB9200804F13 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE65C6A2912CB9200804F13 /* DateExtension.swift */; };
@@ -152,6 +152,7 @@
 /* Begin PBXFileReference section */
 		2D9DFFE19ED7BC4AEDC509FA /* Pods-AwesomeSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeSwift.release.xcconfig"; path = "Target Support Files/Pods-AwesomeSwift/Pods-AwesomeSwift.release.xcconfig"; sourceTree = "<group>"; };
 		50099D577C029A65A007F832 /* Pods_AwesomeSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AwesomeSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D2052F329CB590E006EBFDF /* ProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel.swift; sourceTree = "<group>"; };
 		9D4D228329102713006E0075 /* AwesomeSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AwesomeSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D4D228629102713006E0075 /* AwesomeSwiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwesomeSwiftApp.swift; sourceTree = "<group>"; };
 		9D4D228829102713006E0075 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -228,7 +229,6 @@
 		9DE65C522911495800804F13 /* ProjectList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectList.swift; sourceTree = "<group>"; };
 		9DE65C5429116DDF00804F13 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		9DE65C5629116EDB00804F13 /* ProjectRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRow.swift; sourceTree = "<group>"; };
-		9DE65C5829117E1F00804F13 /* ProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProjectViewModel.swift; path = ../../../../../../../Documents/ProjectViewModel.swift; sourceTree = "<group>"; };
 		9DE65C642912BD3200804F13 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		9DE65C652912BD3200804F13 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9DE65C672912C6A300804F13 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
@@ -579,8 +579,8 @@
 				9DE65C522911495800804F13 /* ProjectList.swift */,
 				9DE65C5429116DDF00804F13 /* Project.swift */,
 				9DE65C5629116EDB00804F13 /* ProjectRow.swift */,
-				9DE65C5829117E1F00804F13 /* ProjectViewModel.swift */,
 				9DE65C672912C6A300804F13 /* WebView.swift */,
+				9D2052F329CB590E006EBFDF /* ProjectViewModel.swift */,
 			);
 			path = WanAndroid;
 			sourceTree = "<group>";
@@ -940,6 +940,7 @@
 				9DA605A82920F71100EFFA1D /* StorageDemoView.swift in Sources */,
 				9DA6059D291F4F1300EFFA1D /* OptionListView.swift in Sources */,
 				9DB8A38B2935C732003DAC4A /* DocumentPickerDemoView.swift in Sources */,
+				9D2052F429CB590E006EBFDF /* ProjectViewModel.swift in Sources */,
 				9DB8A39929384773003DAC4A /* ScannerView.swift in Sources */,
 				9DE65C8B2916201100804F13 /* PullToRefreshViewDemo.swift in Sources */,
 				9D64370F292F978A0074261A /* Intents.intentdefinition in Sources */,
@@ -959,7 +960,6 @@
 				9D87B0AC2934D3D00072B307 /* TaskDataStore.swift in Sources */,
 				9D92EFEA293B18A300061967 /* AlertDemoView.swift in Sources */,
 				9DA6059B291F4EE600EFFA1D /* ListSampleView.swift in Sources */,
-				9DE65C5929117E1F00804F13 /* ProjectViewModel.swift in Sources */,
 				9DB8A3972937AED2003DAC4A /* ScannerDemoView.swift in Sources */,
 				9DE65CC02917E94D00804F13 /* ImmersiveView.swift in Sources */,
 				9DE65C7C29156FDD00804F13 /* WhatsNewKitView.swift in Sources */,
