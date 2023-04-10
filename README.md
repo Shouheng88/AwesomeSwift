@@ -134,9 +134,17 @@
 *除了上述控件和页面框架等基本单元，作为一个成熟的产品，对应用的稳定性和开发的高效也是有要求的，这要求我们对开发环境进行基础的设置。所以，这里列举的是一些必要的可以提升开发效率和应用稳定性的工具。*
 
 - [firebase-ios-sdk](https://github.com/firebase/firebase-ios-sdk)：应用崩溃监控，用来上报程序崩溃日志和进行简单的用户统计
+  - 集成说明：[Get started with Firebase Crashlytics](https://firebase.google.com/docs/crashlytics/get-started?platform=ios#add-sdk)
+  - Step 1: 按照官网的说明，添加 Firebase Crashlytics 依赖
+  - Step 2: 修改 Build Settings，输出 dSYM 文件
+  - Step 3: 修改 Build Phase，添加上传 dSYM 文件的逻辑
+  - Step 4: 添加崩溃，然后测试，测试的时候需要构建完成并 Stop 再测试，因为处于 debug 状态的时候，xcode 会拦截崩溃
 - [R.swift](https://github.com/mac-cain13/R.swift)：用来以类似于 Android 的 R 文件的方式引用项目里的资源，比直接使用字符串应用的方式不容易出错
+  - 使用说明：https://github.com/mac-cain13/R.swift
 - [Then](https://github.com/devxoul/Then)：语法躺，类似于 Kotlin 的 apply 的效果，但是似乎只对 UIKit 有效
 - [CocoaPods](https://github.com/CocoaPods/Specs)：项目的构建工具和依赖管理工具
+  - 创建 Podfile 文件
+  - 执行 `pod install` 命令
 - SwiftPackageManager：项目的依赖管理工具
 
 ### 2.7 综合示例
