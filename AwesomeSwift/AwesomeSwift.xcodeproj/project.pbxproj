@@ -29,6 +29,8 @@
 		9D6437172930BEAE0074261A /* Calendar_120.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D6437152930BEAE0074261A /* Calendar_120.png */; };
 		9D6437182930BEAE0074261A /* Calendar_180.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D6437162930BEAE0074261A /* Calendar_180.png */; };
 		9D71C8942AA625260049CDDD /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D71C8932AA625260049CDDD /* Sample.swift */; };
+		9D71C8972AA6A9F80049CDDD /* SampleSectionTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D71C8962AA6A9F80049CDDD /* SampleSectionTitleView.swift */; };
+		9D71C8992AA6B0E00049CDDD /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D71C8982AA6B0E00049CDDD /* Consts.swift */; };
 		9D87B0A22934BD0D0072B307 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D87B0A12934BD0C0072B307 /* GoogleService-Info.plist */; };
 		9D87B0A52934C8270072B307 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 9D87B0A42934C8270072B307 /* FirebaseCrashlytics */; };
 		9D87B0A92934D3860072B307 /* SqlLiteDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D87B0A82934D3860072B307 /* SqlLiteDemoView.swift */; };
@@ -178,6 +180,8 @@
 		9D6437152930BEAE0074261A /* Calendar_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Calendar_120.png; sourceTree = "<group>"; };
 		9D6437162930BEAE0074261A /* Calendar_180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Calendar_180.png; sourceTree = "<group>"; };
 		9D71C8932AA625260049CDDD /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
+		9D71C8962AA6A9F80049CDDD /* SampleSectionTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleSectionTitleView.swift; sourceTree = "<group>"; };
+		9D71C8982AA6B0E00049CDDD /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
 		9D87B0A12934BD0C0072B307 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9D87B0A82934D3860072B307 /* SqlLiteDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqlLiteDemoView.swift; sourceTree = "<group>"; };
 		9D87B0AB2934D3D00072B307 /* TaskDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDataStore.swift; sourceTree = "<group>"; };
@@ -436,8 +440,17 @@
 			isa = PBXGroup;
 			children = (
 				9D71C8932AA625260049CDDD /* Sample.swift */,
+				9D71C8982AA6B0E00049CDDD /* Consts.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9D71C8952AA6A9E00049CDDD /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9D71C8962AA6A9F80049CDDD /* SampleSectionTitleView.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		9D87B0AA2934D3BB0072B307 /* Sql */ = {
@@ -636,6 +649,7 @@
 		9DE65C6F2913E69200804F13 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				9D71C8952AA6A9E00049CDDD /* Common */,
 				9D71C8912AA624000049CDDD /* Widget */,
 				9D92EFD9293B17E500061967 /* Libraries */,
 				9DDD690A291BFBBB00E2CB69 /* Business */,
@@ -959,6 +973,7 @@
 				9DA605A82920F71100EFFA1D /* StorageDemoView.swift in Sources */,
 				9DA6059D291F4F1300EFFA1D /* OptionListView.swift in Sources */,
 				9DB8A38B2935C732003DAC4A /* DocumentPickerDemoView.swift in Sources */,
+				9D71C8972AA6A9F80049CDDD /* SampleSectionTitleView.swift in Sources */,
 				9D2052F429CB590E006EBFDF /* ProjectViewModel.swift in Sources */,
 				9DB8A39929384773003DAC4A /* ScannerView.swift in Sources */,
 				9DE65C8B2916201100804F13 /* PullToRefreshViewDemo.swift in Sources */,
@@ -970,6 +985,7 @@
 				9DA6059F291F516400EFFA1D /* SectionListView.swift in Sources */,
 				9DDD6909291BF36F00E2CB69 /* CustomPreference.swift in Sources */,
 				9DE65CBE291667BE00804F13 /* FormDemoView.swift in Sources */,
+				9D71C8992AA6B0E00049CDDD /* Consts.swift in Sources */,
 				9DE65C9F29163F6F00804F13 /* LynnRefreshState.swift in Sources */,
 				9DE65CA029163F6F00804F13 /* LynnPullToRefreshModifier.swift in Sources */,
 				9DDD6905291A960B00E2CB69 /* Events.swift in Sources */,
