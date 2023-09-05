@@ -180,7 +180,7 @@ struct ButtonDemoView: View {
                 sampleSliderView
                 sampleStepperView
             }.padding(15)
-        }.navigationTitle("SwiftUI Button Demo")
+        }.navigationTitle("按钮示例")
     }
 }
 

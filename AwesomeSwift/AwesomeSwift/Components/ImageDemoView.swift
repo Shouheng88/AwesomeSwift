@@ -170,6 +170,12 @@ struct ImageDemoView: View {
                 bigImageSampleView
                 resourceSampleView
                 lottieSampleView
+                
+                //            Rectangle()
+                //                .fill(.linearGradient(.init(colors: [.red, .blue, .orange]), startPoint: .topLeading, endPoint: .bottomTrailing))
+                // 加了这个属性之后背景就不会随着软键盘改变了
+                //                .ignoresSafeArea(.all)
+
             }
         }.navigationTitle(Text("The Title"))
             .navigationBarHidden(false)

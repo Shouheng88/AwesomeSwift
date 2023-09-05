@@ -433,6 +433,7 @@
 			children = (
 				9DE65C9329162C7100804F13 /* TextDemoView.swift */,
 				9DE65CA329164C1C00804F13 /* ButtonDemoView.swift */,
+				9DE65CA429164C1C00804F13 /* TextFieldDemoView.swift */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -661,7 +662,6 @@
 				9DE65CA529164C1C00804F13 /* LayoutDemoView.swift */,
 				9DE65CA929164C1D00804F13 /* TabDemoView.swift */,
 				9DE65CAF29164C1D00804F13 /* TabPageDemoView.swift */,
-				9DE65CA429164C1C00804F13 /* TextFieldDemoView.swift */,
 				9DE65C702913E6B300804F13 /* NotificationBannerView.swift */,
 				9DE65C7B29156FDD00804F13 /* WhatsNewKitView.swift */,
 				9DE65C7D2916056B00804F13 /* SegmentedViewDemo.swift */,
