@@ -28,6 +28,7 @@
 		9D6437112930BD510074261A /* ChangeIconDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6437102930BD510074261A /* ChangeIconDemoView.swift */; };
 		9D6437172930BEAE0074261A /* Calendar_120.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D6437152930BEAE0074261A /* Calendar_120.png */; };
 		9D6437182930BEAE0074261A /* Calendar_180.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D6437162930BEAE0074261A /* Calendar_180.png */; };
+		9D71C8942AA625260049CDDD /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D71C8932AA625260049CDDD /* Sample.swift */; };
 		9D87B0A22934BD0D0072B307 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D87B0A12934BD0C0072B307 /* GoogleService-Info.plist */; };
 		9D87B0A52934C8270072B307 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 9D87B0A42934C8270072B307 /* FirebaseCrashlytics */; };
 		9D87B0A92934D3860072B307 /* SqlLiteDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D87B0A82934D3860072B307 /* SqlLiteDemoView.swift */; };
@@ -176,6 +177,7 @@
 		9D6437102930BD510074261A /* ChangeIconDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeIconDemoView.swift; sourceTree = "<group>"; };
 		9D6437152930BEAE0074261A /* Calendar_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Calendar_120.png; sourceTree = "<group>"; };
 		9D6437162930BEAE0074261A /* Calendar_180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Calendar_180.png; sourceTree = "<group>"; };
+		9D71C8932AA625260049CDDD /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
 		9D87B0A12934BD0C0072B307 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9D87B0A82934D3860072B307 /* SqlLiteDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqlLiteDemoView.swift; sourceTree = "<group>"; };
 		9D87B0AB2934D3D00072B307 /* TaskDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDataStore.swift; sourceTree = "<group>"; };
@@ -342,6 +344,7 @@
 		9D4D228529102713006E0075 /* AwesomeSwift */ = {
 			isa = PBXGroup;
 			children = (
+				9D71C8922AA625150049CDDD /* Model */,
 				9DE65C6F2913E69200804F13 /* Components */,
 				9DE65C692912CB7C00804F13 /* Extensions */,
 				9DE65C612912BD3200804F13 /* Resources */,
@@ -419,6 +422,22 @@
 				9D6437162930BEAE0074261A /* Calendar_180.png */,
 			);
 			path = Calendar;
+			sourceTree = "<group>";
+		};
+		9D71C8912AA624000049CDDD /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				9DE65C9329162C7100804F13 /* TextDemoView.swift */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
+		9D71C8922AA625150049CDDD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9D71C8932AA625260049CDDD /* Sample.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		9D87B0AA2934D3BB0072B307 /* Sql */ = {
@@ -617,6 +636,7 @@
 		9DE65C6F2913E69200804F13 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				9D71C8912AA624000049CDDD /* Widget */,
 				9D92EFD9293B17E500061967 /* Libraries */,
 				9DDD690A291BFBBB00E2CB69 /* Business */,
 				9DE65C9929163F6F00804F13 /* PullToRefresh */,
@@ -629,7 +649,6 @@
 				9DE65CAF29164C1D00804F13 /* TabPageDemoView.swift */,
 				9DE65CA429164C1C00804F13 /* TextFieldDemoView.swift */,
 				9DE65C702913E6B300804F13 /* NotificationBannerView.swift */,
-				9DE65C9329162C7100804F13 /* TextDemoView.swift */,
 				9DE65C7B29156FDD00804F13 /* WhatsNewKitView.swift */,
 				9DE65C7D2916056B00804F13 /* SegmentedViewDemo.swift */,
 				9DE65C8A2916201100804F13 /* PullToRefreshViewDemo.swift */,
@@ -994,6 +1013,7 @@
 				9D4D229329102714006E0075 /* AwesomeSwift.xcdatamodeld in Sources */,
 				9DA605AE29213EC700EFFA1D /* SwipeListView.swift in Sources */,
 				9DE65CBC29164C1D00804F13 /* TabPageDemoView.swift in Sources */,
+				9D71C8942AA625260049CDDD /* Sample.swift in Sources */,
 				9DA605AC2920FBF600EFFA1D /* AppInfoUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
