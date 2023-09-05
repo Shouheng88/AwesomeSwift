@@ -144,7 +144,7 @@ struct ImageDemoView: View {
     
     private var sampleLottieImageView: some View {
         VStack {
-            SampleSectionTitleView(title: "5. Lottie 图片")
+            SampleSectionTitleView(title: "5. Lottie 图片", desc: "点击图片可以重新播放动画")
             LottieView(lottieFile: "thank_you", play: self.$playLottie)
                 .frame(width: 200, height: 200)
                 .onTapGesture {
