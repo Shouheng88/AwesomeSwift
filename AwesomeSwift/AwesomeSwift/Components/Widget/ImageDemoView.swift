@@ -7,6 +7,7 @@
 
 import Rswift
 import SwiftUI
+import Kingfisher
 
 /// 图片示例
 struct ImageDemoView: View {
@@ -154,7 +155,41 @@ struct ImageDemoView: View {
     
     private var sampleNetworkImageView: some View {
         VStack {
-            
+            SampleSectionTitleView(title: "6. 网络图片加载", desc: "基于三方控件 Kingfisher")
+            let size: CGFloat = 200
+            ScrollView(.horizontal) {
+                HStack {
+                    KFImage(URL(string: Consts.SAMPLE_NETOWRK_IMAGE))
+                        .renderingMode(.original)
+                        .resizable()
+                        .placeholder({ progress in
+                            RoundedRectangle(cornerRadius: 10.0)
+                                .fill(.gray.opacity(0.1))
+                                .frame(width: size, height: size)
+                                .cornerRadius(size / 10)
+                        })
+                        .scaledToFit()
+                        .padding(size / 10)
+                        .frame(width: size, height: size)
+                        .clipped()
+                        .border(.gray.opacity(0.1))
+                    KFImage(URL(string: Consts.SAMPLE_NETOWRK_IMAGE))
+                        .renderingMode(.original)
+                        .resizable()
+                        .fade(duration: 500)
+                        .placeholder({ progress in
+                            RoundedRectangle(cornerRadius: 10.0)
+                                .fill(.gray.opacity(0.1))
+                                .frame(width: size, height: size)
+                                .cornerRadius(size / 10)
+                        })
+                        .padding(size / 10)
+                        .frame(width: size, height: size, alignment: .top)
+                        .scaledToFit()
+                        .clipped()
+                        .border(.gray.opacity(0.1))
+                }
+            }
         }
     }
     
