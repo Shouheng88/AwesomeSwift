@@ -400,15 +400,6 @@
 			path = Lottie;
 			sourceTree = "<group>";
 		};
-		9D6436F9292C7CAA0074261A /* Image */ = {
-			isa = PBXGroup;
-			children = (
-				9D87B0AD2934F6010072B307 /* ImagePickDemoView.swift */,
-				9D87B0AF2934F6350072B307 /* ImagePicker.swift */,
-			);
-			path = Image;
-			sourceTree = "<group>";
-		};
 		9D6437132930BEAE0074261A /* AppIcons */ = {
 			isa = PBXGroup;
 			children = (
@@ -431,9 +422,11 @@
 			isa = PBXGroup;
 			children = (
 				9DE65C9329162C7100804F13 /* TextDemoView.swift */,
-				9DE65CA329164C1C00804F13 /* ButtonDemoView.swift */,
 				9DE65CA429164C1C00804F13 /* TextFieldDemoView.swift */,
+				9DE65CA329164C1C00804F13 /* ButtonDemoView.swift */,
 				9DE65CA729164C1C00804F13 /* ImageDemoView.swift */,
+				9D87B0AD2934F6010072B307 /* ImagePickDemoView.swift */,
+				9DE65CBD291667BE00804F13 /* FormDemoView.swift */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -452,6 +445,7 @@
 			children = (
 				9D71C8962AA6A9F80049CDDD /* SampleSectionTitleView.swift */,
 				9D6436FA292C7CBA0074261A /* LottieView.swift */,
+				9D87B0AF2934F6350072B307 /* ImagePicker.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -573,7 +567,6 @@
 				9DB8A3912937AB0D003DAC4A /* Vision */,
 				9DB8A3872935C691003DAC4A /* FilePick */,
 				9D87B0AA2934D3BB0072B307 /* Sql */,
-				9D6436F9292C7CAA0074261A /* Image */,
 				9DA605A62920F6FD00EFFA1D /* Storage */,
 				9DA605A32920F16000EFFA1D /* Permission */,
 				9DA60599291F4ED300EFFA1D /* List */,
@@ -666,7 +659,6 @@
 				9DE65C7B29156FDD00804F13 /* WhatsNewKitView.swift */,
 				9DE65C7D2916056B00804F13 /* SegmentedViewDemo.swift */,
 				9DE65C8A2916201100804F13 /* PullToRefreshViewDemo.swift */,
-				9DE65CBD291667BE00804F13 /* FormDemoView.swift */,
 				9DE65CBF2917E94D00804F13 /* ImmersiveView.swift */,
 				9D6436FC292E51090074261A /* ThemeDemoView.swift */,
 				9D6436FE292E64EF0074261A /* AppInfoDemoView.swift */,
