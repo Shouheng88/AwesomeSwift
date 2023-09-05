@@ -433,6 +433,7 @@
 				9D71C89A2AA760960049CDDD /* GestureDemoView.swift */,
 				9DE65CA529164C1C00804F13 /* LayoutDemoView.swift */,
 				9DE65CA829164C1D00804F13 /* PopupDemoView.swift */,
+				9D92EFE9293B18A300061967 /* AlertDemoView.swift */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -581,7 +582,6 @@
 				9D643702292E76980074261A /* MailView.swift */,
 				9DA605AB2920FBF600EFFA1D /* AppInfoUtils.swift */,
 				9DB8A38F29366110003DAC4A /* AudioPlayDemoView.swift */,
-				9D92EFE9293B18A300061967 /* AlertDemoView.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
