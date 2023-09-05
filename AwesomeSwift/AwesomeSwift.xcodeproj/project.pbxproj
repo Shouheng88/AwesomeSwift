@@ -403,7 +403,6 @@
 		9D6436F9292C7CAA0074261A /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				9D6436FA292C7CBA0074261A /* LottieView.swift */,
 				9D87B0AD2934F6010072B307 /* ImagePickDemoView.swift */,
 				9D87B0AF2934F6350072B307 /* ImagePicker.swift */,
 			);
@@ -452,6 +451,7 @@
 			isa = PBXGroup;
 			children = (
 				9D71C8962AA6A9F80049CDDD /* SampleSectionTitleView.swift */,
+				9D6436FA292C7CBA0074261A /* LottieView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";

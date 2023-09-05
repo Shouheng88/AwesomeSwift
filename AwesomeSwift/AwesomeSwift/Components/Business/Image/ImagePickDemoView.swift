@@ -16,31 +16,33 @@ struct ImagePickDemoView: View {
     @State private var inputImage: UIImage?
     
     var body: some View {
-        VStack {
-            if image != nil {
-                image?
-                    .resizable()
-                    .scaledToFit()
-            }
-            Button("Select a picture from photo library", action: {
-                self.showingImagePicker = true
-            }).frame(height: 40)
-            Button("Select a picture from camera", action: {
-                self.showingCameraPicker = true
-            }).frame(height: 40)
-            Text("Photo library available: \(String(UIImagePickerController.isSourceTypeAvailable(.photoLibrary)))")
-                .font(.system(size: 12)).foregroundColor(.gray)
-            Text("Camera available: \(String(UIImagePickerController.isSourceTypeAvailable(.camera)))")
-                .font(.system(size: 12)).foregroundColor(.gray)
-        }.sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
-            ImagePicker(image: self.$inputImage, sourceType: .photoLibrary)
-        }.sheet(isPresented: $showingCameraPicker, onDismiss: loadImage) {
-            ImagePicker(image: self.$inputImage, sourceType: .camera)
-        }.navigationTitle("Image Pick Demo")
-            .navigationBarTitleDisplayMode(.inline)
+        ScrollView {
+            VStack {
+                if image != nil {
+                    image?
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 300)
+                }
+                Text("相册是否可用: \(String(UIImagePickerController.isSourceTypeAvailable(.photoLibrary)))")
+                    .font(.system(size: 14)).foregroundColor(.gray)
+                Button("从相册中选择图片", action: {
+                    self.showingImagePicker = true
+                }).frame(height: 40)
+                Text("相机是否可用: \(String(UIImagePickerController.isSourceTypeAvailable(.camera)))")
+                    .font(.system(size: 14)).foregroundColor(.gray)
+                Button("从相机中获取图片", action: {
+                    self.showingCameraPicker = true
+                }).frame(height: 40)
+            }.sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
+                ImagePicker(image: self.$inputImage, sourceType: .photoLibrary)
+            }.sheet(isPresented: $showingCameraPicker, onDismiss: loadImage) {
+                ImagePicker(image: self.$inputImage, sourceType: .camera)
+            }.padding(15)
+        }.navigationTitle("图片选择示例").navigationBarTitleDisplayMode(.inline)
     }
     
-    func loadImage() {
+    private func loadImage() {
         guard let inputImage = inputImage else {
             print("image empty")
             return

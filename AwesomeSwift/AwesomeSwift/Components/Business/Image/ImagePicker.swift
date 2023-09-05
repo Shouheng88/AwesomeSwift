@@ -9,10 +9,13 @@ import Foundation
 import UIKit
 import SwiftUI
 
+/// 图片选择
 struct ImagePicker: UIViewControllerRepresentable {
 
     @Binding var image: UIImage? // 用于存放UIImage
+
     var sourceType: UIImagePickerController.SourceType
+
     @Environment(\.presentationMode) var presentationMode // 获取环境变量
 
     class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
