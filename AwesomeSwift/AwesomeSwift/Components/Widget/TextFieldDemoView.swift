@@ -35,7 +35,7 @@ struct TextFieldDemoView: View {
                 Text("密码")
                 SecureField("", text: $password, onCommit: {
                     self.firstEditState = "密码已提交"
-                }).padding(EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20))
+                }).padding(10)
                     .frame(height: 50)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
             }

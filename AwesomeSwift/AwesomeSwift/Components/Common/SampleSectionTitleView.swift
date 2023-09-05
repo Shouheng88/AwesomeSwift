@@ -16,8 +16,8 @@ struct SampleSectionTitleView: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text(title).font(.system(size: 15)).foregroundColor(.black)
-                Text(desc).font(.system(size: 13)).foregroundColor(.gray)
+                Text(title).font(.system(size: 16)).foregroundColor(.black)
+                Text(desc).font(.system(size: 14)).foregroundColor(.gray)
             }
             Spacer()
         }.padding(.vertical, 10)

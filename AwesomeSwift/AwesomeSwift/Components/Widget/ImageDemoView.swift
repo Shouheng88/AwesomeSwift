@@ -152,6 +152,12 @@ struct ImageDemoView: View {
         }
     }
     
+    private var sampleNetworkImageView: some View {
+        VStack {
+            
+        }
+    }
+    
     var body: some View {
         ScrollView {
             VStack {
@@ -161,6 +167,7 @@ struct ImageDemoView: View {
                 sampleImageEffectView
                 sampleSystemImageView
                 sampleLottieImageView
+                sampleNetworkImageView
             }.padding(15)
         }.navigationTitle(Text("图片示例"))
             .navigationBarHidden(false)

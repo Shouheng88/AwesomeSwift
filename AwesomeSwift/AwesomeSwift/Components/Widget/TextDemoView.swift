@@ -44,37 +44,39 @@ struct TextDemoView: View {
     private var sampleTextSizeView: some View {
         VStack {
             SampleSectionTitleView(title: "3. 文本大小和粗细", desc: "")
-            HStack {
-                VStack {
-                    Text("字体(.largeTitle)").font(.largeTitle)
-                    Text("字体(.title)").font(.title)
-                    Text("字体(.title2)").font(.title2)
-                    Text("字体(.title3)").font(.title3)
-                    Text("字体(.headline)").font(.headline)
-                    Text("字体(.subheadline)").font(.subheadline)
-                    Text("字体(.footnote)").font(.footnote)
-                    Text("字体(.caption)").font(.caption)
-                    Text("字体(.caption2)").font(.caption2)
-                    Text("字体(.callout)").font(.callout)
-                }
-                VStack {
-                    Text("字体(10f)").font(.system(size: 10))
-                    Text("字体(12f)").font(.system(size: 12))
-                    Text("字体(14f)").font(.system(size: 14))
-                    Text("字体(16f)").font(.system(size: 16))
-                    Text("字体(18f)").font(.system(size: 18))
-                    Text("字体(20f)").font(.system(size: 20))
-                    Text("字体(22f)").font(.system(size: 22))
-                    Text("字体(24f)").font(.system(size: 24))
-                    Text("字体(26f)").font(.system(size: 26))
-                    Text("字体(28f)").font(.system(size: 28))
-                }
-                VStack {
-                    Text("大小(.regular)").fontWeight(.regular)
-                    Text("大小(.medium)").fontWeight(.medium)
-                    Text("大小(.bold)").fontWeight(.bold)
-                    Text("大小(.heavy)").fontWeight(.heavy)
-                    Text("大小(.light)").fontWeight(.light)
+            ScrollView(.horizontal) {
+                HStack {
+                    VStack {
+                        Text("字体(.largeTitle)").font(.largeTitle)
+                        Text("字体(.title)").font(.title)
+                        Text("字体(.title2)").font(.title2)
+                        Text("字体(.title3)").font(.title3)
+                        Text("字体(.headline)").font(.headline)
+                        Text("字体(.subheadline)").font(.subheadline)
+                        Text("字体(.footnote)").font(.footnote)
+                        Text("字体(.caption)").font(.caption)
+                        Text("字体(.caption2)").font(.caption2)
+                        Text("字体(.callout)").font(.callout)
+                    }
+                    VStack {
+                        Text("字体(10f)").font(.system(size: 10))
+                        Text("字体(12f)").font(.system(size: 12))
+                        Text("字体(14f)").font(.system(size: 14))
+                        Text("字体(16f)").font(.system(size: 16))
+                        Text("字体(18f)").font(.system(size: 18))
+                        Text("字体(20f)").font(.system(size: 20))
+                        Text("字体(22f)").font(.system(size: 22))
+                        Text("字体(24f)").font(.system(size: 24))
+                        Text("字体(26f)").font(.system(size: 26))
+                        Text("字体(28f)").font(.system(size: 28))
+                    }
+                    VStack {
+                        Text("大小(.regular)").fontWeight(.regular)
+                        Text("大小(.medium)").fontWeight(.medium)
+                        Text("大小(.bold)").fontWeight(.bold)
+                        Text("大小(.heavy)").fontWeight(.heavy)
+                        Text("大小(.light)").fontWeight(.light)
+                    }
                 }
             }
         }
@@ -83,20 +85,39 @@ struct TextDemoView: View {
     private var sampleTextEffectView: some View {
         VStack {
             SampleSectionTitleView(title: "4. 文本效果", desc: "")
-            Text("普通的背影效果：.shadow(color: .black, radius: 1, x: 3, y: 3)")
-                .shadow(color: .black, radius: 1, x: 3, y: 3)
-            Text("较强的背影效果：.shadow(color: .black, radius: 2, x: 3, y: 3)")
-                .shadow(color: .black, radius: 2, x: 3, y: 3)
-            Text("模糊效果：.blur(radius: 3)")
-                .blur(radius: 3)
-            Text("横划效果：.strikethrough()")
-                .strikethrough()
-            Text("边框效果：.border(.black, width: 2)")
-                .border(.black, width: 2)
-            Text("边框+填充效果：.padding(5).border(.black, width: 2)")
-                .padding(5).border(.black, width: 2)
-            Text("边框+填充效果：.border(.black, width: 2).padding(5).border(.black, width: 2)")
-                .border(.black, width: 2).padding(5).border(.black, width: 2)
+            Group {
+                Text("普通的背影效果")
+                    .shadow(color: .black, radius: 1, x: 3, y: 3)
+                Text(".shadow(color: .black, radius: 1, x: 3, y: 3)").font(.system(size: 14)).foregroundColor(.gray)
+            }
+            Group {
+                Text("较强的背影效果")
+                    .shadow(color: .black, radius: 2, x: 3, y: 3)
+                Text(".shadow(color: .black, radius: 2, x: 3, y: 3)").font(.system(size: 14)).foregroundColor(.gray)
+            }
+            Group {
+                Text("模糊效果").blur(radius: 3)
+                Text(".blur(radius: 3)").font(.system(size: 14)).foregroundColor(.gray)
+            }
+            Group {
+                Text("横划效果").strikethrough()
+                Text(".strikethrough()").font(.system(size: 14)).foregroundColor(.gray)
+            }
+            Group {
+                Text("边框效果")
+                    .border(.black, width: 2)
+                Text(".border(.black, width: 2)").font(.system(size: 14)).foregroundColor(.gray)
+            }
+            Group {
+                Text("边框+填充效果")
+                    .padding(5).border(.black, width: 2)
+                Text(".padding(5).border(.black, width: 2)").font(.system(size: 14)).foregroundColor(.gray)
+            }
+            Group {
+                Text("边框+填充效果")
+                    .border(.black, width: 2).padding(5).border(.black, width: 2)
+                Text(".border(.black, width: 2).padding(5).border(.black, width: 2)").font(.system(size: 14)).foregroundColor(.gray)
+            }
         }
     }
     
@@ -121,9 +142,21 @@ struct TextDemoView: View {
     private var sampleTextWrapView: some View {
         VStack {
             SampleSectionTitleView(title: "6. 多行文本折叠", desc: "")
-            Text(Consts.longText)
-            Spacer().frame(height: 10)
             Text(Consts.longText).lineLimit(2)
+        }
+    }
+    
+    private var sampleTextComplexView: some View {
+        VStack {
+            SampleSectionTitleView(title: "7. 图文混排")
+            let message = Image(systemName: "message.badge.filled.fill")
+                .renderingMode(.original)
+            let wifi = Image(systemName: "wifi")
+            let animatableWifi: Image = Image(systemName: "wifi")
+            Text("Test").foregroundColor(.red)
+            + Text(message).font(.title)
+            + Text("文字与 SF Symbols 混排。\(wifi) Text 会将插值图片视作文字的一部分。")
+            + Text(animatableWifi).foregroundColor(.blue).underline()
         }
     }
     
@@ -136,6 +169,7 @@ struct TextDemoView: View {
                 sampleTextEffectView
                 sampleLinkView
                 sampleTextWrapView
+                sampleTextComplexView
             }.padding(15)
         }.navigationTitle("文本示例").navigationBarTitleDisplayMode(.inline)
     }
