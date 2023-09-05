@@ -45,7 +45,7 @@ struct SampleData {
         SampleItem(name: "布局", destination: LayoutDemoView()),
         SampleItem(name: "弹窗", destination: PopupDemoView()),
         SampleItem(name: "提示*", destination: AlertDemoView()),
-        SampleItem(name: "TAB-按钮", destination: TabPageDemoView()),
+        SampleItem(name: "TAB页面", destination: TabPageDemoView()),
         SampleItem(name: "底部TAB页面框架", destination: TabDemoView()),
         SampleItem(name: "顶部TAB页面框架", destination: SegmentedViewDemo()),
         SampleItem(name: "全屏页面", destination: ImmersiveView()),

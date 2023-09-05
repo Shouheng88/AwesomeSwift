@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Tab 页面
 struct TabPageDemoView: View {
 
     @State var selection: Int = 0
@@ -26,48 +27,60 @@ struct TabPageDemoView: View {
     var body: some View {
         VStack {
             VStack {
-                Text("The tab styled page")
                 Picker(selection: $selection, content: {
                     ForEach(0..<3) { idx in
-                        Text("TAB \(idx)")
-                        // invalid
-//                        SimpleTab(image: "trash", text: "TAB \(idx)")
+                        Text("标签 \(idx)")
                     }
                 }, label: {
                     Text("")
                 }).pickerStyle(SegmentedPickerStyle())
-                    .foregroundColor(.gray)
-                    .background(Rectangle().fill(.purple))
                 Picker(selection: $selection, content: {
                     ForEach(0..<3) { idx in
-//                        Text("TAB \(idx)")
-                        SimpleTab(image: "trash", text: "TAB \(idx)")
+                        SimpleTab(image: "trash", text: "标签 \(idx)")
                     }
                 }, label: {
                     Text("")
                 }).pickerStyle(InlinePickerStyle())
-            }.padding(10)
+            }
             contentView
-        }.navigationBarTitleDisplayMode(.inline)
+        }.padding(15).navigationTitle("TAB 示例").navigationBarTitleDisplayMode(.inline)
     }
     
     private var contentView: some View {
         switch selection {
         case 0:
-            return AnyView(VStack(alignment: .center) {
-                Text("First Page")
-                Spacer()
-            })
+            return AnyView(
+                ZStack {
+                    Color.red.opacity(0.1).ignoresSafeArea(.all)
+                    VStack(alignment: .trailing) {
+                        Spacer()
+                        Text("页面 1")
+                        Spacer()
+                    }
+                }
+            )
         case 1:
-            return AnyView(VStack(alignment: .leading) {
-                Text("Second Page")
-                Spacer()
-            })
+            return AnyView(
+                ZStack {
+                    Color.green.opacity(0.1).ignoresSafeArea(.all)
+                    VStack(alignment: .trailing) {
+                        Spacer()
+                        Text("页面 2")
+                        Spacer()
+                    }
+                }
+            )
         case 2:
-            return AnyView(VStack(alignment: .trailing) {
-                Text("Third Page")
-                Spacer()
-            })
+            return AnyView(
+                ZStack {
+                    Color.blue.opacity(0.1).ignoresSafeArea(.all)
+                    VStack(alignment: .trailing) {
+                        Spacer()
+                        Text("页面 3")
+                        Spacer()
+                    }
+                }
+            )
         default:
             return AnyView(VStack {
                 Form {
