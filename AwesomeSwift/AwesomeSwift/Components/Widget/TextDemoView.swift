@@ -129,7 +129,7 @@ struct TextDemoView: View {
     
     var body: some View {
         ScrollView {
-            VStack(spacing: 5) {
+            VStack {
                 sampleMarqueeLabelView
                 sampleTextColorView
                 sampleTextSizeView
