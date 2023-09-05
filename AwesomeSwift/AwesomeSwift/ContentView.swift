@@ -22,10 +22,10 @@ struct ContentView: View {
         }, label: {
             HStack {
                 Spacer()
-                Text(name).font(.system(size: 20))
+                Text(name).font(.system(size: 18))
                 Spacer()
-            }.padding(.vertical, 30)
-                .background(Rectangle().fill(.green))
+            }.frame(height: 100)
+                .background(Rectangle().fill(.gray.opacity(0.1)))
                 .cornerRadius(5, antialiased: true)
         })
     }
