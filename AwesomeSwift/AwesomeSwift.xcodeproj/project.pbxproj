@@ -434,6 +434,7 @@
 				9DE65C9329162C7100804F13 /* TextDemoView.swift */,
 				9DE65CA329164C1C00804F13 /* ButtonDemoView.swift */,
 				9DE65CA429164C1C00804F13 /* TextFieldDemoView.swift */,
+				9DE65CA729164C1C00804F13 /* ImageDemoView.swift */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -658,7 +659,6 @@
 				9DE65C9929163F6F00804F13 /* PullToRefresh */,
 				9DE65CA829164C1D00804F13 /* PopupDemoView.swift */,
 				9DE65CA629164C1C00804F13 /* AnimationDemoView.swift */,
-				9DE65CA729164C1C00804F13 /* ImageDemoView.swift */,
 				9DE65CA529164C1C00804F13 /* LayoutDemoView.swift */,
 				9DE65CA929164C1D00804F13 /* TabDemoView.swift */,
 				9DE65CAF29164C1D00804F13 /* TabPageDemoView.swift */,
