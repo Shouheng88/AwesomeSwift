@@ -9,11 +9,12 @@ import SwiftUI
 import JXSegmentedView
 import UIKit
 
+/// 顶部导航栏示例
 struct SegmentedViewDemo: View {
     
     @ObservedObject private var vm: SegmentedViewModel = SegmentedViewModel()
     @State private var selection: Int = 0
-    private let colors: [Color] = [.red, .green, .blue]
+    private let colors: [Color] = [.red.opacity(0.1), .green.opacity(0.1), .blue.opacity(0.1)]
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
     var body: some View {
@@ -25,6 +26,7 @@ struct SegmentedViewDemo: View {
                     .onTapGesture {
                         presentationMode.wrappedValue.dismiss()
                     }
+                Text("顶部导航栏示例")
                 Spacer()
             }.padding(.leading, 5)
             SegmentedView(
@@ -34,17 +36,22 @@ struct SegmentedViewDemo: View {
             TabView(selection: $selection) {
                 ForEach(0..<3) { idx in
                     VStack {
-                        Text("Slide Page [\(idx)]").foregroundColor(.white)
-                        Button("Click to Navigate to Next Page", action: {
+                        Spacer()
+                        HStack {
+                            Spacer()
+                            Text("页面 [\(idx)]")
+                            Spacer()
+                        }
+                        Button("点击跳转到下一个页面", action: {
                             let next = self.selection + 1
                             if next >= colors.count {
                                 self.selection = 0
                             } else {
                                 self.selection = next
                             }
-                        }).frame(height: 40).foregroundColor(.white)
-                    }.frame(width: UIScreen.main.bounds.width, height: 200)
-                        .background(colors[idx])
+                        })
+                        Spacer()
+                    }.background(colors[idx])
                 }
             }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
         }.onAppear(perform: {
@@ -104,7 +111,7 @@ struct SegmentedView: UIViewRepresentable {
         segmentedView.delegate = context.coordinator
         segmentedView.defaultSelectedIndex = selectedIndex
         
-        segmentedDataSource.titles = ["猴哥", "青蛙王子", "旺财"]
+        segmentedDataSource.titles = ["页面 1", "页面 2", "页面 3"]
         segmentedDataSource.isTitleColorGradientEnabled = true
         segmentedView.dataSource = self.segmentedDataSource
         
