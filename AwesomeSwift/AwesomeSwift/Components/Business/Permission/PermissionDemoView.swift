@@ -16,7 +16,6 @@ struct PermissionDemoView: View {
             Button("请求联系人权限", action: {
                 ContactsPermission.request()
             }).frame(height: 40)
-            Divider()
         }
     }
     
@@ -26,7 +25,6 @@ struct PermissionDemoView: View {
             Button("请求位置权限", action: {
                 LocationPermission.request()
             }).frame(height: 40)
-            Divider()
         }
     }
     
@@ -36,7 +34,6 @@ struct PermissionDemoView: View {
             Button("请求相册权限", action: {
                 PhotoLibraryPermission.request()
             }).frame(height: 40)
-            Divider()
         }
     }
     
@@ -46,7 +43,6 @@ struct PermissionDemoView: View {
             Button("请求相机权限", action: {
                 CameraPermission.request()
             }).frame(height: 40)
-            Divider()
         }
     }
     
