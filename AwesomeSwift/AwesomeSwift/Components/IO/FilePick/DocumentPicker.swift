@@ -10,7 +10,9 @@ import SwiftUI
 import UIKit
 
 struct DocumentPicker : UIViewControllerRepresentable {
+    
     var callback : ([URL]?) -> Void
+    
     @Environment(\.presentationMode) var presentationMode
     
     class Coordinator : NSObject, UIDocumentPickerDelegate {
@@ -38,7 +40,9 @@ struct DocumentPicker : UIViewControllerRepresentable {
     func updateUIViewController(_ uiViewController: UIDocumentPickerViewController, context: Context) {}
 
     func makeUIViewController(context: Context) ->  UIDocumentPickerViewController {
-        let options = ["public.image", "public.jpeg", "public.png", "public.pdf", "public.text", "public.video", "public.audio", "public.text", "public.data", "public.zip-archive"]
+        let options = ["public.image", "public.jpeg", "public.png", "public.pdf",
+                       "public.text", "public.video", "public.audio", "public.text",
+                       "public.data", "public.zip-archive"]
         let picker = UIDocumentPickerViewController(documentTypes: options, in: .import)
         picker.allowsMultipleSelection = true
         picker.modalPresentationStyle = .fullScreen

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// 文件选择示例
 struct DocumentPickerDemoView: View {
     
     @State private var showingDocumentPicker = false
@@ -15,20 +16,19 @@ struct DocumentPickerDemoView: View {
     var body: some View {
         VStack {
             Text(tip).foregroundColor(.gray).font(.system(size: 12))
-            Button("Pick Document", action: {
+            Button("选择文件", action: {
                 self.showingDocumentPicker = true
-            })
+            }).frame(height: 40)
         }
         .sheet(isPresented: $showingDocumentPicker, content: {
             DocumentPicker(callback: { urls in
                 if urls == nil {
-                    self.tip = "Selected nothing"
+                    self.tip = "什么都没选"
                 } else {
-                    self.tip = "Selected: \n" + "\n - ".join(list: urls!)
+                    self.tip = "选择这些文件: \n" + "\n - ".join(list: urls!)
                 }
             })
-        }).navigationTitle("Document Pick Demo")
-            .navigationBarTitleDisplayMode(.inline)
+        }).navigationTitle("文件选择示例").navigationBarTitleDisplayMode(.inline)
     }
 }
 

@@ -476,6 +476,7 @@
 		9D71C89D2AA8B0980049CDDD /* IO */ = {
 			isa = PBXGroup;
 			children = (
+				9DB8A3872935C691003DAC4A /* FilePick */,
 				9DA605A92920F76400EFFA1D /* KV.swift */,
 				9DA605A72920F71100EFFA1D /* UserDefaultsDemoView.swift */,
 				9D9D0AE829335E7700605056 /* FileDemoView.swift */,
@@ -547,13 +548,6 @@
 			path = Permission;
 			sourceTree = "<group>";
 		};
-		9DA605A62920F6FD00EFFA1D /* Storage */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Storage;
-			sourceTree = "<group>";
-		};
 		9DB8A3872935C691003DAC4A /* FilePick */ = {
 			isa = PBXGroup;
 			children = (
@@ -588,9 +582,7 @@
 			isa = PBXGroup;
 			children = (
 				9DB8A3912937AB0D003DAC4A /* Vision */,
-				9DB8A3872935C691003DAC4A /* FilePick */,
 				9D87B0AA2934D3BB0072B307 /* Sql */,
-				9DA605A62920F6FD00EFFA1D /* Storage */,
 				9DA605A32920F16000EFFA1D /* Permission */,
 				9DDD690C291BFBD400E2CB69 /* Keyboard */,
 				9DDD690B291BFBCC00E2CB69 /* Events */,
