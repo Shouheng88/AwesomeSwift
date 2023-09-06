@@ -66,7 +66,7 @@ struct SampleData {
         SampleItem(name: "分享", destination: ShareDemoView()),
         SampleItem(name: "发邮件", destination: EmailDemoView()),
         SampleItem(name: "打开页面", destination: LaunchPhonePageDemo()),
-        SampleItem(name: "申请权限", destination: PermissionDemoView()),
+        SampleItem(name: "权限", destination: PermissionDemoView()),
         SampleItem(name: "切换主题", destination: ThemeDemoView()),
         SampleItem(name: "玩安卓", destination: ProjectList()),
         SampleItem(name: "AI视觉", destination: VisionDemoView()),

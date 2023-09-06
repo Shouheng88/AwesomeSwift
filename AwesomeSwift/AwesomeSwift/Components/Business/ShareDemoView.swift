@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// 分享示例
 struct ShareDemoView: View {
     
     private let link = URL(string: "https://www.fullstack.fan")!
@@ -15,9 +16,9 @@ struct ShareDemoView: View {
         VStack(spacing: 20) {
             if #available(iOS 16.0, *) {
                 ShareLink(item: link)
-                ShareLink("Share link", item: link)
+                ShareLink("分享链接", item: link)
                 ShareLink(item: link) {
-                    Label("Share link", systemImage: "lasso")
+                    Label("分享链接", systemImage: "lasso")
                 }
                 ShareLink(item: link, message: Text("Hoooollow!"))
                 ShareLink(
@@ -31,12 +32,12 @@ struct ShareDemoView: View {
                 EmptyView()
             }
             
-            Button("Share Link", action: {
+            Button("分享链接", action: {
                 let activityController = UIActivityViewController(activityItems: [link], applicationActivities: nil)
                 UIApplication.shared.windows.first?.rootViewController!.present(activityController, animated: true, completion: nil)
             })
             
-            Button("Share text", action: {
+            Button("分享文本", action: {
                 let activityController = UIActivityViewController(activityItems: ["This is the sample text to share!"], applicationActivities: nil)
 //                activityController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
                 // exclude some activity types from the list (optional)
@@ -44,11 +45,11 @@ struct ShareDemoView: View {
                 UIApplication.shared.windows.first?.rootViewController!.present(activityController, animated: true, completion: nil)
             })
             
-            Button("Share Image", action: {
+            Button("分享图片", action: {
                 let activityController = UIActivityViewController(activityItems: [R.image.the_soup()!], applicationActivities: nil)
                 UIApplication.shared.windows.first?.rootViewController!.present(activityController, animated: true, completion: nil)
             })
-        }
+        }.padding(15).navigationTitle("分享示例").navigationBarTitleDisplayMode(.inline)
     }
 }
 
