@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import SSZipArchive
 
 /// 文件示例
 struct FileDemoView: View {
     
+    @State private var tip: String = ""
+
     private var documentDirectoryUrl: URL {
         try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
     }
@@ -174,12 +177,57 @@ struct FileDemoView: View {
         }
     }
 
+    private var sampleArchiveDemoView: some View {
+        VStack {
+            SampleSectionTitleView(title: "4. 压缩和解压缩文件")
+            // Archive files.
+            Button {
+                archiveTaskDBData()
+            } label: {
+                Text("Zip 压缩")
+            }.frame(height: 44)
+            
+            Button {
+                unarchiveZipFile()
+            } label: {
+                Text("Zip 解压")
+            }.frame(height: 44)
+        }
+    }
+    
+    /// Usages: https://github.com/ZipArchive/ZipArchive
+    private func archiveTaskDBData() {
+        let docDir = try! FileManager.default.url(
+            for: .documentDirectory,
+            in: .userDomainMask,
+            appropriateFor: nil,
+            create: false)
+        let taskDBDir = docDir.appendingPathComponent("TaskDB").path
+        let zipFilePath = docDir.appendingPathComponent("test.zip").path
+        tip = "archive:\n\(zipFilePath) \nfor:\n\(taskDBDir)"
+        SSZipArchive.createZipFile(atPath: zipFilePath, withContentsOfDirectory: taskDBDir)
+    }
+    
+    private func unarchiveZipFile() {
+        let fm = FileManager.default
+        var docDir = try! fm.url(
+            for: .documentDirectory,
+            in: .userDomainMask,
+            appropriateFor: nil,
+            create: false)
+        let unzipDir = docDir.appendingPathComponent("ziptest").path
+        let zipFilePath = docDir.appendingPathComponent("test.zip").path
+        SSZipArchive.unzipFile(atPath: zipFilePath, toDestination: unzipDir)
+    }
+    
     var body: some View {
         ScrollView {
             VStack {
+                Text(tip).foregroundColor(.gray).font(.system(size: 14))
                 directoryInfoView
                 folderOptionsView
                 fileOptionsView
+                sampleArchiveDemoView
             }.padding(15)
         }.navigationBarTitleDisplayMode(.inline)
             .navigationTitle("文件示例")

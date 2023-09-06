@@ -95,20 +95,6 @@ struct StorageDemoView: View {
             } label: {
                  Text("Create file Custom")
             }.frame(height: 44)
-
-            // Archive files.
-            Button {
-                archiveTaskDBData()
-            } label: {
-                Text("Archive Zip")
-            }.frame(height: 44)
-            
-            Button {
-                unarchiveZipFile()
-            } label: {
-                Text("Unarchive Zip")
-            }.frame(height: 44)
-
         }.padding(.top, 10)
     }
     
@@ -160,31 +146,6 @@ struct StorageDemoView: View {
             }.padding(.horizontal, 15)
         }).navigationBarTitleDisplayMode(.inline)
             .onAppear(perform: onAppear)
-    }
-    
-    /// Usages: https://github.com/ZipArchive/ZipArchive
-    private func archiveTaskDBData() {
-        let docDir = try! FileManager.default.url(
-            for: .documentDirectory,
-            in: .userDomainMask,
-            appropriateFor: nil,
-            create: false)
-        let taskDBDir = docDir.appendingPathComponent("TaskDB").path
-        let zipFilePath = docDir.appendingPathComponent("test.zip").path
-        tip = "archive:\n\(zipFilePath) \nfor:\n\(taskDBDir)"
-        SSZipArchive.createZipFile(atPath: zipFilePath, withContentsOfDirectory: taskDBDir)
-    }
-    
-    private func unarchiveZipFile() {
-        let fm = FileManager.default
-        var docDir = try! fm.url(
-            for: .documentDirectory,
-            in: .userDomainMask,
-            appropriateFor: nil,
-            create: false)
-        let unzipDir = docDir.appendingPathComponent("ziptest").path
-        let zipFilePath = docDir.appendingPathComponent("test.zip").path
-        SSZipArchive.unzipFile(atPath: zipFilePath, toDestination: unzipDir)
     }
     
     private func onAppear() {
