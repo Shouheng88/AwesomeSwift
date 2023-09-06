@@ -58,7 +58,7 @@ struct SampleData {
         SampleItem(name: "文件", destination: FileDemoView()),
         SampleItem(name: "文件选择", destination: DocumentPickerDemoView()),
         SampleItem(name: "WebDAV存储", destination: WebDAVDemoView()),
-        SampleItem(name: "SQLite", destination: SqlLiteDemoView()),
+        SampleItem(name: "SQLite 操作示例", destination: SqlLiteDemoView()),
         SampleItem(name: "Environment示例", destination: EnvironmentDemoView()),
         SampleItem(name: "APP信息", destination: AppInfoDemoView()),
         SampleItem(name: "音频播放", destination: AudioPlayDemoView()),

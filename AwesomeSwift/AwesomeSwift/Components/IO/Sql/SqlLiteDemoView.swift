@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// SQL 示例
 struct SqlLiteDemoView: View {
     
     @State private var result: String = ""
@@ -14,19 +15,19 @@ struct SqlLiteDemoView: View {
     var body: some View {
         VStack {
             Text(result).foregroundColor(.gray).font(.system(size: 12))
-            Button("Insert One Record", action: {
+            Button("插入一条记录", action: {
                 let task = TaskDataStore.shared.insert(task: TaskModel(id: nil, name: "task", date: Date(), status: true))
                 self.result = "inserted: \(String(describing: task.id)), \(task.message)"
             }).frame(height: 40)
-            Button("Get All Records", action: {
+            Button("获取所有记录", action: {
                 let tasks = TaskDataStore.shared.getAll()
                 if tasks.isEmpty {
-                    self.result = "empty -.-"
+                    self.result = "记录为空 -.-"
                 } else {
-                    self.result = "- " + "\n- ".join(list: tasks)
+                    self.result = "全部记录如下：\n- " + "\n- ".join(list: tasks)
                 }
             }).frame(height: 40)
-        }.navigationTitle("SQLite Demo")
+        }.navigationTitle("SQLite 操作示例")
             .navigationBarTitleDisplayMode(.inline)
     }
 }
