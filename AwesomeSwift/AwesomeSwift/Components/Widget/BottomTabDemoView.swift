@@ -7,15 +7,13 @@
 
 import SwiftUI
 
-struct TabDemoView: View {
+/// 底部导航栏示例
+struct BottomTabDemoView: View {
     
     @State var selection: Int = 0
     @State var tip: String = ""
     
     var body: some View {
-        // Use ZStack instead of NavigationView, since NavigationView will
-        // put a fade shader on page on 14.x.
-//        NavigationView {
         ZStack {
             TabView(selection: $selection) {
                 ForEach(0..<5) { idx in
@@ -37,7 +35,7 @@ struct TabDemoView: View {
                 .foregroundColor(.gray)
                 .font(.system(size: 14))
         }.navigationBarHidden(selection == 4)
-            .navigationBarTitle("TAB Title \(selection + 1)", displayMode: .inline)
+            .navigationBarTitle("顶部导航栏示例 \(selection + 1)", displayMode: .inline)
             .navigationBarItems(trailing: trailingView)
             .statusBar(hidden: selection == 4) // hide status bar
     }
@@ -68,99 +66,97 @@ struct TabDemoView: View {
 
 struct SlidePageViewWithCustomIndicator: View {
 
-    private let colors: [Color] = [.red, .green, .blue, .orange, .yellow, .pink, .purple, .black]
+    private let colors: [Color] = [.red.opacity(0.1), .green.opacity(0.1), .blue.opacity(0.1), .orange.opacity(0.1),
+        .yellow.opacity(0.1), .pink.opacity(0.1), .purple.opacity(0.1), .black.opacity(0.1)]
     @State var selection: Int = 0
 
-    var customIndicatorView: some View {
+    private var customIndicatorView: some View {
         HStack(spacing: 15) {
             ForEach(0..<8) { idx in
                 Rectangle()
-                    .fill(.white.opacity(selection == idx ? 1 : 0.5))
-                    .frame(width: 5, height: 5, alignment: .center)
+                    .fill(.black.opacity(selection == idx ? 1 : 0.5))
+                    .frame(width: 8, height: 8, alignment: .center)
             }
-        }
+        }.padding(.bottom, 20)
     }
     
     var body: some View {
         TabView(selection: $selection) {
             ForEach(0..<8) { idx in
-                VStack {
-                    Text("Slide Page [\(idx)]").foregroundColor(.white)
-                    Button("Click to Navigate to Next Page", action: {
+                VStack(spacing: 15) {
+                    Spacer()
+                    HStack {
+                        Spacer()
+                        Text("可滑动页面 [\(idx)]")
+                        Spacer()
+                    }
+                    Button("跳转到下一个页面", action: {
                         let next = self.selection + 1
                         if next >= 8 {
                             self.selection = 0
                         } else {
                             self.selection = next
                         }
-                    }).frame(height: 40).foregroundColor(.white)
-                }.frame(width: UIScreen.main.bounds.width, height: 200)
-                    .background(colors[idx])
+                    })
+                    Spacer()
+                }.background(colors[idx])
             }
         }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-            .background(Rectangle().fill(.pink))
             .overlay(customIndicatorView, alignment: .bottom)
     }
 }
 
 struct SlidePageView: View {
 
-    private let colors: [Color] = [.red, .green, .blue, .orange, .yellow, .pink, .purple, .black]
+    private let colors: [Color] = [.red.opacity(0.1), .green.opacity(0.1), .blue.opacity(0.1),
+        .orange.opacity(0.1), .yellow.opacity(0.1), .pink.opacity(0.1), .purple.opacity(0.1), .black.opacity(0.1)]
     @State var selection: Int = 0
 
     var body: some View {
         TabView(selection: $selection) {
             ForEach(0..<8) { idx in
-                VStack {
-                    Text("Slide Page [\(idx)]")
-                    Button("Click to Navigate to Next Page", action: {
+                VStack(spacing: 15) {
+                    Spacer()
+                    HStack {
+                        Spacer()
+                        Text("可滑动页面 [\(idx)]")
+                        Spacer()
+                    }
+                    Button("跳转到下一个页面", action: {
                         let next = self.selection + 1
                         if next >= 8 {
                             self.selection = 0
                         } else {
                             self.selection = next
                         }
-                    }).frame(height: 40).foregroundColor(.white)
-                }.frame(width: UIScreen.main.bounds.width, height: 200)
-                    .background(colors[idx])
+                    })
+                    Spacer()
+                }.background(colors[idx])
             }
         }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
-//            .background(.pink) // Available only on 15.0 or newer
-            .background(Rectangle().fill(.pink))
     }
 }
 
 struct NormalPageView: View {
     
     let idx: Int
-    private let colors: [Color] = [.red, .green, .blue, .orange, .yellow]
+    private let colors: [Color] = [.red.opacity(0.1), .green.opacity(0.1), .blue.opacity(0.1), .orange.opacity(0.1), .yellow.opacity(0.1)]
 
     var body: some View {
-        ZStack {
-            VStack {
-                Color(.gray).frame(height: 300)
+        VStack{
+            Spacer()
+            HStack {
                 Spacer()
-                Color(.gray).frame(height: 300)
+                Text("TAB 页面 [\(idx)]")
+                Spacer()
             }
-            VStack {
-                ScrollView(content: {
-                    VStack{
-                        Text(
-                            "This is the page for tab item with index [\(idx)]. This might be a good practice to show how the TabView of SwiftUI works! If you have any question, you can contace me at email blablabla@gmail.com anytime."
-                        ).padding(EdgeInsets(top: 10, leading: 15, bottom: 10, trailing: 15))
-                        .frame(width: UIScreen.main.bounds.width,height: UIScreen.main.bounds.height)
-                            .background(colors[idx])
-                    }
-                })
-//                Spacer()
-//                Divider()
-            }
-        }
+            Spacer()
+        }.background(colors[idx])
     }
 }
 
 struct TabDemoView_Previews: PreviewProvider {
     static var previews: some View {
-        TabDemoView()
+        BottomTabDemoView()
     }
 }
