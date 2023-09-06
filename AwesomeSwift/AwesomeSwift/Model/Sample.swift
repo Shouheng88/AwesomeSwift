@@ -52,7 +52,7 @@ struct SampleData {
         SampleItem(name: "软键盘", destination: KeyboardDemoView()),
         SampleItem(name: "列表", destination: ListSampleView()),
         SampleItem(name: "更新提示*", destination: WhatsNewKitView()),
-        SampleItem(name: "顶部通知*", destination: NotificationBannerView()),
+        SampleItem(name: "通知*", destination: NotificationBannerView()),
         SampleItem(name: "下拉刷新", destination: PullToRefreshViewDemo()),
         SampleItem(name: "存储", destination: StorageDemoView()),
         SampleItem(name: "文件", destination: FileDemoView()),

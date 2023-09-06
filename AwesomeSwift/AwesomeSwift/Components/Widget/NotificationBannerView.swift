@@ -9,6 +9,7 @@ import SwiftUI
 import NotificationBannerSwift
 import Rswift
 
+/// 通知示例
 struct NotificationBannerView: View {
     
     @State private var banner: NotificationBanner?
@@ -26,13 +27,13 @@ struct NotificationBannerView: View {
                 self.banner?.show()
             }.frame(height: 40)
             
-            Button("Danger Type Notification") {
+            Button(".danger 类型的通知") {
                 self.banner?.dismiss()
                 self.banner = NotificationBanner(title: "Title", subtitle: "subtitle", style: .danger)
                 self.banner?.show()
             }.frame(height: 40)
             
-            Button("Custom Left View Notification") {
+            Button("自定义左侧按钮类型通知") {
                 self.banner?.dismiss()
                 self.banner = NotificationBanner(
                     title: "Title",
@@ -44,7 +45,7 @@ struct NotificationBannerView: View {
                 self.banner?.show()
             }.frame(height: 40)
             
-            Button("Custom Right View Notification") {
+            Button("自定义右侧按钮类型通知") {
                 self.banner?.dismiss()
                 self.banner = NotificationBanner(
                     title: "Title",
@@ -56,7 +57,7 @@ struct NotificationBannerView: View {
                 self.banner?.show()
             }.frame(height: 40)
             
-            Button("Custom View Notification") {
+            Button("自定义类型通知") {
                 self.banner?.dismiss()
                 // NotificationBanner 内部会取 customView 的 backgroundColor 作为自己的 backgroundColor
                 self.banner = NotificationBanner(customView: UITextView().then({
@@ -66,7 +67,7 @@ struct NotificationBannerView: View {
                 self.banner?.show()
             }.frame(height: 40)
             
-            Button("Danger Type Notification | Bottom") {
+            Button(".info 类型的底部弹出的通知") {
                 self.banner?.dismiss()
                 self.banner = NotificationBanner(title: "Title", subtitle: "subtitle", style: .info)
                 self.banner?.show(bannerPosition: .bottom)

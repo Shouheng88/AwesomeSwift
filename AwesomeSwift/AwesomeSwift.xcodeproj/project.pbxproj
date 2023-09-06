@@ -423,6 +423,7 @@
 		9D71C8912AA624000049CDDD /* Widget */ = {
 			isa = PBXGroup;
 			children = (
+				9DE65C702913E6B300804F13 /* NotificationBannerView.swift */,
 				9DE65C7B29156FDD00804F13 /* WhatsNewKitView.swift */,
 				9DE65C9329162C7100804F13 /* TextDemoView.swift */,
 				9DE65CA429164C1C00804F13 /* TextFieldDemoView.swift */,
@@ -661,7 +662,6 @@
 				9D71C8912AA624000049CDDD /* Widget */,
 				9DDD690A291BFBBB00E2CB69 /* Business */,
 				9DE65C9929163F6F00804F13 /* PullToRefresh */,
-				9DE65C702913E6B300804F13 /* NotificationBannerView.swift */,
 				9DE65C8A2916201100804F13 /* PullToRefreshViewDemo.swift */,
 				9D6436FC292E51090074261A /* ThemeDemoView.swift */,
 				9D6436FE292E64EF0074261A /* AppInfoDemoView.swift */,
