@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// 键值对
 struct KV {
     
     static let def = UserDefaults.standard
@@ -19,7 +20,7 @@ struct KV {
     }
 }
 
-// 一种封装思路：使用属性装饰，做 AOP，内部存取键值对
+/// 一种封装思路：使用属性装饰，做 AOP，内部存取键值对
 @propertyWrapper
 struct UserDefault<Value> {
 

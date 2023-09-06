@@ -32,6 +32,7 @@
 		9D71C8972AA6A9F80049CDDD /* SampleSectionTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D71C8962AA6A9F80049CDDD /* SampleSectionTitleView.swift */; };
 		9D71C8992AA6B0E00049CDDD /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D71C8982AA6B0E00049CDDD /* Consts.swift */; };
 		9D71C89B2AA760960049CDDD /* GestureDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D71C89A2AA760960049CDDD /* GestureDemoView.swift */; };
+		9D71C89F2AA8B4D80049CDDD /* WebDAVDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D71C89E2AA8B4D80049CDDD /* WebDAVDemoView.swift */; };
 		9D87B0A22934BD0D0072B307 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D87B0A12934BD0C0072B307 /* GoogleService-Info.plist */; };
 		9D87B0A52934C8270072B307 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 9D87B0A42934C8270072B307 /* FirebaseCrashlytics */; };
 		9D87B0A92934D3860072B307 /* SqlLiteDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D87B0A82934D3860072B307 /* SqlLiteDemoView.swift */; };
@@ -62,7 +63,7 @@
 		9DA6059F291F516400EFFA1D /* SectionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6059E291F516400EFFA1D /* SectionListView.swift */; };
 		9DA605A1291FA10500EFFA1D /* StatusBarStyleEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA605A0291FA10500EFFA1D /* StatusBarStyleEnvironment.swift */; };
 		9DA605A52920F17700EFFA1D /* AppPermisions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA605A42920F17700EFFA1D /* AppPermisions.swift */; };
-		9DA605A82920F71100EFFA1D /* StorageDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA605A72920F71100EFFA1D /* StorageDemoView.swift */; };
+		9DA605A82920F71100EFFA1D /* UserDefaultsDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA605A72920F71100EFFA1D /* UserDefaultsDemoView.swift */; };
 		9DA605AA2920F76400EFFA1D /* KV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA605A92920F76400EFFA1D /* KV.swift */; };
 		9DA605AC2920FBF600EFFA1D /* AppInfoUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA605AB2920FBF600EFFA1D /* AppInfoUtils.swift */; };
 		9DA605AE29213EC700EFFA1D /* SwipeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA605AD29213EC700EFFA1D /* SwipeListView.swift */; };
@@ -184,6 +185,7 @@
 		9D71C8962AA6A9F80049CDDD /* SampleSectionTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleSectionTitleView.swift; sourceTree = "<group>"; };
 		9D71C8982AA6B0E00049CDDD /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
 		9D71C89A2AA760960049CDDD /* GestureDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureDemoView.swift; sourceTree = "<group>"; };
+		9D71C89E2AA8B4D80049CDDD /* WebDAVDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDAVDemoView.swift; sourceTree = "<group>"; };
 		9D87B0A12934BD0C0072B307 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9D87B0A82934D3860072B307 /* SqlLiteDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqlLiteDemoView.swift; sourceTree = "<group>"; };
 		9D87B0AB2934D3D00072B307 /* TaskDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDataStore.swift; sourceTree = "<group>"; };
@@ -214,7 +216,7 @@
 		9DA605A0291FA10500EFFA1D /* StatusBarStyleEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarStyleEnvironment.swift; sourceTree = "<group>"; };
 		9DA605A2291FB2CC00EFFA1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DA605A42920F17700EFFA1D /* AppPermisions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPermisions.swift; sourceTree = "<group>"; };
-		9DA605A72920F71100EFFA1D /* StorageDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageDemoView.swift; sourceTree = "<group>"; };
+		9DA605A72920F71100EFFA1D /* UserDefaultsDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsDemoView.swift; sourceTree = "<group>"; };
 		9DA605A92920F76400EFFA1D /* KV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KV.swift; sourceTree = "<group>"; };
 		9DA605AB2920FBF600EFFA1D /* AppInfoUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoUtils.swift; sourceTree = "<group>"; };
 		9DA605AD29213EC700EFFA1D /* SwipeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeListView.swift; sourceTree = "<group>"; };
@@ -474,6 +476,10 @@
 		9D71C89D2AA8B0980049CDDD /* IO */ = {
 			isa = PBXGroup;
 			children = (
+				9DA605A92920F76400EFFA1D /* KV.swift */,
+				9DA605A72920F71100EFFA1D /* UserDefaultsDemoView.swift */,
+				9D9D0AE829335E7700605056 /* FileDemoView.swift */,
+				9D71C89E2AA8B4D80049CDDD /* WebDAVDemoView.swift */,
 			);
 			path = IO;
 			sourceTree = "<group>";
@@ -544,9 +550,6 @@
 		9DA605A62920F6FD00EFFA1D /* Storage */ = {
 			isa = PBXGroup;
 			children = (
-				9DA605A72920F71100EFFA1D /* StorageDemoView.swift */,
-				9DA605A92920F76400EFFA1D /* KV.swift */,
-				9D9D0AE829335E7700605056 /* FileDemoView.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -974,7 +977,7 @@
 				9DB8A3892935C6A3003DAC4A /* DocumentPicker.swift in Sources */,
 				9D92EFE8293B185400061967 /* ActivityIndicator.swift in Sources */,
 				9D4D228729102713006E0075 /* AwesomeSwiftApp.swift in Sources */,
-				9DA605A82920F71100EFFA1D /* StorageDemoView.swift in Sources */,
+				9DA605A82920F71100EFFA1D /* UserDefaultsDemoView.swift in Sources */,
 				9DA6059D291F4F1300EFFA1D /* OptionListView.swift in Sources */,
 				9DB8A38B2935C732003DAC4A /* DocumentPickerDemoView.swift in Sources */,
 				9D71C8972AA6A9F80049CDDD /* SampleSectionTitleView.swift in Sources */,
@@ -1010,6 +1013,7 @@
 				9D64370B292F8FC90074261A /* ShareDemoView.swift in Sources */,
 				9DE65CB629164C1D00804F13 /* PopupDemoView.swift in Sources */,
 				9DE65CC42918096A00804F13 /* KeyboardAwareDemoView2.swift in Sources */,
+				9D71C89F2AA8B4D80049CDDD /* WebDAVDemoView.swift in Sources */,
 				9DA605AA2920F76400EFFA1D /* KV.swift in Sources */,
 				9DDD6912291BFF5600E2CB69 /* KeyboardAwareDemo3.swift in Sources */,
 				9DE65C6E29135B9400804F13 /* R.generated.swift in Sources */,
