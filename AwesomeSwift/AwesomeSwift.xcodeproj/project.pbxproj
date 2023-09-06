@@ -471,6 +471,7 @@
 				9DE65CA929164C1D00804F13 /* BottomTabDemoView.swift */,
 				9DE65C7D2916056B00804F13 /* SegmentedViewDemo.swift */,
 				9DE65CBF2917E94D00804F13 /* ImmersiveView.swift */,
+				9DE65C8A2916201100804F13 /* PullToRefreshViewDemo.swift */,
 			);
 			path = Structure;
 			sourceTree = "<group>";
@@ -484,6 +485,7 @@
 				9DA605A72920F71100EFFA1D /* UserDefaultsDemoView.swift */,
 				9D9D0AE829335E7700605056 /* FileDemoView.swift */,
 				9D71C89E2AA8B4D80049CDDD /* WebDAVDemoView.swift */,
+				9DB8A38F29366110003DAC4A /* AudioPlayDemoView.swift */,
 			);
 			path = IO;
 			sourceTree = "<group>";
@@ -589,7 +591,6 @@
 				9DDD690B291BFBCC00E2CB69 /* Events */,
 				9D643702292E76980074261A /* MailView.swift */,
 				9DA605AB2920FBF600EFFA1D /* AppInfoUtils.swift */,
-				9DB8A38F29366110003DAC4A /* AudioPlayDemoView.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -665,7 +666,6 @@
 				9D71C8952AA6A9E00049CDDD /* Common */,
 				9D71C8912AA624000049CDDD /* Widget */,
 				9DDD690A291BFBBB00E2CB69 /* Business */,
-				9DE65C8A2916201100804F13 /* PullToRefreshViewDemo.swift */,
 				9D6436FC292E51090074261A /* ThemeDemoView.swift */,
 				9D6436FE292E64EF0074261A /* AppInfoDemoView.swift */,
 				9D643700292E6BF20074261A /* LaunchPhonePageDemo.swift */,

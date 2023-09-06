@@ -28,14 +28,13 @@ struct AudioPlayDemoView: View {
     var body: some View {
         VStack {
             Text(tip).foregroundColor(.gray).font(.system(size: 12))
-            Button("Play", action: {
+            Button("播放", action: {
                 playAudio(forResource: "y1309", ofType: "mp3")
             }).frame(height: 40)
-            Button("Stop", action: {
+            Button("停止", action: {
                 soundPlayer?.stop()
             }).frame(height: 40)
-        }.navigationTitle("Audio Play Demo")
-            .navigationBarTitleDisplayMode(.inline)
+        }.navigationTitle("音频播放示例").navigationBarTitleDisplayMode(.inline)
     }
 }
 
