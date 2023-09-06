@@ -8,6 +8,7 @@
 import SwiftUI
 import WhatsNewKit
 
+/// 更新提示示例
 struct WhatsNewKitView: View {
     
     @State private var whatsNew: WhatsNew?
@@ -15,20 +16,19 @@ struct WhatsNewKitView: View {
     
     var body: some View {
         VStack(spacing: 10) {
-            Button("Show Whats New", action: {
-                // 给 self.whatsNew 赋值的时候即展示
+            Button("基于 WhatsNewView 的 sheet 显示更新提示", action: {
                 self.whatsNew = buildWhatsNew()
             }).frame(height: 40)
 
-            Button("Show Whats New", action: {
+            Button("基于 sheet 显示更新提示", action: {
                 self.showCustomWhatsNew = true
             }).frame(height: 40)
 
             Spacer()
-        }.sheet(isPresented: $showCustomWhatsNew, content: {
+        }
+        .sheet(isPresented: $showCustomWhatsNew, content: {
             WhatsNewView(whatsNew: buildWhatsNew())
         })
-//        .whatsNewSheet()
         .sheet(whatsNew: self.$whatsNew)
     }
     
