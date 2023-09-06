@@ -20,20 +20,20 @@ struct LaunchPhonePageDemo: View {
 
     private var showAppReviewDemo: some View {
         VStack {
-            Text("Review runsSinceLastRequest [\(LaunchPhonePageDemo.runsSinceLastRequest)]")
-            Text("Review version [\(LaunchPhonePageDemo.version)]")
+            Text("距离上次请求评分 [\(LaunchPhonePageDemo.runsSinceLastRequest)]")
+            Text("评分的版本 [\(LaunchPhonePageDemo.version)]")
 
-            Button("Request Review (before 16.0)", action: {
+            Button("请求评分 (16.0 之前的版本)", action: {
                 if let scene = UIApplication.shared.connectedScenes.first(where: {$0.activationState == .foregroundActive}) as? UIWindowScene {
                     SKStoreReviewController.requestReview(in: scene)
                 }
             }).frame(height: 40)
             
-            Button("Request Review (before 16.0)", action: {
+            Button("请求评分 (16.0 之前的版本)", action: {
                 LaunchPhonePageDemo.showReview()
             }).frame(height: 40)
             
-            Button("Request Review (16.0 and above)", action: {
+            Button("请求评分 (16.0 及以上)", action: {
 //                requestReview()
                 // Use this method on 16.0 and above.
             }).frame(height: 40)
@@ -42,14 +42,14 @@ struct LaunchPhonePageDemo: View {
     
     var body: some View {
         VStack {
-            Button("Open App Settings", action: {
+            Button("打开应用设置", action: {
                 openAppSpecificSettings()
             }).frame(height: 40)
-            Button("Open Web External", action: {
+            Button("外部打开网页", action: {
                 openWebpageExternal()
             }).frame(height: 40)
             showAppReviewDemo
-        }
+        }.navigationTitle("打开页面").navigationBarTitleDisplayMode(.inline)
     }
     
     // https://stackoverflow.com/a/52103305/1477298
