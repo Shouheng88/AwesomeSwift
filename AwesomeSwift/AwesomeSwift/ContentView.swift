@@ -15,302 +15,44 @@ struct ContentView: View {
     @State private var italic = false
     @State private var fontSize = 12.0
     
-    private var appComponentsDemo_part1: some View {
-        VStack {
-            NavigationLink{
-                ProjectList()
-            } label: {
-                Text("WanAndroid")
-            }.frame(height: 40)
-            
-            NavigationLink(destination: {
-                ThemeDemoView()
-            }, label: {
-                Text("Themes")
-            }).frame(height: 40)
-                        
-            NavigationLink(destination: {
-                PermissionDemoView()
-            }, label: {
-                Text("Permission Demo")
-            }).frame(height: 40)
-            
-            NavigationLink(destination: {
-                LaunchPhonePageDemo()
-            }, label: {
-                Text("Launch Phone Pages Demo")
-            }).frame(height: 40)
-            
-            NavigationLink(destination: {
-                EmailDemoView()
-            }, label: {
-                Text("Email Demo")
-            }).frame(height: 40)
-            
-            NavigationLink(destination: {
-                ShareDemoView()
-            }, label: {
-                Text("Share Demo")
-            }).frame(height: 40)
-            
-            NavigationLink(destination: {
-                ChangeIconDemoView()
-            }, label: {
-                Text("Change Icon Demo")
-            }).frame(height: 40)
-            
-            Button("Cause a Crash", action: {
-                fatalError("Guess who's crashed")
-            }).frame(height: 40)
-            
-            NavigationLink(destination: {
-                SqlLiteDemoView()
-            }, label: {
-                Text("SQLite Demo")
-            }).frame(height: 40)
-        }
-    }
-    
-    private var appComponentsDemo_part2: some View {
-        VStack {
-            NavigationLink(destination: {
-                ImagePickDemoView()
-            }, label: {
-                Text("Image Picker Demo")
-            }).frame(height: 40)
-            NavigationLink(destination: {
-                DocumentPickerDemoView()
-            }, label: {
-                Text("Document Picker Demo")
-            }).frame(height: 40)
-            NavigationLink(destination: {
-                AudioPlayDemoView()
-            }, label: {
-                Text("Audio Play Demo")
-            }).frame(height: 40)
-            NavigationLink(destination: {
-                VisionDemoView()
-            }, label: {
-                Text("AI Vision Demo")
-            }).frame(height: 40)
-        }
-    }
-    
-    private var appComponentsDemo: some View {
-        Section(content: {
-            VStack {
-                appComponentsDemo_part1
-                appComponentsDemo_part2
-            }
-        }, header: {
-            Text("App Components Demo")
-        })
-    }
-    
-    private var uiStructureComponentsDemo_Part1: some View {
-        VStack {
-            NavigationLink(destination: {
-                TabPageDemoView()
-            }, label: {
-                Text("Tab Picker Demo")
-            }).frame(height: 40)
-            
-            NavigationLink(destination: {
-                TabDemoView()
-            }, label: {
-                Text("Tab Page Demo")
-            }).frame(height: 40)
-            
-            NavigationLink(destination: {
-                ImmersiveView()
-            }, label: {
-                Text("Immersive Page Demo")
-            }).frame(height: 40)
-            
-            NavigationLink(destination: {
-                KeyboardDemoView()
-            }, label: {
-                Text("Keyboard Demo")
-            }).frame(height: 40)
-            
-            NavigationLink(destination: {
-                ListSampleView()
-            }, label: {
-                Text("List Demo")
-            }).frame(height: 40)
-         
-            NavigationLink(destination: {
-                WhatsNewKitView()
-            }, label: {
-                Text("WhatsNewKit Demo")
-            }).frame(height: 40)
-            
-            NavigationLink(destination: {
-                NotificationBannerView()
-            }, label: {
-                Text(R.string.localizable.banner_test_entry())
-            }).frame(height: 40)
-            
-            NavigationLink(destination: {
-                SegmentedViewDemo()
-            }, label: {
-                Text("JXSegmentedView Demo")
-            }).frame(height: 40)
-            
-            NavigationLink(destination: {
-                PullToRefreshViewDemo()
-            }, label: {
-                Text("Pull To Refresh View Demo")
-            }).frame(height: 40)
-        }
-    }
-    
-    private var uiStructureComponentsDemo_Part2: some View {
-        VStack {
-            NavigationLink(destination: {
-                AlertDemoView()
-            }, label: {
-                Text("Alert Demo")
-            }).frame(height: 40)
-        }
-    }
-    
-    private var uiStructureComponentsDemo: some View {
-        Section(content: {
-            VStack {
-                uiStructureComponentsDemo_Part1
-                uiStructureComponentsDemo_Part2
-            }
-        }, header: {
-            Text("UI Structure Components Demo")
-        })
-    }
-    
-    private var dataCompontntsDemo: some View {
-        Section(content: {
-            NavigationLink(destination: {
-                StorageDemoView()
-            }, label: {
-                Text("Storage Demo")
-            }).frame(height: 40)
-            
-            NavigationLink(destination: {
-                FileDemoView()
-            }, label: {
-                Text("File Demo")
-            }).frame(height: 40)
-            
-            NavigationLink(destination: {
-                EnvironmentDemoView()
-            }, label: {
-                Text("Environment Object Demo")
-            }).frame(height: 40)
-            
-            NavigationLink(destination: {
-                AppInfoDemoView()
-            }, label: {
-                Text("App Info Demo")
-            }).frame(height: 40)
-        }, header: {
-            Text("Data Compontents Demo")
-        })
-    }
-    
-    private var widgetComponentsDemo: some View {
-        Section(content: {
-            NavigationLink(destination: {
-                TextDemoView()
-            }, label: {
-                Text("SwiftUI Text Demo")
-            }).frame(height: 40)
-            
-            NavigationLink(destination: {
-                ButtonDemoView()
-            }, label: {
-                Text("SwiftUI Button Demo")
-            }).frame(height: 40)
-            
-            NavigationLink(destination: {
-                TextFieldDemoView()
-            }, label: {
-                Text("SwiftUI TextField Demo")
-            }).frame(height: 40)
-            
-            NavigationLink(destination: {
-                ImageDemoView()
-            }, label: {
-                Text("SwiftUI Image Demo")
-            }).frame(height: 40)
-            
-            NavigationLink(destination: {
-                FormDemoView()
-            }, label: {
-                Text("SwiftUI Form Demo")
-            }).frame(height: 40)
-            
-            NavigationLink(destination: {
-                AnimationDemoView()
-            }, label: {
-                Text("SwiftUI Animation Demo")
-            }).frame(height: 40)
-            
-            NavigationLink(destination: {
-                LayoutDemoView()
-            }, label: {
-                Text("SwiftUI Layout Demo")
-            }).frame(height: 40)
-            
-            NavigationLink(destination: {
-                PopupDemoView()
-            }, label: {
-                Text("SwiftUI Popup Demo")
-            }).frame(height: 40)
-        }, header: {
-            Text("SwiftUI Widget Components Demo")
+    /// 示例条目控件
+    private func sampleIemView(view: any View, name: String) -> some View {
+        NavigationLink(destination: {
+            AnyView(view)
+        }, label: {
+            HStack {
+                Spacer()
+                Text(name).font(.system(size: 18))
+                Spacer()
+            }.frame(height: 100)
+                .background(Rectangle().fill(.gray.opacity(0.1)))
+                .cornerRadius(5, antialiased: true)
         })
     }
     
     var body: some View {
         NavigationView {
             ScrollView {
-                VStack(spacing: 10) {
-                    appComponentsDemo
-                    dataCompontntsDemo
-                    uiStructureComponentsDemo
-                    widgetComponentsDemo
-                    Spacer()
-                }.frame(width: UIScreen.main.bounds.width)
-            }.toolbar {
-                // 工具栏的使用方法，但是需要放到 NavigationView 内部
-                ToolbarItemGroup {
-                     Slider(
-                         value: $fontSize,
-                         in: 8...120,
-                         minimumValueLabel:
-                             Text("A").font(.system(size: 8)),
-                         maximumValueLabel:
-                             Text("A").font(.system(size: 16))
-                     ) {
-                         Text("Font Size 15")
-                     }
-                     .frame(width: 150)
-                     Toggle(isOn: $bold) {
-                         Image(systemName: "bold")
-                     }
-                     Toggle(isOn: $italic) {
-                         Image(systemName: "italic")
-                     }
-                }
-            }.navigationTitle(Text("Aswsome Swift"))
+                ForEach(SampleData.getSamples()) { group in
+                    HStack(spacing: 10) {
+                        ForEach(group.items) { item in
+                            sampleIemView(view: item.destination, name: item.name)
+                        }
+                    }
+                }.padding(.vertical, 15).padding(.horizontal, 15)
+            }
+            .navigationTitle(Text("Aswsome Swift"))
+                .navigationBarTitleDisplayMode(.inline)
                 .onReceive(NotificationCenter.Publisher(
                     center: NotificationCenter.default,
                     name: NSNotification.Name(Events.SMAPLE_NOTIFICATION_NAME)
                 ), perform: { out in
                     debugPrint("RECEIVED NOTIFICATION WITH \(String(describing: out.object))")
                 })
-        }
+        }.navigationViewStyle(.stack)
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

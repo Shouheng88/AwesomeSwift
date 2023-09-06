@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// AI 视觉示例
 struct VisionDemoView: View {
     
     var body: some View {
@@ -17,20 +18,19 @@ struct VisionDemoView: View {
                     NavigationLink(destination: {
                         ScannerDemoView()
                     }, label: {
-                        Text("Scanner Demo")
+                        Text("图像识别示例")
                     })
                 } else {
-                    Text("Scanner Feature Not Supported For You OS Version")
+                    Text("你的系统版本不支持该特性")
                 }
             }.frame(height: 40)
             // 拍照识别
             NavigationLink(destination: {
                 DocScanDemoView()
             }, label: {
-                Text("Docs Scan Demo")
+                Text("文档扫描示例")
             }).frame(height: 40)
-        }.navigationBarTitleDisplayMode(.inline)
-            .navigationTitle("AI Vision Demo")
+        }.navigationBarTitleDisplayMode(.inline).navigationTitle("AI 视觉示例")
     }
 }
 

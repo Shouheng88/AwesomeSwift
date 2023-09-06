@@ -23,7 +23,7 @@ target 'AwesomeSwift' do
   pod 'Then', :git => 'git@github.com:devxoul/Then.git'
   pod 'R.swift'#, :git => 'git@github.com:mac-cain13/R.swift.git', :tag => '6.1.0'
   # 图片
-  pod 'Kingfisher', :git => 'git@github.com:onevcat/Kingfisher.git'
+  pod 'Kingfisher', '7.6.1'
   pod 'lottie-ios'
 
   pod 'SQLite.swift', '~> 0.14.0'
@@ -34,4 +34,14 @@ target 'AwesomeSwift' do
   pod 'NotificationBannerSwift', '~> 3.0.0'
   pod 'JXSegmentedView'
   # pod 'WhatsNewKit', :git => 'git@github.com:SvenTiigi/WhatsNewKit.git', :tag => '2.0.3'
+end
+
+post_install do |installer|
+  installer.generated_projects.each do |project|
+    project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+      end
+    end
+  end
 end
