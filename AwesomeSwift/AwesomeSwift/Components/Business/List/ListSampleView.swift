@@ -7,25 +7,26 @@
 
 import SwiftUI
 
+/// 列表示例
 struct ListSampleView: View {
     var body: some View {
         VStack {
             NavigationLink{
                 OptionListView()
             } label: {
-                Text("Option List")
+                Text("删除和拖动列表")
             }.frame(height: 40)
             
             NavigationLink{
                 SectionListView()
             } label: {
-                Text("Section List")
+                Text("分组列表示例")
             }.frame(height: 40)
             
             NavigationLink{
                 SwipeListView()
             } label: {
-                Text("Swipe List")
+                Text("侧滑列表示例")
             }.frame(height: 40)
         }.navigationBarTitleDisplayMode(.inline)
     }

@@ -7,9 +7,10 @@
 
 import SwiftUI
 
+/// 侧滑删除和拖动排序列表
 struct OptionListView: View {
     
-    @State var messages: [Message] = (0...60).map { Message(text: "message:\($0)") }
+    @State var messages: [Message] = (0...60).map { Message(text: "条目 \($0)") }
     
     var body: some View {
         List {
@@ -22,7 +23,7 @@ struct OptionListView: View {
                     self.messages.move(fromOffsets: from, toOffset: to)
                 }
             }
-        }.navigationTitle("Option List Sample")
+        }.navigationTitle("删除和拖动列表")
     }
     
     func deleteRow(at offsets: IndexSet) {

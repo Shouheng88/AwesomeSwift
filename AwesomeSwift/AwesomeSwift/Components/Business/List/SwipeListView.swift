@@ -7,9 +7,10 @@
 
 import SwiftUI
 
+/// 侧滑列表示例
 struct SwipeListView: View {
     
-    @State var messages: [Message] = (0...60).map { Message(text: "message:\($0)") }
+    @State var messages: [Message] = (0...60).map { Message(text: "条目 \($0)") }
     @State var swipedChannelId: String?
     
     var body: some View {
@@ -23,7 +24,7 @@ struct SwipeListView: View {
                 }
                 .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
             }
-        }.navigationTitle("Swipe List Sample")
+        }.navigationTitle("侧滑列表示例")
 //            .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)) // 无效
     }
 }
@@ -62,7 +63,7 @@ struct SwipeContainer: View {
                 actions
             }
             child
-                .background(Rectangle().fill(.gray))
+                .background(Rectangle().fill(.gray.opacity(0.1)))
                 .offset(x: self.offsetX)
                 .simultaneousGesture(
                     DragGesture(minimumDistance: 10, coordinateSpace: .local)
