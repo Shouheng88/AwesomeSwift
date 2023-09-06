@@ -8,31 +8,34 @@
 import SwiftUI
 import Rswift
 
+/// 主题切换示例
 struct ThemeDemoView: View {
     
     private var switchThemeView: some View {
-        VStack {
-            Button("Switch To Light", action: {
-                UIApplication.shared.windows
-                    .first { $0.isKeyWindow }?
-                    .overrideUserInterfaceStyle = .light
-            }).frame(height: 40)
-            Button("Switch To Dark", action: {
-                UIApplication.shared.windows
-                    .first { $0.isKeyWindow }?
-                    .overrideUserInterfaceStyle = .dark
-            }).frame(height: 40)
-            Button("Follow System", action: {
-                UIApplication.shared.windows
-                    .first { $0.isKeyWindow }?
-                    .overrideUserInterfaceStyle = .unspecified
-            }).frame(height: 40)
-            HStack {
-                Rectangle()
-                    .fill(Color(R.color.dark_light_sample_color()!))
-                    .frame(height: 30)
-            }.padding(EdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 30))
-        }
+        ZStack {
+            VStack {
+                Button("切换为亮色主题", action: {
+                    UIApplication.shared.windows
+                        .first { $0.isKeyWindow }?
+                        .overrideUserInterfaceStyle = .light
+                }).frame(height: 40)
+                Button("切换为暗色主题", action: {
+                    UIApplication.shared.windows
+                        .first { $0.isKeyWindow }?
+                        .overrideUserInterfaceStyle = .dark
+                }).frame(height: 40)
+                Button("跟随系统", action: {
+                    UIApplication.shared.windows
+                        .first { $0.isKeyWindow }?
+                        .overrideUserInterfaceStyle = .unspecified
+                }).frame(height: 40)
+                HStack {
+                    Rectangle()
+                        .fill(Color(R.color.dark_light_sample_color()!))
+                        .frame(height: 30)
+                }.padding(EdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 30))
+            }.padding(15)
+        }.navigationTitle("主题切换示例").navigationBarTitleDisplayMode(.inline)
     }
     
     private var uiInfoSampleView: some View {
