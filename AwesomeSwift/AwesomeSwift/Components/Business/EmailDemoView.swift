@@ -8,6 +8,7 @@
 import SwiftUI
 import MessageUI
 
+/// 邮件示例
 struct EmailDemoView: View {
     
     @State var result: Result<MFMailComposeResult, Error>? = nil
@@ -20,7 +21,7 @@ struct EmailDemoView: View {
             Button(action: {
                self.isShowingMailView.toggle()
             }) {
-                Text("Send Email")
+                Text("使用内置页面发送邮件")
             }
             .frame(height: 40)
             .disabled(!MFMailComposeViewController.canSendMail())
@@ -28,7 +29,7 @@ struct EmailDemoView: View {
                 MailView(result: self.$result)
             }
             
-            Button("Send Email by URL", action: {
+            Button("基于 URL 的形式发送邮件", action: {
                 sendEmailByUrl()
             }).frame(height: 40)
             
