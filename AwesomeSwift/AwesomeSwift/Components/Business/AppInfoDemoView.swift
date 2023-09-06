@@ -7,37 +7,38 @@
 
 import SwiftUI
 
+/// 应用信息示例
 struct AppInfoDemoView: View {
 
     private var uiid = UIDevice.current.identifierForVendor?.uuidString ?? ""
     
     private var appInfoView: some View {
         VStack {
-            Text("App Name: \(AppInfoUtils.appName)")
-            Text("App Version: \(AppInfoUtils.appVersion)")
-            Text("App Build: \(AppInfoUtils.appBuild)")
-            Text("App Build Date: \(AppInfoUtils.buildDate?.format(format: "yyyy-MM-dd HH:mm:ss") ?? "")")
+            itemView(title: "App Name:", desc: AppInfoUtils.appName)
+            itemView(title: "App Version:", desc: "\(AppInfoUtils.appVersion)")
+            itemView(title: "App Build:", desc: "\(AppInfoUtils.appBuild)")
+            itemView(title: "App Build Date:", desc: "\(AppInfoUtils.buildDate?.format(format: "yyyy-MM-dd HH:mm:ss") ?? "")")
         }.padding(.top, 10)
     }
     
     private var deviceInfoView: some View {
         VStack {
-            Text("Device name: \(UIDevice.current.name)")
-            Text("Device model: \(UIDevice.current.model)")
-            Text("Device system version: \(UIDevice.current.systemVersion)")
-            Text("Device system name: \(UIDevice.current.systemName)")
-            Text("Device localized model: \(UIDevice.current.localizedModel)")
-            Text("Device uiid: \(uiid)")
-            Text("Device battery level: \(UIDevice.current.batteryLevel)")
-            Text("Device battery state: \(getBatteryStateString())")
-            Text("Device orientation: \(getOrientationString())")
+            itemView(title: "Device name:", desc: "\(UIDevice.current.name)")
+            itemView(title: "Device model:", desc: "\(UIDevice.current.model)")
+            itemView(title: "Device system version:", desc: "\(UIDevice.current.systemVersion)")
+            itemView(title: "Device system name:", desc: "\(UIDevice.current.systemName)")
+            itemView(title: "Device localized model:", desc: "\(UIDevice.current.localizedModel)")
+            itemView(title: "Device uiid:", desc: "\(uiid)")
+            itemView(title: "Device battery level:", desc: "\(UIDevice.current.batteryLevel)")
+            itemView(title: "Device battery state:", desc: "\(getBatteryStateString())")
+            itemView(title: "Device orientation:", desc: "\(getOrientationString())")
         }
     }
     
     private var screenInfoView: some View {
         VStack {
-            Text("Screen width: \(UIScreen.main.bounds.width)")
-            Text("Screen width: \(UIScreen.main.bounds.height)")
+            itemView(title: "Screen width:", desc: "\(UIScreen.main.bounds.width)")
+            itemView(title: "Screen width:", desc: "\(UIScreen.main.bounds.height)")
         }
     }
     
@@ -77,12 +78,24 @@ struct AppInfoDemoView: View {
         }
     }
     
+    private func itemView(title: String, desc: String) -> AnyView {
+        return AnyView(HStack {
+            Text(title)
+                .frame(width: (UIScreen.main.bounds.width - 40)/2, alignment: .trailing)
+            Spacer()
+            Text(desc)
+                .frame(width: (UIScreen.main.bounds.width - 40)/2, alignment: .leading)
+        })
+    }
+    
     var body: some View {
-        VStack {
-            appInfoView.padding(.vertical, 10)
-            screenInfoView.padding(.vertical, 10)
-            deviceInfoView.padding(.vertical, 10)
-        }
+        ZStack {
+            VStack {
+                appInfoView.padding(.vertical, 10)
+                screenInfoView.padding(.vertical, 10)
+                deviceInfoView.padding(.vertical, 10)
+            }.padding(15)
+        }.navigationTitle("应用信息示例").navigationBarTitleDisplayMode(.inline)
     }
 }
 

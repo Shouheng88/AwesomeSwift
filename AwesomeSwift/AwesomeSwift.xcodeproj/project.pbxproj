@@ -456,6 +456,7 @@
 			children = (
 				9D92EFE2293B185400061967 /* AlertToast */,
 				9D71C8962AA6A9F80049CDDD /* SampleSectionTitleView.swift */,
+				9DA605AB2920FBF600EFFA1D /* AppInfoUtils.swift */,
 				9D6436FA292C7CBA0074261A /* LottieView.swift */,
 				9D87B0AF2934F6350072B307 /* ImagePicker.swift */,
 			);
@@ -590,7 +591,6 @@
 				9DA605A32920F16000EFFA1D /* Permission */,
 				9DDD690B291BFBCC00E2CB69 /* Events */,
 				9D643702292E76980074261A /* MailView.swift */,
-				9DA605AB2920FBF600EFFA1D /* AppInfoUtils.swift */,
 				9D6436FC292E51090074261A /* ThemeDemoView.swift */,
 				9D6436FE292E64EF0074261A /* AppInfoDemoView.swift */,
 				9D643700292E6BF20074261A /* LaunchPhonePageDemo.swift */,
