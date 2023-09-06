@@ -450,6 +450,7 @@
 		9D71C8952AA6A9E00049CDDD /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				9D92EFE2293B185400061967 /* AlertToast */,
 				9D71C8962AA6A9F80049CDDD /* SampleSectionTitleView.swift */,
 				9D6436FA292C7CBA0074261A /* LottieView.swift */,
 				9D87B0AF2934F6350072B307 /* ImagePicker.swift */,
@@ -475,14 +476,6 @@
 				9D87B0AB2934D3D00072B307 /* TaskDataStore.swift */,
 			);
 			path = Sql;
-			sourceTree = "<group>";
-		};
-		9D92EFD9293B17E500061967 /* Libraries */ = {
-			isa = PBXGroup;
-			children = (
-				9D92EFE2293B185400061967 /* AlertToast */,
-			);
-			path = Libraries;
 			sourceTree = "<group>";
 		};
 		9D92EFE2293B185400061967 /* AlertToast */ = {
@@ -587,7 +580,6 @@
 				9D87B0AA2934D3BB0072B307 /* Sql */,
 				9DA605A62920F6FD00EFFA1D /* Storage */,
 				9DA605A32920F16000EFFA1D /* Permission */,
-				9DA60599291F4ED300EFFA1D /* List */,
 				9DDD690C291BFBD400E2CB69 /* Keyboard */,
 				9DDD690B291BFBCC00E2CB69 /* Events */,
 				9D643702292E76980074261A /* MailView.swift */,
@@ -662,10 +654,10 @@
 		9DE65C6F2913E69200804F13 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				9DA60599291F4ED300EFFA1D /* List */,
 				9D71C89C2AA80AFC0049CDDD /* Structure */,
 				9D71C8952AA6A9E00049CDDD /* Common */,
 				9D71C8912AA624000049CDDD /* Widget */,
-				9D92EFD9293B17E500061967 /* Libraries */,
 				9DDD690A291BFBBB00E2CB69 /* Business */,
 				9DE65C9929163F6F00804F13 /* PullToRefresh */,
 				9DE65C702913E6B300804F13 /* NotificationBannerView.swift */,
