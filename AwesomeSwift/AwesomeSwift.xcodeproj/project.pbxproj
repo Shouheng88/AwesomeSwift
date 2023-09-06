@@ -434,9 +434,6 @@
 				9DE65CA529164C1C00804F13 /* LayoutDemoView.swift */,
 				9DE65CA829164C1D00804F13 /* PopupDemoView.swift */,
 				9D92EFE9293B18A300061967 /* AlertDemoView.swift */,
-				9DE65CAF29164C1D00804F13 /* TabPageDemoView.swift */,
-				9DE65CA929164C1D00804F13 /* BottomTabDemoView.swift */,
-				9DE65C7D2916056B00804F13 /* SegmentedViewDemo.swift */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -458,6 +455,17 @@
 				9D87B0AF2934F6350072B307 /* ImagePicker.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		9D71C89C2AA80AFC0049CDDD /* Structure */ = {
+			isa = PBXGroup;
+			children = (
+				9DE65CAF29164C1D00804F13 /* TabPageDemoView.swift */,
+				9DE65CA929164C1D00804F13 /* BottomTabDemoView.swift */,
+				9DE65C7D2916056B00804F13 /* SegmentedViewDemo.swift */,
+				9DE65CBF2917E94D00804F13 /* ImmersiveView.swift */,
+			);
+			path = Structure;
 			sourceTree = "<group>";
 		};
 		9D87B0AA2934D3BB0072B307 /* Sql */ = {
@@ -654,6 +662,7 @@
 		9DE65C6F2913E69200804F13 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				9D71C89C2AA80AFC0049CDDD /* Structure */,
 				9D71C8952AA6A9E00049CDDD /* Common */,
 				9D71C8912AA624000049CDDD /* Widget */,
 				9D92EFD9293B17E500061967 /* Libraries */,
@@ -662,7 +671,6 @@
 				9DE65C702913E6B300804F13 /* NotificationBannerView.swift */,
 				9DE65C7B29156FDD00804F13 /* WhatsNewKitView.swift */,
 				9DE65C8A2916201100804F13 /* PullToRefreshViewDemo.swift */,
-				9DE65CBF2917E94D00804F13 /* ImmersiveView.swift */,
 				9D6436FC292E51090074261A /* ThemeDemoView.swift */,
 				9D6436FE292E64EF0074261A /* AppInfoDemoView.swift */,
 				9D643700292E6BF20074261A /* LaunchPhonePageDemo.swift */,
