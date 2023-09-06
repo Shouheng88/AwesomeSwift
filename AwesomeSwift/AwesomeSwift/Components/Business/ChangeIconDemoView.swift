@@ -7,30 +7,30 @@
 
 import SwiftUI
 
+/// 修改应用图标
 struct ChangeIconDemoView: View {
 
     private let iconName = UIApplication.shared.alternateIconName ?? ""
 
     var body: some View {
         VStack {
-            Text("Icon name: \(iconName)")
+            Text("当前应用名称: \(iconName)")
             
-            Button("Clear App Icon", action: {
+            Button("清理应用图标", action: {
                 UIApplication.shared.setAlternateIconName(nil)
             }).frame(height: 40)
                 .disabled(!UIApplication.shared.supportsAlternateIcons)
             
-            Button("Change to Calendar App Icon", action: {
+            Button("修改应用图标为 Calendar", action: {
                 changeToCalendarAppIcon()
             }).frame(height: 40)
                 .disabled(!UIApplication.shared.supportsAlternateIcons)
             
-            Button("Change to Swift App Icon", action: {
+            Button("修改应用图标为 Swift", action: {
                 changeToSwiftAppIcon()
             }).frame(height: 40)
                 .disabled(!UIApplication.shared.supportsAlternateIcons)
-
-        }
+        }.navigationTitle("修改应用图标").navigationBarTitleDisplayMode(.inline)
     }
     
     private func changeToCalendarAppIcon() {
