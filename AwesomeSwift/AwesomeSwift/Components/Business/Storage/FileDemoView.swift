@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// 文件示例
 struct FileDemoView: View {
     
     private var documentDirectoryUrl: URL {
@@ -27,46 +28,32 @@ struct FileDemoView: View {
     
     private var directoryInfoView: some View {
         VStack(alignment: .leading, spacing: 8) {
-            DirectoryInfoView(message: ".documentDirectory:\n \(urlFor(for: .documentDirectory))")
-            DirectoryInfoView(message: ".userDirectory:\n \(urlFor(for: .userDirectory))")
-            DirectoryInfoView(message: ".applicationDirectory:\n \(urlFor(for: .applicationDirectory))")
-            DirectoryInfoView(message: ".developerDirectory:\n \(urlFor(for: .developerDirectory))")
-            DirectoryInfoView(message: ".libraryDirectory:\n \(urlFor(for: .libraryDirectory))")
-            DirectoryInfoView(message: ".musicDirectory:\n \(urlFor(for: .musicDirectory))")
-            DirectoryInfoView(message: ".trashDirectory:\n \(urlFor(for: .trashDirectory))")
-            DirectoryInfoView(message: ".applicationSupportDirectory:\n \(urlFor(for: .applicationSupportDirectory))")
-            DirectoryInfoView(message: ".documentDirectory content:\n \(contentsOfDocumentDirectory)")
-            DirectoryInfoView(message: "contentsOfDocumentDirectoryDepth:\n \(contentsOfDocumentDirectoryDepth)")
+            SampleSectionTitleView(title: "1. 文件路径示例")
+            Group {
+                DirectoryInfoView(message: ".documentDirectory:\n \(urlFor(for: .documentDirectory))")
+                DirectoryInfoView(message: ".userDirectory:\n \(urlFor(for: .userDirectory))")
+                DirectoryInfoView(message: ".applicationDirectory:\n \(urlFor(for: .applicationDirectory))")
+                DirectoryInfoView(message: ".developerDirectory:\n \(urlFor(for: .developerDirectory))")
+                DirectoryInfoView(message: ".libraryDirectory:\n \(urlFor(for: .libraryDirectory))")
+                DirectoryInfoView(message: ".musicDirectory:\n \(urlFor(for: .musicDirectory))")
+                DirectoryInfoView(message: ".trashDirectory:\n \(urlFor(for: .trashDirectory))")
+                DirectoryInfoView(message: ".applicationSupportDirectory:\n \(urlFor(for: .applicationSupportDirectory))")
+                DirectoryInfoView(message: ".documentDirectory content:\n \(contentsOfDocumentDirectory)")
+                DirectoryInfoView(message: "contentsOfDocumentDirectoryDepth:\n \(contentsOfDocumentDirectoryDepth)")
+            }
         }.onAppear(perform: {
             // 另外一种查看模拟器里的目录的方式是，将以下打印出的内容在 Finder 中选择 “前往->前往文件夹”，输入，然后可以进入对应目录
             print(urlFor(for: .documentDirectory))
         })
     }
     
-    private var fileOptionsView: some View {
-        VStack {
-            Text("Sample text file exists: \(String(sampleFileExists()))").frame(height: 40)
-            Button("Write Text To File", action: {
-                writeTextToFile()
-            }).frame(height: 40)
-            Button("Write Image To File", action: {
-                writeImageToFile()
-            }).frame(height: 40)
-            Button("Write Data To File", action: {
-                writeDataToFile()
-            }).frame(height: 40)
-            Button("Copy File", action: {
-                copyFile()
-            }).frame(height: 40)
-        }
-    }
-    
     private var folderOptionsView: some View {
         VStack {
-            Button("Create Folder", action: {
+            SampleSectionTitleView(title: "2. 目录读写")
+            Button("创建目录", action: {
                 createFolder()
             }).frame(height: 40)
-            Button("Create Sub Folder", action: {
+            Button("创建子目录", action: {
                 createSubFolder()
             }).frame(height: 40)
         }
@@ -103,6 +90,25 @@ struct FileDemoView: View {
             try fm.createDirectory(at: folder, withIntermediateDirectories: true)
         } catch {
             print("failed to create folder")
+        }
+    }
+    
+    private var fileOptionsView: some View {
+        VStack {
+            SampleSectionTitleView(title: "3. 文件读写示例")
+            Text("示例文件是否存在: \(String(sampleFileExists()))").frame(height: 40)
+            Button("写文本到文件", action: {
+                writeTextToFile()
+            }).frame(height: 40)
+            Button("写图片到文件", action: {
+                writeImageToFile()
+            }).frame(height: 40)
+            Button("写字节到文件", action: {
+                writeDataToFile()
+            }).frame(height: 40)
+            Button("文件复制", action: {
+                copyFile()
+            }).frame(height: 40)
         }
     }
     
@@ -154,17 +160,6 @@ struct FileDemoView: View {
         return FileManager.default.fileExists(atPath: textUrl.path)
     }
     
-    var body: some View {
-        ScrollView {
-            VStack {
-                directoryInfoView
-                folderOptionsView
-                fileOptionsView
-            }
-        }.navigationBarTitleDisplayMode(.inline)
-            .navigationTitle("File Demo")
-    }
-    
     private func urlFor(for directory: FileManager.SearchPathDirectory) -> String {
         do {
             let fm = FileManager.default
@@ -177,6 +172,17 @@ struct FileDemoView: View {
         } catch {
             return "--"
         }
+    }
+
+    var body: some View {
+        ScrollView {
+            VStack {
+                directoryInfoView
+                folderOptionsView
+                fileOptionsView
+            }.padding(15)
+        }.navigationBarTitleDisplayMode(.inline)
+            .navigationTitle("文件示例")
     }
 }
 
@@ -212,7 +218,6 @@ struct DirectoryInfoView: View {
             Text(messageTitle)
                 .foregroundColor(Color.black)
                 .font(.system(size: 12))
-                .bold()
             Text(messageBody)
                 .foregroundColor(Color.gray)
                 .font(.system(size: 12))
