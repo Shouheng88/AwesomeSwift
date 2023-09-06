@@ -41,28 +41,7 @@ struct ContentView: View {
                     }
                 }.padding(.vertical, 15).padding(.horizontal, 15)
             }
-            .toolbar {
-                // 工具栏的使用方法，但是需要放到 NavigationView 内部
-                ToolbarItemGroup {
-                     Slider(
-                         value: $fontSize,
-                         in: 8...120,
-                         minimumValueLabel:
-                             Text("A").font(.system(size: 8)),
-                         maximumValueLabel:
-                             Text("A").font(.system(size: 16))
-                     ) {
-                         Text("Font Size 15")
-                     }
-                     .frame(width: 150)
-                     Toggle(isOn: $bold) {
-                         Image(systemName: "bold")
-                     }
-                     Toggle(isOn: $italic) {
-                         Image(systemName: "italic")
-                     }
-                }
-            }.navigationTitle(Text("Aswsome Swift"))
+            .navigationTitle(Text("Aswsome Swift"))
                 .navigationBarTitleDisplayMode(.inline)
                 .onReceive(NotificationCenter.Publisher(
                     center: NotificationCenter.default,
