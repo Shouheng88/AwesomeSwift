@@ -591,6 +591,12 @@
 				9DDD690B291BFBCC00E2CB69 /* Events */,
 				9D643702292E76980074261A /* MailView.swift */,
 				9DA605AB2920FBF600EFFA1D /* AppInfoUtils.swift */,
+				9D6436FC292E51090074261A /* ThemeDemoView.swift */,
+				9D6436FE292E64EF0074261A /* AppInfoDemoView.swift */,
+				9D643700292E6BF20074261A /* LaunchPhonePageDemo.swift */,
+				9D64370A292F8FC90074261A /* ShareDemoView.swift */,
+				9D64370C292F90510074261A /* EmailDemoView.swift */,
+				9D6437102930BD510074261A /* ChangeIconDemoView.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -666,12 +672,6 @@
 				9D71C8952AA6A9E00049CDDD /* Common */,
 				9D71C8912AA624000049CDDD /* Widget */,
 				9DDD690A291BFBBB00E2CB69 /* Business */,
-				9D6436FC292E51090074261A /* ThemeDemoView.swift */,
-				9D6436FE292E64EF0074261A /* AppInfoDemoView.swift */,
-				9D643700292E6BF20074261A /* LaunchPhonePageDemo.swift */,
-				9D64370A292F8FC90074261A /* ShareDemoView.swift */,
-				9D64370C292F90510074261A /* EmailDemoView.swift */,
-				9D6437102930BD510074261A /* ChangeIconDemoView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
