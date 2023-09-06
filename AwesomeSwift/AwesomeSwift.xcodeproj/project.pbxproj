@@ -465,6 +465,7 @@
 		9D71C89C2AA80AFC0049CDDD /* Structure */ = {
 			isa = PBXGroup;
 			children = (
+				9DDD690C291BFBD400E2CB69 /* Keyboard */,
 				9DE65C9929163F6F00804F13 /* PullToRefresh */,
 				9DE65CAF29164C1D00804F13 /* TabPageDemoView.swift */,
 				9DE65CA929164C1D00804F13 /* BottomTabDemoView.swift */,
@@ -585,7 +586,6 @@
 			children = (
 				9DB8A3912937AB0D003DAC4A /* Vision */,
 				9DA605A32920F16000EFFA1D /* Permission */,
-				9DDD690C291BFBD400E2CB69 /* Keyboard */,
 				9DDD690B291BFBCC00E2CB69 /* Events */,
 				9D643702292E76980074261A /* MailView.swift */,
 				9DA605AB2920FBF600EFFA1D /* AppInfoUtils.swift */,
