@@ -34,8 +34,8 @@ struct ThemeDemoView: View {
                         .fill(Color(R.color.dark_light_sample_color()!))
                         .frame(height: 30)
                 }.padding(EdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 30))
-            }.padding(15)
-        }.navigationTitle("主题切换示例").navigationBarTitleDisplayMode(.inline)
+            }
+        }
     }
     
     private var uiInfoSampleView: some View {
@@ -96,8 +96,8 @@ struct ThemeDemoView: View {
             VStack {
                 uiInfoSampleView
                 switchThemeView
-            }
-        })
+            }.padding(15)
+        }).navigationTitle("主题切换示例").navigationBarTitleDisplayMode(.inline)
     }
 }
 
