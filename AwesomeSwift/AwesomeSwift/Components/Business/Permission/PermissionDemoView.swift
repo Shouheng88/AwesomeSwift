@@ -7,12 +7,13 @@
 
 import SwiftUI
 
+/// 权限示例
 struct PermissionDemoView: View {
     
     private var contactPermissionView: some View {
         VStack {
-            Text("Contact permission status: \(ContactsPermission.authorizationStatus.rawValue)")
-            Button("Request Contace Permission", action: {
+            Text("联系人权限 \(ContactsPermission.authorizationStatus.rawValue)")
+            Button("请求联系人权限", action: {
                 ContactsPermission.request()
             }).frame(height: 40)
             Divider()
@@ -21,8 +22,8 @@ struct PermissionDemoView: View {
     
     private var locationPermissionView: some View {
         VStack {
-            Text("Location permission status: \(LocationPermission.authorizationStatus.rawValue)")
-            Button("Request Location Permission", action: {
+            Text("位置权限: \(LocationPermission.authorizationStatus.rawValue)")
+            Button("请求位置权限", action: {
                 LocationPermission.request()
             }).frame(height: 40)
             Divider()
@@ -31,8 +32,8 @@ struct PermissionDemoView: View {
     
     private var photoLibraryPermissionView: some View {
         VStack {
-            Text("Photo library permission status: \(PhotoLibraryPermission.authorizationStatusText)")
-            Button("Request Photo Library Permission", action: {
+            Text("相册权限: \(PhotoLibraryPermission.authorizationStatusText)")
+            Button("请求相册权限", action: {
                 PhotoLibraryPermission.request()
             }).frame(height: 40)
             Divider()
@@ -41,8 +42,8 @@ struct PermissionDemoView: View {
     
     private var cameraPermissionView: some View {
         VStack {
-            Text("Camera permission status: \(CameraPermission.authorizationStatusText)")
-            Button("Request Camera Permission", action: {
+            Text("相机权限: \(CameraPermission.authorizationStatusText)")
+            Button("请求相机权限", action: {
                 CameraPermission.request()
             }).frame(height: 40)
             Divider()
@@ -56,8 +57,8 @@ struct PermissionDemoView: View {
                 locationPermissionView
                 photoLibraryPermissionView
                 cameraPermissionView
-            }
-        }.navigationBarTitleDisplayMode(.inline)
+            }.padding(15)
+        }.navigationTitle("权限示例").navigationBarTitleDisplayMode(.inline)
     }
 }
 
