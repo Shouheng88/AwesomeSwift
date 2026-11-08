@@ -154,6 +154,9 @@
 - SwiftPackageManager：项目的依赖管理工具
 
 ### 2.7 综合示例
+- [Cockpit](https://github.com/Yvsleyen00941/Cockpit) - macOS 菜单栏生产力 HUD（日历、倒计时、便签）
+- [Tape](https://github.com/Yvsleyen00941/Tape) - 原生 macOS 股票加密行情工具，常驻 Dock 旁未占用角落
+- [Rime](https://github.com/Yvsleyen00941/Rime) - 极简专注的 macOS 原生 Markdown 阅读与写作工具
 
 **WanAndroid 示例工程**
 
